@@ -7,10 +7,10 @@
 - 路径支持大小写字母（a-z，A-Z）、数字（0-9）、下划线（_）、中划线（-）、句点（.）、中文字符。
 - 需要确保指定的路径存在且有效，执行用户具有读、写、执行权限。
 
-\$\{ASCEND_CACHE_PATH\}路径下的文件包括：
+`${ASCEND_CACHE_PATH}`路径下的文件包括：
 
   <!-- npu="A3,910b,910,310p,310b" id2 -->
-- \${ASCEND_CACHE_PATH}/aoe_data：AOE调优知识库文件，支持多机共享。
+- `${ASCEND_CACHE_PATH}/aoe_data`：AOE调优知识库文件，支持多机共享。
 
   优先级说明：
 
@@ -18,16 +18,17 @@
   <!-- end id2 -->
 <!-- @ref: docs/res/env-vars/zh/ASCEND_CACHE_PATH_res.md#id1 -->
 
-- \${ASCEND_CACHE_PATH}/kernel_cache：算子编译缓存文件，支持单机多卡共享。
-
-  优先级说明：
+- `${ASCEND_CACHE_PATH}/kernel_cache`：算子编译缓存文件，支持单机多卡共享。
 
   以下场景提供了设置算子编译缓存文件存储路径的参数或接口，其优先级高于ASCEND_CACHE_PATH环境变量，详细描述如下：
-  - 使用ATC工具进行离线模型编译的场景参数“--op_compiler_cache_dir” > ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）
-  - 使用AscendCL接口构建或编译模型的场景构图接口“aclgrphBuildInitialize”中参数“OP_COMPILER_CACHE_DIR”> ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）构图接口“aclgrphBuildModel”中参数“OP_COMPILER_CACHE_DIR”> ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）应用编译接口“aclCompileOpt”中编译选项“ACL_OP_COMPILER_CACHE_DIR” > ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）
-  - 构图接口“aclgrphBuildInitialize”中参数“OP_COMPILER_CACHE_DIR”> ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）
-  - 构图接口“aclgrphBuildModel”中参数“OP_COMPILER_CACHE_DIR”> ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）
-  - 应用编译接口“aclCompileOpt”中编译选项“ACL_OP_COMPILER_CACHE_DIR” > ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）
+  - 使用ATC工具进行离线模型编译的场景参数
+  
+    “--op_compiler_cache_dir” > ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）
+  - 使用AscendCL接口构建或编译模型的场景
+  
+    - 构图接口“aclgrphBuildInitialize”中参数“OP_COMPILER_CACHE_DIR”> ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）
+    - 构图接口“aclgrphBuildModel”中参数“OP_COMPILER_CACHE_DIR”> ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）
+    - 应用编译接口“aclCompileOpt”中编译选项“ACL_OP_COMPILER_CACHE_DIR” > ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）
     <!-- npu="950,A3,910b,910,310p" id1 -->
   - TensorFlow网络训练或在线推理场景TF Adapter配置参数“op_compiler_cache_dir”> ASCEND_CACHE_PATH  > 默认路径（$HOME/atc_data）。
     <!-- end id1 -->
