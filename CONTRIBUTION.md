@@ -1,6 +1,6 @@
 # 贡献指南
 
-本项目欢迎广大开发者体验并参与贡献，在参与社区贡献之前。请参见[cann-community](https://gitcode.com/cann/community)了解行为准则，进行CLA协议签署，了解源码仓的贡献流程。
+本项目欢迎广大开发者体验并参与贡献，在参与社区贡献之前，请参见[cann-community](https://gitcode.com/cann/community)了解行为准则，进行CLA协议签署，了解源码仓的贡献流程。
 
 符合要求的文档将会在[CANN文档中心](https://www.hiascend.com/cann/document)呈现。
 
@@ -42,4 +42,4 @@
 
     以算子库文档为例，新增文件时，先在`docs/ops-lib/`目录下找到目录文件[README.md](./docs/ops-lib/README.md)，该文件即对应算子库文档的组织结构，在对应位置增加链接指向新建的文件。
 
-完成上述操作后，并提交PR即可参与贡献。
+完成上述操作后，提交PR即可参与贡献。
