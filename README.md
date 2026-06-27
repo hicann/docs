@@ -2,7 +2,7 @@
 
 ## 简介
 
-本仓库提供[CANN文档中心](https://www.hiascend.com/cann/document)公共类文档的源文件信息，如故障处理等。
+本仓库托管[CANN文档中心](https://www.hiascend.com/cann/document)公共文档的源文件，而与各组件密切关联的文档则由各组件仓库单独维护。
 
 
 ## 贡献
