@@ -2,6 +2,6 @@
 
 - **[aclnn开发接口（当前版本不支持）](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/00_opdev_api_list.md)**  
 
-- **[算子性能提升专题](算子性能提升专题.md)**  
+- **[算子性能提升专题](performance_improve_series.md)**  
 
 - **[FAQ](FAQ.md)**  

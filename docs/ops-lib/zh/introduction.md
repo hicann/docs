@@ -148,19 +148,19 @@
   </tr>
   <tr>
     <td>4.算子库有哪些<b>Torch扩展接口</b></td>
-    <td><a href="算子接口（torch_extension）.md">torch_extension接口</a></td>
+    <td><a href="op_interface_torch_extension.md">torch_extension接口</a></td>
     <td>针对非PyTorch原生但常见的大模型算子，提供PyTorch API。通过JIT即时编译C++ Kernel Wrapper，将PyTorch函数桥接到aclnn API，同时通过GE Converter支持TorchAir图模式。</td>
     <td>-</td>
   </tr>
   <tr>
     <td>5.算子库中<b>Ascend IR算子规格信息</b></td>
-    <td><a href="Ascend-IR算子规格说明.md">Ascend IR算子规格说明</a></td>
+    <td><a href="ascendIR_op_specification.md">Ascend IR算子规格说明</a></td>
     <td>罗列了基于Ascend IR定义的算子信息。</td>
     <td>-</td>
   </tr>
   <tr>
     <td>6.算子库相关知识</td>
-    <td><a href="附录.md">附录</a></td>
+    <td><a href="appendix/appendix.md">附录</a></td>
       <td>
           <ul>
               <li>提供算子aclnn API依赖的框架接口、L0层接口</li>
@@ -234,13 +234,13 @@
   </tr>
   <tr>
     <td>4.算子库中<b>Ascend IR算子规格信息</b></td>
-    <td><a href="Ascend-IR算子规格说明.md">Ascend IR算子规格说明</a></td>
+    <td><a href="ascendIR_op_specification.md">Ascend IR算子规格说明</a></td>
     <td>罗列了基于Ascend IR定义的算子信息。</td>
     <td>-</td>
   </tr>
   <tr>
     <td>5.算子库相关知识</td>
-    <td><a href="附录.md">附录</a></td>
+    <td><a href="appendix/appendix.md">附录</a></td>
       <td>
           <ul>
               <li>提供算子aclnn API依赖的框架接口、L0层接口</li>
