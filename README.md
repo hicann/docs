@@ -38,4 +38,4 @@ docs/
 - [Ascend C API](https://gitcode.com/cann/asc-devkit/blob/master/docs/api/README.md)
 - [PyPTO API](https://gitcode.com/cann/pypto/blob/master/docs/zh/api/index_hiascend.md)
 - [HCCL集合通信库](https://gitcode.com/cann/hccl/blob/master/docs/zh/user_guide/README.md)
-- [算子库](docs/ops-lib/README.md)
+- [算子库](docs/ops-lib/zh/0_README.md)
