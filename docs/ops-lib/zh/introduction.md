@@ -31,7 +31,7 @@
 <!-- npu="950,A3,910b" id3 -->
 - PyTorch API：针对非PyTorch原生但常见的大模型算子，提供了一套兼容PyTorch原生风格的torch\_extension API。该API借助JIT机制（torch.utils.cpp\_extension.load）在首次调用时即时编译C++ Kernel Wrapper，将PyTorch函数桥接到aclnn API。同时，它还通过GE Converter支持TorchAir图模式。
 <!-- end id3 -->
-- GE图模式调用：通过算子Ascend IR（Intermediate Representation）定义，以构图方式实现算子调用，调用原理参见[《图开发指南原始》](https://hiascend.com/document/redirect/CannCommunityGraphguide)中“编程指南”，这里不详细阐述。
+- GE图模式调用：通过算子Ascend IR（Intermediate Representation）定义，以构图方式实现算子调用，调用原理参见[《图开发指南》](https://hiascend.com/document/redirect/CannCommunityGraphguide)中“编程指南”，这里不详细阐述。
 
 <!-- npu="950,A3,910b,910,310p,310b" id4 -->
 **图 2**  aclnn API调用流程 <a id="fig2"></a>
@@ -48,7 +48,7 @@
   - 通过aclnn API调用算子时，请提前安装CANN Toolkit包、ops算子包，具体操作参见[《CANN 软件安装》](https://hiascend.com/document/redirect/CannCommunityInstSoftware)。
   <!-- end id5 -->
   <!-- npu="950,A3,910b" id6 -->
-  - 通过PyTorch API调用算子时，请提前安装CANN Toolkit包、ops算子包、torch\_npu包（注意与Toolkit包版本配套），具体操作参见[《CANN 软件安装》](https://hiascend.com/document/redirect/CannCommunityInstSoftware)和[《Ascend Extension for PyTorch 软件安装指南》](https://www.hiascend.com/document/detail/zh/Pytorch/2600/configandinstg/instg/docs/zh/installation_guide/installation_description.md)。
+  - 通过PyTorch API调用算子时，请提前安装CANN Toolkit包、ops算子包、torch\_npu包（注意与Toolkit包版本配套），具体操作参见[《CANN 软件安装》](https://hiascend.com/document/redirect/CannCommunityInstSoftware)和[《Ascend Extension for PyTorch 软件安装》](https://www.hiascend.com/document/detail/zh/Pytorch/2600/configandinstg/instg/docs/zh/installation_guide/installation_description.md)。
   <!-- end id6 -->
   - 通过GE构图方式调用算子Ascend IR时，请提前安装CANN Toolkit包、ops算子包，具体操作参见[《CANN 软件安装》](https://hiascend.com/document/redirect/CannCommunityInstSoftware)。
 
@@ -84,7 +84,7 @@
 >
 > - aclnn API调用从CANN 9.0.0版本开始，整库文件libopapi.so废弃，请使用libopapi_*.so子库文件以提升算子编译效率。
 > - aclnn API调用从CANN 8.5.0版本开始，libaclnn_ops_infer、libaclnn_ops_train、libaclnn_math、libaclnn_rand静态库（\*.a）和动态库（\*.so）废弃，请使用libopapi_*.so库文件替代。
-> - aclnn API调用从CANN 7.0.0版本开始，头文件引用路径aclnnop/level2/aclnn\_*.h废弃，请使用新头文件路径aclnnop/aclnn\_*.h替代。
+> - aclnn API调用从CANN 7.0.0版本开始，头文件引用路径aclnnop/level2/aclnn\_\*.h废弃，请使用新头文件路径aclnnop/aclnn\_\*.h替代。
 <!-- end id12 -->
 
 <!-- npu="950,A3,910b,910,310p,310b" id10 -->
@@ -163,7 +163,8 @@
     <td><a href="appendix/appendix.md">附录</a></td>
       <td>
           <ul>
-              <li>提供算子aclnn API依赖的框架接口、L0层接口</li>
+              <li>提供开发aclnn API依赖的nnopbase接口</li>
+              <li>提供算子开发/调用过程依赖的op_common公共接口</li>
               <li>介绍算子性能提升方法</li>
               <li>算子调用过程中常见FAQ和案例</li>
           </ul>
@@ -243,7 +244,8 @@
     <td><a href="appendix/appendix.md">附录</a></td>
       <td>
           <ul>
-              <li>提供算子aclnn API依赖的框架接口、L0层接口</li>
+              <li>提供开发aclnn API依赖的nnopbase接口</li>
+              <li>提供算子开发/调用过程依赖的op_common公共接口</li>
               <li>介绍算子性能提升方法</li>
               <li>算子调用过程中常见FAQ和案例</li>
           </ul>

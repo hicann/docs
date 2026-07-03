@@ -34,11 +34,17 @@
   - [规格清单](ascendIR_spec_list.md)
 - [附录](appendix/appendix.md)
   <!-- npu="950,A3,910b,910,310p,310b" id6 -->
-  - [aclnn开发接口](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/00_opdev_api_list.md)
+  - [nnopbase接口](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/00_opdev_api_list.md)
   <!-- end id6 -->
   <!-- npu="IPV350" id7 -->
-  - [aclnn开发接口（当前版本不支持）](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/00_opdev_api_list.md)
+  - [nnopbase接口（当前版本不支持）](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/00_opdev_api_list.md)
   <!-- end id7 -->
+  <!-- npu="950,A3,910b,910,310p,310b" id9 -->
+  - [op_common接口](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/op_common/00_op_common_list.md)
+  <!-- end id9 -->
+  <!-- npu="IPV350" id10 -->
+  - [op_common接口（当前版本不支持）](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/op_common/00_op_common_list.md)
+  <!-- end id10 -->
   <!-- npu="950,910b,910,310p" id8 -->
   - [算子性能提升专题](appendix/performance_improve_series.md)
     - [使用静态Kernel提升算子执行性能](appendix/performance_improve_by_staticKernel.md)
