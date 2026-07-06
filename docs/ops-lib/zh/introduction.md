@@ -42,34 +42,6 @@
 ## 使用说明
 
 - **V版本演进**：功能演进过程中，算子或算子API可能会存在多个V版本，使用时请选择最高V版本（高版本默认兼容低版本能力）。
-- **环境准备**：
-
-  <!-- npu="950,A3,910b,910,310p,310b" id5 -->
-  - 通过aclnn API调用算子时，请提前安装CANN Toolkit包、ops算子包，具体操作参见[《CANN 软件安装》](https://hiascend.com/document/redirect/CannCommunityInstSoftware)。
-  <!-- end id5 -->
-  <!-- npu="950,A3,910b" id6 -->
-  - 通过PyTorch API调用算子时，请提前安装CANN Toolkit包、ops算子包、torch\_npu包（注意与Toolkit包版本配套），具体操作参见[《CANN 软件安装》](https://hiascend.com/document/redirect/CannCommunityInstSoftware)和[《Ascend Extension for PyTorch 软件安装》](https://www.hiascend.com/document/detail/zh/Pytorch/2600/configandinstg/instg/docs/zh/installation_guide/installation_description.md)。
-  <!-- end id6 -->
-  - 通过GE构图方式调用算子Ascend IR时，请提前安装CANN Toolkit包、ops算子包，具体操作参见[《CANN 软件安装》](https://hiascend.com/document/redirect/CannCommunityInstSoftware)。
-
-- **接口定义路径**：
-
-  <!-- npu="950,A3,910b,910,310p,310b" id7 -->
-  - 调用aclnn API时，需include依赖的文件，一般头文件默认在`${INSTALL_DIR}/include/`目录，库文件默认在`${INSTALL_DIR}/lib64/`目录。
-  <!-- end id7 -->
-  <!-- npu="950,A3,910b" id8 -->
-  - 调用torch\_extension API时，需导入如下模块，其中cann\_ops\_transformer定义在`${INSTALL_DIR}/python/site-packages/cann_ops_transformer`目录。
-
-      ```python
-      import torch 
-      import torch_npu
-      import cann_ops_transformer
-      ```
-  <!-- end id8 -->
-  - 调用Ascend IR算子时，其头文件路径为`${INSTALL_DIR}/opp/built-in/op_graph/inc`。
-
-  其中$\{INSTALL\_DIR\}请替换为CANN软件安装后文件存储路径。以root用户安装为例，安装后文件默认存储路径为`/usr/local/Ascend/cann`。
-
 - 对于算子文档中**未声明支持的场景**（如产品型号、数据类型、数据格式、数据维度等），不推荐开发者使用，当前版本不保证算子调用效果。
 <!-- npu="910b,910,310p" id9 -->
 - 昇腾虚拟化实例：当前版本融合类算子暂不支持该功能。融合类算子是指由多个独立基础“小算子”（如向量Vector、矩阵Cube等）融合而成，其功能与多个小算子等效，而性能通常更优，例如Flash Attention、通算融合算子（简称MC2算子）等。
@@ -77,7 +49,7 @@
 
 ## 使用向导
 
-首次阅读本手册时，建议先熟悉下表。该表将帮助您快速了解算子的分类、适用场景及头文件等信息。
+阅读手册正文前，请先熟悉向导表，了解手册大纲和章节作用，以帮助您快速了解算子分类、适用场景等信息。
 
 <!-- npu="950,A3,910b,910,310p,310b" id12 -->
 > **须知**：
@@ -95,44 +67,27 @@
     <th>使用场景</th>
     <th>操作指引</th>
     <th>说明</th>
-    <th>依赖头文件或库文件</th>
   </tr></thead>
 <tbody>
   <tr>
-      <td>1.算子库<b>基础领域知识</b></td>
+      <td>1.算子库<b>依赖哪些头文件/库文件</b></td>
+    <td><a href="header_and_library.md">头文件和库文件说明</a></td>
+    <td>介绍不同方式调用算子依赖的头文件或库文件。</td>
+  </tr>
+  <tr>
+      <td>2.算子库<b>基础领域知识</b></td>
     <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md">基本概念</a></td>
     <td>介绍算子的基本概念、术语及关键技术，帮助用户更好地理解算子文档。</td>
-    <td>-</td>
   </tr>
   <tr>
-    <td>2.算子API调用时<b>依赖哪些公共接口</b></td>
+    <td>3.算子API调用时<b>依赖哪些公共接口</b></td>
     <td><a href="https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/00_aclnn_api_list.md">公共接口</a></td>
     <td>调用算子接口时依赖的公共Meta接口，如创建aclTensor、aclScalar、aclIntArray等。</td>
-      <td>
-          <li>头文件：aclnn/acl_meta.h、aclnn/aclnn_base.h（仅包含aclnnInit和aclnnFinalize）</li>
-          <li>库文件：libnnopbase.so</li>
-      </td>
   </tr>
   <tr>
-    <td rowspan="4">3.算子库中有哪些<b>aclnn API</b></td>
+    <td rowspan="4">4.算子库中有哪些<b>aclnn API</b></td>
     <td><a href="bookmap_aclnn_math.md">Math类接口</a></td>
     <td>数学计算类算子库，提供Add、Abs等算子API。</td>
-    <td rowspan="4">
-      <ul>
-        <li>头文件：引用每类总头文件后无需引用单API头文件</li>
-        <ul>
-          <li>每类API依赖的总头文件<b>（推荐）</b>：aclnnop/aclnn_ops_math.h、aclnnop/aclnn_ops_nn.h、aclnnop/aclnn_ops_cv.h、aclnnop/aclnn_ops_transformer.h</li>
-          <li>每个API依赖的头文件：aclnnop/aclnn_*.h（*表示具体算子名）</li>
-        </ul>
-      </ul>
-      <ul>
-        <li>库文件：</li>
-        <ul>
-            <li>aclnn API依赖的总库文件：libopapi.so<b>（废弃）</b></li>
-          <li>每类API依赖的库文件：libopapi_math.so、libopapi_nn.so、libopapi_cv.so、libopapi_transformer.so</li>
-        </ul>
-      </ul>
-    </td>
   </tr>
   <tr>
     <td><a href="bookmap_aclnn_nn.md">NN类接口</a></td>
@@ -147,19 +102,17 @@
     <td>大模型计算类算子库，提供FlashAttention、MC2（通算融合）、MoE（Mixture of Experts）等算子API。</td>
   </tr>
   <tr>
-    <td>4.算子库有哪些<b>Torch扩展接口</b></td>
+    <td>5.算子库有哪些<b>Torch扩展接口</b></td>
     <td><a href="op_interface_torch_extension.md">torch_extension接口</a></td>
     <td>针对非PyTorch原生但常见的大模型算子，提供PyTorch API。通过JIT即时编译C++ Kernel Wrapper，将PyTorch函数桥接到aclnn API，同时通过GE Converter支持TorchAir图模式。</td>
-    <td>-</td>
   </tr>
   <tr>
-    <td>5.算子库中<b>Ascend IR算子规格信息</b></td>
+    <td>6.算子库中<b>Ascend IR算子规格信息</b></td>
     <td><a href="ascendIR_op_specification.md">Ascend IR算子规格说明</a></td>
     <td>罗列了基于Ascend IR定义的算子信息。</td>
-    <td>-</td>
   </tr>
   <tr>
-    <td>6.算子库相关知识</td>
+    <td>7.算子库相关知识</td>
     <td><a href="appendix/appendix.md">附录</a></td>
       <td>
           <ul>
@@ -169,7 +122,6 @@
               <li>算子调用过程中常见FAQ和案例</li>
           </ul>
       </td>
-    <td>-</td>
   </tr>
 </tbody></table>
 <!-- end id10 -->
@@ -182,44 +134,27 @@
     <th>使用场景</th>
     <th>操作指引</th>
     <th>说明</th>
-    <th>依赖头文件或库文件</th>
   </tr></thead>
 <tbody>
   <tr>
-      <td>1.算子库<b>基础领域知识</b></td>
+      <td>1.算子库<b>依赖哪些头文件/库文件</b></td>
+    <td><a href="header_and_library.md">头文件和库文件说明</a></td>
+    <td>介绍不同方式调用算子依赖的头文件或库文件。</td>
+  </tr>
+  <tr>
+      <td>2.算子库<b>基础领域知识</b></td>
     <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md">基本概念</a></td>
     <td>介绍算子的基本概念、术语及关键技术，帮助用户更好地理解算子文档。</td>
-    <td>-</td>
   </tr>
   <tr>
-    <td>2.算子API调用时<b>依赖哪些公共接口</b>（当前版本不支持）</td>
+    <td>3.算子API调用时<b>依赖哪些公共接口</b><br>（当前版本不支持）</td>
     <td><a href="https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/00_aclnn_api_list.md">公共接口</a></td>
     <td>调用算子接口时依赖的公共Meta接口，如创建aclTensor、aclScalar、aclIntArray等。</td>
-      <td>
-          <li>头文件：aclnn/acl_meta.h、aclnn/aclnn_base.h（仅包含aclnnInit和aclnnFinalize）</li>
-          <li>库文件：libnnopbase.so</li>
-      </td>
   </tr>
   <tr>
-    <td rowspan="4">3.算子库中有哪些<b>aclnn API</b>（当前版本不支持）</td>
+    <td rowspan="4">4.算子库中有哪些<b>aclnn API</b><br>（当前版本不支持）</td>
     <td><a href="bookmap_aclnn_math.md">Math类接口</a></td>
     <td>数学计算类算子库，提供Add、Abs等算子API。</td>
-    <td rowspan="4">
-      <ul>
-        <li>头文件：引用每类总头文件后无需引用单API头文件</li>
-        <ul>
-          <li>每类API依赖的总头文件<b>（推荐）</b>：aclnnop/aclnn_ops_math.h、aclnnop/aclnn_ops_nn.h、aclnnop/aclnn_ops_cv.h、aclnnop/aclnn_ops_transformer.h</li>
-          <li>每个API依赖的头文件：aclnnop/aclnn_*.h（*表示具体算子名）</li>
-        </ul>
-      </ul>
-      <ul>
-        <li>库文件：</li>
-        <ul>
-            <li>aclnn API依赖的总库文件：libopapi.so<b>（废弃）</b></li>
-          <li>每类API依赖的库文件：libopapi_math.so、libopapi_nn.so、libopapi_cv.so、libopapi_transformer.so</li>
-        </ul>
-      </ul>
-    </td>
   </tr>
   <tr>
     <td><a href="bookmap_aclnn_nn.md">NN类接口</a></td>
@@ -234,13 +169,12 @@
     <td>大模型计算类算子库，提供FlashAttention、MC2（通算融合）、MoE（Mixture of Experts）等算子API。</td>
   </tr>
   <tr>
-    <td>4.算子库中<b>Ascend IR算子规格信息</b></td>
+    <td>5.算子库中<b>Ascend IR算子规格信息</b></td>
     <td><a href="ascendIR_op_specification.md">Ascend IR算子规格说明</a></td>
     <td>罗列了基于Ascend IR定义的算子信息。</td>
-    <td>-</td>
   </tr>
   <tr>
-    <td>5.算子库相关知识</td>
+    <td>6.算子库相关知识</td>
     <td><a href="appendix/appendix.md">附录</a></td>
       <td>
           <ul>
@@ -250,7 +184,6 @@
               <li>算子调用过程中常见FAQ和案例</li>
           </ul>
       </td>
-    <td>-</td>
   </tr>
 </tbody></table>
 <!-- end id11 -->

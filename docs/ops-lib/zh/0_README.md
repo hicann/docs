@@ -1,6 +1,7 @@
 # 算子库参考
 
 - [简介](introduction.md)
+- [头文件和库文件说明](header_and_library.md)
 - [基本概念](https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
 <!-- npu="950,A3,910b,910,310p,310b" id1 -->
 - [公共接口](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/00_aclnn_api_list.md)
@@ -22,7 +23,6 @@
   - [CV类接口](bookmap_aclnn_cv.md)
   - [Transformer类接口](bookmap_aclnn_trans.md)
 <!-- end id4 -->
-
 <!-- npu="950,A3,910b" id5 -->
 - [算子接口（torch\_extension）](op_interface_torch_extension.md)
   - [mhc_post](https://gitcode.com/cann/ops-transformer/blob/master/torch_extension/cann_ops_transformer/docs/zh/mhc_post.md)
