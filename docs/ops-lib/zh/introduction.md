@@ -76,12 +76,12 @@
   </tr>
   <tr>
       <td>2.算子库<b>基础领域知识</b></td>
-    <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md">基本概念</a></td>
+    <td><a href="https://gitcode.com/cann/ops-math/blob/9.1.0/docs/zh/context/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md">基本概念</a></td>
     <td>介绍算子的基本概念、术语及关键技术，帮助用户更好地理解算子文档。</td>
   </tr>
   <tr>
     <td>3.算子API调用时<b>依赖哪些公共接口</b></td>
-    <td><a href="https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/00_aclnn_api_list.md">公共接口</a></td>
+    <td><a href="https://gitcode.com/cann/opbase/blob/9.1.0/docs/zh/api/nnopbase/aclnn/00_aclnn_api_list.md">公共接口</a></td>
     <td>调用算子接口时依赖的公共Meta接口，如创建aclTensor、aclScalar、aclIntArray等。</td>
   </tr>
   <tr>
