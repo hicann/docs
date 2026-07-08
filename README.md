@@ -4,7 +4,6 @@
 
 本仓库托管[CANN文档中心](https://www.hiascend.com/cann/document)公共文档的源文件，而与各组件密切关联的文档则由各组件仓库单独维护。
 
-
 ## 贡献
 
 欢迎您参与文档贡献！详细请参考[贡献指南](./CONTRIBUTION.md)，请您务必遵守文档写作规范，并按照流程规则提交。如果您对文档有任何意见或建议，请在Issues中提交。
@@ -32,6 +31,7 @@ docs/
 - [PyPTO算子开发](https://gitcode.com/cann/pypto/blob/master/docs/zh/tutorials/index_hiascend.md)
 - [通信算子开发](https://gitcode.com/cann/hcomm/blob/master/docs/zh/comm_op_dev_guide/README.md)
 - [应用开发](docs/app-dev/zh/00_acl_cpp_dev.md)
+- [图开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/graph_dev/README.md)
 
 ### API参考
 
@@ -39,3 +39,17 @@ docs/
 - [PyPTO API](https://gitcode.com/cann/pypto/blob/master/docs/zh/api/index_hiascend.md)
 - [HCCL集合通信库](https://gitcode.com/cann/hccl/blob/master/docs/zh/user_guide/README.md)
 - [算子库](docs/ops-lib/zh/0_README.md)
+
+### 开发工具
+
+- [ATC离线模型编译工具](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/atc_tools/README.md)
+- [性能调优工具](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/profiling/README.md)
+
+### 参考
+
+- [日志参考](https://gitcode.com/cann/runtime/blob/master/docs/log_ref/README.md)
+
+### 其他
+
+- [LLM DataDist开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/llm_datadist/index.md)
+- [DataFlow开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/dflow/index.md)
