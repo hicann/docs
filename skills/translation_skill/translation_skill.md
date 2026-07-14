@@ -31,7 +31,6 @@
    ```bash
    current_path=$(pwd)
    cat ${current_path}\exclude_docs.json
-
    ```
 
 3. **统计排除路径文件数量**（避免误导用户）
@@ -111,31 +110,36 @@
 
 **docs目录文档（非排除列表）：**
 
-**步骤1：检查docs目录下是否存在zh文件夹**
+**步骤1：检查文档路径中是否包含zh文件夹（docs目录内任意层级）**
 
-```bash
-# 检查docs目录下是否存在zh文件夹
-ls docs/zh
-```
+   ```bash
+   # 检查docs目录内任意层级是否存在zh文件夹
+   find docs -type d -name "zh"
+   # 检查文档是否在某个zh文件夹下
+   echo $filepath | grep "/zh/"
+   ```
 
 **步骤2：根据zh文件夹存在情况确定存放规则**
 
-**情况A：docs目录下存在zh文件夹**
+**情况A：文档位于docs目录内某个zh文件夹下**
 
 - **zh文件夹下的文档（非排除列表）**：
-  - 存放规则：在zh同级目录新建en文件夹，en文件夹中的目录层级完全和zh一样
+  - 存放规则：在该zh同级目录新建en文件夹，en文件夹中的目录层级完全和zh一样
   - 文件命名：`<原文件名>.md`（与原文文件名保持一致，不添加`_en`后缀）
   - 示例：`docs/zh/api/quantize.md` → `docs/en/api/quantize.md`
   - 示例：`docs/zh/guide/install.md` → `docs/en/guide/install.md`
+  - 示例：`docs/design/zh/modules/feature.md` → `docs/design/en/modules/feature.md`
+  - 示例：`docs/design/modules/zh/sub/overview.md` → `docs/design/modules/en/sub/overview.md`
   - 注意：如果zh下的某个md文件在排除列表中，则跳过该文件不翻译
 
-- **docs下zh文件夹以外的文档（非排除列表）**：
+- **docs下不在任何zh文件夹内的文档（非排除列表）**：
   - 存放规则：与原文件同级目录
   - 文件命名：`<原文件名>_en.md`
   - 示例：`docs/README.md` → `docs/README_en.md`
   - 示例：`docs/build.md` → `docs/build_en.md`
+  - 示例：`docs/design/overview.md` → `docs/design/overview_en.md`
 
-**情况B：docs目录下不存在zh文件夹**
+**情况B：docs目录内不存在任何zh文件夹**
 
 - 存放规则：与原文件同级目录
 - 文件命名：`<原文件名>_en.md`
@@ -372,7 +376,7 @@ ls docs/zh
 
 **示例（正确统计流程）：**
 
-```console
+```text
 [
   {"content": "扫描所有md文档并统计总数", "status": "in_progress", "priority": "high"},
   {"content": "统计排除路径文件数量（docs/dflow_api、docs/graph_engine_api等）", "status": "pending", "priority": "high"},
@@ -388,7 +392,7 @@ ls docs/zh
 **统计报告示例：**
 扫描完成后，向用户输出清晰的统计信息：
 
-```console
+```text
 扫描结果：
 - 总md文件：1495个
 - 排除路径（跳过翻译）：1345个
@@ -437,30 +441,40 @@ ls docs/zh
 
 ## 目录结构示例
 
-```text
+```tree
 仓库根目录/
 ├── README.md                  # 原始中文文档（非docs）
 ├── README_en.md               # 翻译后英文文档（同级目录）
 ├── CONTRIBUTING.md            # 原始中文文档（非docs）
 ├── CONTRIBUTING_en.md         # 翻译后英文文档（同级目录）
 ├── docs/                      # docs目录
-│   ├── README.md              # 原始文档（docs根目录，zh文件夹以外）
+│   ├── README.md              # 原始文档（docs根目录，不在任何zh文件夹内）
 │   ├── README_en.md           # 翻译后英文文档（同级目录，命名<原文件名>_en.md）
-│   ├── build.md               # 原始文档（docs根目录，zh文件夹以外）
+│   ├── build.md               # 原始文档（docs根目录，不在任何zh文件夹内）
 │   ├── build_en.md            # 翻译后英文文档（同级目录，命名<原文件名>_en.md）
-│   ├── zh/                    # 中文文档目录
+│   ├── zh/                    # 中文文档目录（docs根层级）
 │   │   ├── api/
 │   │   │   ├── README.md      # 原始文档（zh下，非排除列表）
 │   │   │   └── quantize.md    # 原始文档（zh下，非排除列表）
 │   │   └── guide/
 │   │       └── install.md     # 原始文档（zh下，非排除列表）
 │   │       └── excluded.md    # 原始文档（zh下，在排除列表中，不翻译）
-│   └── en/                    # 英文文档目录（与zh同级，目录结构一致）
-│       ├── api/
-│       │   ├── README.md      # 翻译后英文文档（文件名与原文一致）
-│       │   └── quantize.md    # 翻译后英文文档（文件名与原文一致）
-│       └── guide/
-│           └── install.md     # 翻译后英文文档（文件名与原文一致）
+│   ├── en/                    # 英文文档目录（与zh同级，目录结构一致）
+│   │   ├── api/
+│   │   │   ├── README.md      # 翻译后英文文档（文件名与原文一致）
+│   │   │   └── quantize.md    # 翻译后英文文档（文件名与原文一致）
+│   │   └── guide/
+│   │       └── install.md     # 翻译后英文文档（文件名与原文一致）
+│   └── design/                # docs子目录
+│       ├── overview.md        # 原始文档（不在任何zh文件夹内）
+│       ├── overview_en.md     # 翻译后英文文档（同级目录，命名<原文件名>_en.md）
+│       └── modules/           # 更深层级子目录
+│           ├── overview.md    # 原始文档（不在任何zh文件夹内）
+│           ├── overview_en.md # 翻译后英文文档（同级目录）
+│           ├── zh/            # 中文文档目录（modules层级）
+│           │   └── feature.md # 原始文档（zh下，非排除列表）
+│           └── en/            # 英文文档目录（与zh同级）
+│               └── feature.md # 翻译后英文文档（文件名与原文一致）
 ├── examples/
 │   └── README.md              # 原始中文文档（非docs）
 │   └── README_en.md           # 翻译后英文文档（同级目录）
@@ -472,8 +486,9 @@ ls docs/zh
 **说明：**
 
 - zh下的文件如果在排除列表中，则跳过不翻译（如`zh/guide/excluded.md`）
-- zh下的文件如果不在排除列表中，则翻译到en目录对应位置，文件名保持一致
-- docs根目录的文件（如README.md、build.md）翻译到同级目录，命名为`<原文件名>_en.md`
+- zh下的文件如果不在排除列表中，则翻译到该zh同级的en目录对应位置，文件名保持一致
+- zh可以出现在docs目录内的任意层级（如`docs/zh/`、`docs/design/modules/zh/`等），en目录始终创建在对应zh的同级
+- 不在任何zh文件夹内的docs文档（如`docs/README.md`、`docs/design/overview.md`）翻译到同级目录，命名为`<原文件名>_en.md`
 
 ## 工具使用建议
 
@@ -494,14 +509,14 @@ ls docs/zh
  3. **必须先读取翻译标准**：翻译任何内容前，必须先读取英文风格指南
  4. **文件存放路径**：
     - 非docs目录：与原文件同级目录，命名为`<原文件名>_en.md`
-    - docs目录存在zh文件夹：
-      - zh文件夹下的文档（非排除列表）：存放在docs/en/目录下，目录结构与zh一致，文件名与原文一致（不添加`_en`后缀）
-      - docs下zh文件夹以外的文档（非排除列表）：与原文件同级目录，命名为`<原文件名>_en.md`
-    - docs目录不存在zh文件夹：所有文档（非排除列表）与原文件同级目录，命名为`<原文件名>_en.md`
+    - docs目录内文档位于某个zh文件夹下（zh可出现在docs内任意层级）：
+      - zh文件夹下的文档（非排除列表）：存放在该zh同级的en/目录下，目录结构与zh一致，文件名与原文一致（不添加`_en`后缀）
+      - 不在任何zh文件夹内的docs文档（非排除列表）：与原文件同级目录，命名为`<原文件名>_en.md`
+    - docs目录内不存在任何zh文件夹：所有文档（非排除列表）与原文件同级目录，命名为`<原文件名>_en.md`
  5. **文件命名规则**：
     - 非docs目录：`<原文件名>_en.md`
-    - docs目录存在zh文件夹：zh下的文档（非排除列表）保持原文件名；其他文档（非排除列表）`<原文件名>_en.md`
-    - docs目录不存在zh文件夹：`<原文件名>_en.md`
+    - docs目录内文档位于某个zh文件夹下：zh下的文档（非排除列表）保持原文件名；不在zh内的文档`<原文件名>_en.md`
+    - docs目录内不存在任何zh文件夹：`<原文件名>_en.md`
  6. **增量更新**：已存在翻译文件时，仅翻译变更部分，避免重复翻译
  7. **格式一致性**：保持Markdown格式、表格结构、链接引用等一致
  8. **提交变更**：翻译完成后必须将所有变更的中英文md文档提交到远程仓库
@@ -514,6 +529,10 @@ ls docs/zh
     - 去掉冗余的"please"（技术文档应简洁直接）
     - 使用祈使句而非"You can..."结构
     - 表格字段使用专业术语（"Precautions"而非"Note"）
+ 11. **行数比对检查（新增）**：
+    - 每篇文档翻译完成后，比对中文原文与英文翻译的行数是否大体相等
+    - 若英文行数比中文少超过30%，说明存在漏翻译，需逐段对照补充缺失内容
+    - 代码块和空白行差异可忽略，重点关注实质性文本行
 
 ## 翻译质量检查清单（新增，必须执行）
 
@@ -566,6 +585,28 @@ ls docs/zh
    - [ ] 链接是否有效
    - [ ] 代码块格式是否正确
 
+9. **行数比对检查（翻译完成度校验）**
+   - [ ] 翻译完成后，比对中文原文与英文翻译的行数是否大体相等
+   - [ ] 若行数差异超过30%，说明英文存在漏翻译，需重新检查并补充缺失内容
+   - [ ] 代码块、空白行、仅含标记符号的行可不计入比对基数，重点关注实质性文本行
+
+   **检查方法：**
+
+   ```bash
+   # 统计中文原文行数
+   zh_lines=$(wc -l < zh_file.md)
+   # 统计英文翻译行数
+   en_lines=$(wc -l < en_file.md)
+   # 计算差异比例
+   diff_ratio=$(( (zh_lines - en_lines) * 100 / zh_lines ))
+   # 若差异超过30%，需要检查是否漏翻译
+   ```
+
+   **处理方式：**
+   - 英文行数明显少于中文：逐段对照检查，找出未翻译段落并补充
+   - 行数基本相等（±30%以内）：检查通过
+   - 对于表格密集型文档，英文因换行展开导致行数偏多属于正常现象
+
 **检查示例对比：**
 
 | 问题类型 | ❌ 错误示例 | ✓ 正确示例 | 检查项 |
@@ -578,6 +619,7 @@ ls docs/zh
 | 表格字段 | "Note" | "Precautions" | 表格检查 |
 | 缺少冠词 | "WebIDE development platform" | "the WebIDE development platform" | 冠词检查 |
 | 术语不一致 | "example" | "sample" | 术语一致性 |
+| 漏翻译 | 原文100行，翻译仅60行 | 逐段对照补充缺失章节 | 行数比对检查 |
 
 ## 常见问题处理
 
@@ -650,42 +692,42 @@ cat ${current_path}\exclude_docs.json
 
 **判断流程：**
 
-```
+```text
 1. 检查文档路径是否在docs目录下？
    → 否：非docs目录文档，存放规则：与原文件同级目录，命名为<原文件名>_en.md
    → 是：继续检查
 
-2. 检查docs目录下是否存在zh文件夹？
-   → 不存在：存放规则：与原文件同级目录，命名为<原文件名>_en.md
-   → 存在：继续检查
+2. 检查文档路径中是否包含/zh/（即文档是否位于docs内某个zh文件夹下，zh可出现在任意层级）？
+   → 不在zh文件夹下：存放规则：与原文件同级目录，命名为<原文件名>_en.md
+   → 在zh文件夹下：继续检查
 
-3. 检查文档是否在zh文件夹下？
-   → 否：存放规则：与原文件同级目录，命名为<原文件名>_en.md
-   → 是：继续检查
-
-4. 检查文档是否在排除列表中？
+3. 检查文档是否在排除列表中？
    → 是：跳过，不翻译
-   → 否：存放规则：docs/en/目录下，目录结构与zh一致，文件名与原文一致（不添加_en后缀）
+   → 否：存放规则：在该zh同级目录新建en/文件夹，en目录结构与zh一致，文件名与原文一致（不添加_en后缀）
 ```
 
 **检查命令：**
 
 ```bash
-# 1. 检查docs目录下是否存在zh文件夹
-ls docs/zh
+# 1. 检查docs目录内任意层级是否存在zh文件夹
+   find docs -type d -name "zh"
 
-# 2. 检查文档是否在zh文件夹下
-echo $filepath | grep "^./docs/zh/"
+# 2. 检查文档是否在某个zh文件夹下（匹配路径中的/zh/）
+   echo $filepath | grep "/zh/"
 
-# 3. 检查文档是否在排除列表中
+# 3. 提取zh的父路径，确定en目录应创建的位置
+# 示例：docs/design/modules/zh/feature.md → zh父路径为 docs/design/modules/ → en目录为 docs/design/modules/en/
+
+# 4. 检查文档是否在排除列表中
 # 需要读取exclude_docs.json配置并匹配repoName和excludeDocsPaths
 ```
 
-**为什么docs存在zh文件夹时使用不同的规则？**
+**为什么docs内存在zh文件夹时使用不同的规则？**
 
 - zh和en目录已经区分了中英文，文件名无需再添加`_en`后缀区分
 - 保持zh和en目录结构一致，便于对照管理
-- docs下zh以外的文档（如docs根目录的文件）仍使用`_en`后缀，因为同一目录下需要区分中英文
+- zh可以出现在docs内的任意层级（如`docs/zh/`、`docs/design/zh/`、`docs/design/modules/zh/`等），en目录始终创建在对应zh的同级
+- 不在任何zh文件夹内的docs文档仍使用`_en`后缀，因为同一目录下需要区分中英文
 - zh下的文档如果单个文件在排除列表中，则跳过该文件不翻译
 
 ### Q3: 如何检查排除列表
@@ -694,24 +736,24 @@ echo $filepath | grep "^./docs/zh/"
 
 1. **读取排除列表配置文件**
 
-```bash
-current_path=$(pwd)
-cat ${current_path}\exclude_docs.json
-```
+   ```bash
+   current_path=$(pwd)
+   cat ${current_path}\exclude_docs.json
+   ```
 
-1. **获取本地仓库的远程地址并提取仓库名**
+2. **获取本地仓库的远程地址并提取仓库名**
 
-```bash
-# 获取远程地址
-git remote -v
+   ```bash
+   # 获取远程地址
+   git remote -v
 
-# 提取仓库名示例：
-# https://gitcode.com/sophia1213/ge_en_test.git → ge
-# https://gitcode.com/cann/pypto.git → pypto
-# https://gitcode.com/user/custom_repo.git → custom_repo
-```
+   # 提取仓库名示例：
+   # https://gitcode.com/sophia1213/ge_en_test.git → ge
+   # https://gitcode.com/cann/pypto.git → pypto
+   # https://gitcode.com/user/custom_repo.git → custom_repo
+   ```
 
-1. **匹配逻辑**
+3. **匹配逻辑**
    - 在配置文件的 mapping 数组中查找 repoName 字段
    - 如果 repoName 与本地仓库名匹配：
      - 检查文档路径是否在 excludeDocsPaths 列表中
@@ -719,44 +761,44 @@ git remote -v
      - 不在排除路径：需要翻译
    - 如果 repoName 不匹配：需要翻译（该仓库的所有文档）
 
-**配置文件格式：**
+   **配置文件格式：**
 
-```json
-{
-    "mapping": [
-        {
-            "repoName": "ge",
-            "publicRepo": "https://gitcode.com/cann/ge",
-            "excludeDocsPaths": ["docs/dflow_api", "docs/graph_engine_api", "docs/llm_datadist_api"]
-        },
-        {
-            "repoName": "pypto",
-            "publicRepo": "https://gitcode.com/cann/pypto",
-            "excludeDocsPaths": ["docs"]
-        }
-    ]
-}
-```
+   ```json
+   {
+       "mapping": [
+          {
+               "repoName": "ge",
+               "publicRepo": "https://gitcode.com/cann/ge",
+               "excludeDocsPaths": ["docs/dflow_api", "docs/graph_engine_api", "docs/llm_datadist_api"]
+         },
+         {
+               "repoName": "pypto",
+             "publicRepo": "https://gitcode.com/cann/pypto",
+               "excludeDocsPaths": ["docs"]
+          }
+      ]
+   }
+   ```
 
-**匹配示例：**
+   **匹配示例：**
 
-| 本地仓库名 | 配置repoName | excludeDocsPaths | docs文档路径 | 是否跳过 |
-|-----------|-------------|-----------------|------------|---------|
-| ge | ge | `["docs/dflow_api"]` | `docs/dflow_api/cpp/AddInvokedClosure.md` | 跳过 |
-| ge | ge | `["docs/dflow_api"]` | `docs/architecture/architecture.md` | 翻译 |
-| pypto | pypto | `["docs"]` | `docs/any/path.md` | 跳过（整个docs排除） |
-| custom | 不匹配 | - | `docs/any.md` | 翻译 |
+   | 本地仓库名 | 配置repoName | excludeDocsPaths | docs文档路径 | 是否跳过 |
+   |-----------|-------------|-----------------|------------|---------|
+   | ge | ge | `["docs/dflow_api"]` | `docs/dflow_api/cpp/AddInvokedClosure.md` | 跳过 |
+   | ge | ge | `["docs/dflow_api"]` | `docs/architecture/architecture.md` | 翻译 |
+   | pypto | pypto | `["docs"]` | `docs/any/path.md` | 跳过（整个docs排除） |
+   | custom | 不匹配 | - | `docs/any.md` | 翻译 |
 
-**代码实现示例：**
+   **代码实现示例：**
 
-```bash
-# 从远程地址提取仓库名
-remote_url=$(git remote get-url origin)
-repo_name=$(basename "$remote_url" .git)
+   ```bash
+   # 从远程地址提取仓库名
+   remote_url=$(git remote get-url origin)
+   repo_name=$(basename "$remote_url" .git)
 
-# 检查是否在排除列表
-# 需要解析JSON配置并匹配repoName
-```
+   # 检查是否在排除列表
+   # 需要解析JSON配置并匹配repoName
+   ```
 
 ### Q4: 如何检查是否存在翻译文件
 
@@ -767,17 +809,13 @@ repo_name=$(basename "$remote_url" .git)
    → 否：检查同级目录下的<原文件名>_en.md文件
    → 是：继续检查
 
-2. docs目录下是否存在zh文件夹？
-   → 不存在：检查同级目录下的<原文件名>_en.md文件
-   → 存在：继续检查
+2. 文档路径中是否包含/zh/（即文档是否位于docs内某个zh文件夹下）？
+   → 不在zh文件夹下：检查同级目录下的<原文件名>_en.md文件
+   → 在zh文件夹下：继续检查
 
-3. 文档是否在zh文件夹下？
-   → 否：检查同级目录下的<原文件名>_en.md文件
-   → 是：继续检查
-
-4. 文档是否在排除列表中？
+3. 文档是否在排除列表中？
    → 是：跳过，不检查翻译文件
-   → 否：检查docs/en/目录下对应路径（文件名与原文一致）
+   → 否：检查该zh同级en/目录下对应路径（文件名与原文一致）
 ```
 
 **检查命令示例：**
@@ -791,24 +829,29 @@ ls examples/README_en.md
 ls npu_ops/guide_en.md
 ```
 
-**情况B：docs目录存在zh文件夹，zh文件夹下的文档（非排除列表）**
+**情况B：docs内zh文件夹下的文档（非排除列表），zh可出现在任意层级**
 
 ```bash
-# 检查docs/en/目录下对应路径（文件名与原文一致）
+# 检查对应en目录下对应路径（文件名与原文一致）
+# zh在docs根层级
 ls docs/en/api/README.md
 ls docs/en/api/quantize.md
 ls docs/en/guide/install.md
+# zh在docs子目录层级
+ls docs/design/en/modules/feature.md
+ls docs/design/modules/en/sub/overview.md
 ```
 
-**情况C：docs目录存在zh文件夹，zh文件夹以外的文档（非排除列表）**
+**情况C：docs内不在任何zh文件夹下的文档（非排除列表）**
 
 ```bash
 # 检查同级目录下是否存在_en.md文件
 ls docs/README_en.md
 ls docs/build_en.md
+ls docs/design/overview_en.md
 ```
 
-**情况D：docs目录不存在zh文件夹（非排除列表）**
+**情况D：docs目录内不存在任何zh文件夹（非排除列表）**
 
 ```bash
 # 检查同级目录下是否存在_en.md文件
@@ -823,11 +866,11 @@ ls docs/guide/install_en.md
 # 非docs目录：检查同级目录
 ls <文件所在目录>/<文件名（不含扩展名）>_en.md
 
-# docs目录存在zh文件夹：
-# - zh下的文档（非排除列表）：检查docs/en/<zh后的路径>/<原文件名>
-# - zh以外的文档（非排除列表）：检查同级目录<原文件名>_en.md
+# docs目录内文档位于某个zh文件夹下（zh可出现在任意层级）：
+# - zh下的文档（非排除列表）：检查<zh父路径>/en/<zh后的路径>/<原文件名>
+# - 不在zh内的文档（非排除列表）：检查同级目录<原文件名>_en.md
 
-# docs目录不存在zh文件夹（非排除列表）：
+# docs目录内不存在任何zh文件夹（非排除列表）：
 # - 检查同级目录<原文件名>_en.md
 ```
 
@@ -900,47 +943,47 @@ git diff HEAD~1 -- README.md
 
 1. **查看所有变更的md文档**
 
-```bash
-# 查看所有变更文件
-git status
+   ```bash
+   # 查看所有变更文件
+   git status
 
-# 查看变更的md文档（包括中文原文和英文翻译）
-git status -- "*.md"
-```
+   # 查看变更的md文档（包括中文原文和英文翻译）
+   git status -- "*.md"
+   ```
 
-1. **添加变更文件到暂存区**
+2. **添加变更文件到暂存区**
 
-```bash
-# 方式1：添加所有md文档变更
-git add "*.md"
+   ```bash
+   # 方式1：添加所有md文档变更
+   git add "*.md"
 
-# 方式2：添加特定文件
-git add README.md README_en.md
-git add docs/api/quantize.md docs/en/api/quantize_en.md
-```
+   # 方式2：添加特定文件
+   git add README.md README_en.md
+   git add docs/api/quantize.md docs/en/api/quantize_en.md
+   ```
 
-1. **创建提交记录**
+3. **创建提交记录**
 
-```bash
-# 创建提交（推荐提交信息格式）
-git commit -m "docs: add/update English translation for markdown files"
+   ```bash
+   # 创建提交（推荐提交信息格式）
+   git commit -m "docs: add/update English translation for markdown files"
 
-# 或更详细的提交信息
-git commit -m "docs: translate README.md to README_en.md
+   # 或更详细的提交信息
+   git commit -m "docs: translate README.md to README_en.md
 
-- Add README_en.md (English translation)
-- Update docs/api/quantize.md and docs/en/api/quantize_en.md"
-```
+   - Add README_en.md (English translation)
+   - Update docs/api/quantize.md and docs/en/api/quantize_en.md"
+   ```
 
-1. **推送到远程仓库**
+4. **推送到远程仓库**
 
-```bash
-# 推送到远程仓库
-git push origin <branch_name>
+   ```bash
+   # 推送到远程仓库
+   git push origin <branch_name>
 
-# 如果是新分支，使用 -u 参数
-git push -u origin <branch_name>
-```
+   # 如果是新分支，使用 -u 参数
+   git push -u origin <branch_name>
+   ```
 
 **完整提交示例：**
 
