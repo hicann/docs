@@ -1,0 +1,45 @@
+﻿# 收集内存OOM问题信息
+
+支持用户手动收集、工具自动收集两种方式。
+
+- 用户手动收集：收集Host、Device日志和文件，**仅收集最小集信息**。
+- 工具自动收集：在Host服务上，使用[asys](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_functions_and_restrictions.md)工具**收集所有故障相关信息**，包括安装版本信息、Device健康状态信息、dump文件、算子编译信息、全量日志文件等。
+
+    **注意**：asys工具使用场景有限，集群、容器、虚拟机、云场景不支持asys工具一键式收集故障信息。
+
+## 用户手动收集方法
+
+**收集应用类日志、Device侧系统类日志和其他维测信息，详细步骤如下**：
+
+1. 在Host服务器规划一个存放日志的目录，例如$\{HOME\}/err\_log\_info/。
+2. 应用类日志的默认路径为Host服务器的$\{HOME\}/ascend/log目录。将日志文件移动至err\_log\_info目录下:
+
+    ```bash
+    mv ${HOME}/ascend/log ${HOME}/err_log_info/ 
+    ```
+
+3. 使用msnpureport工具将Device侧系统类日志和其他维测信息导出到Host侧，包括slog日志、syslog日志、黑匣子等。
+
+    ```bash
+    # 在${HOME}/err_log_info目录下创建一个存放日志和文件的目录
+    cd ${HOME}/err_log_info
+    mkdir report
+    
+    # 在report目录下执行msnpureport命令
+    cd report
+    msnpureport -f
+    ```
+
+关于日志级别、日志路径以及日志文件的详细介绍请参见[《日志参考》](https://hiascend.com/document/redirect/CannCommunitylogref)。
+
+## 工具自动收集方法
+
+asys工具的使用约束请参见[asys工具功能及约束](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_functions_and_restrictions.md)，在使用asys工具前需先安装、配置asys工具，请先参见[环境准备](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_environment_preparation.md)处的前提条件说明。
+
+asys工具命令示例如下，执行**asys collect**命令，**收集故障信息**：
+
+```bash
+asys collect --output="path"
+```
+
+output表示收集信息所存放的目录，详细参数说明及约束请参见[故障信息收集](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/fault_information_collection.md)。

@@ -36,6 +36,7 @@ docs/
 ### API参考
 
 - [Ascend C API](https://gitcode.com/cann/asc-devkit/blob/master/docs/zh/api/README.md)
+- [Runtime运行时 API](https://gitcode.com/cann/runtime/blob/master/docs/zh/api_ref/README.md)
 - [PyPTO API](https://gitcode.com/cann/pypto/blob/master/docs/zh/api/index_hiascend.md)
 - [HCCL集合通信库](https://gitcode.com/cann/hccl/blob/master/docs/zh/user_guide/README.md)
 - [算子库](docs/ops-lib/zh/0_README.md)
@@ -47,6 +48,7 @@ docs/
 
 ### 参考
 
+- [故障处理](docs/troubleshooting/zh/00_troubleshooting.md)
 - [日志参考](https://gitcode.com/cann/runtime/blob/master/docs/log_ref/README.md)
 
 ### 其他
