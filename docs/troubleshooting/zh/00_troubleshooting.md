@@ -53,7 +53,7 @@
 
 - [故障定位工具](troubleshooting_tools.md)
   - [asys工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/README.md)
-  - [msaicerr工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/tree/master/docs/zh/msaicerr) 
+  - [msaicerr工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/msaicerr/README.md)
 
 - [常用定位操作](common_diagnostic_operations.md)
   - [通过Device日志获取故障ID并排查RAS硬件故障](device_log_ras_hardware_fault.md)
