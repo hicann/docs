@@ -1,8 +1,8 @@
-# CANN\_KNOWLEDGE\_BANK\_PROCESS\_NUM
+# CANN_KNOWLEDGE_BANK_PROCESS_NUM
 
 ## 功能描述
 
-CANN\_KNOWLEDGE\_BANK\_PROCESS\_NUM用于设置知识库管理模块查询知识库的进程数。
+CANN_KNOWLEDGE_BANK_PROCESS_NUM用于设置知识库管理模块查询知识库的进程数。
 
 取值范围\[0, 8\]。默认值8（即在算子编译阶段，默认会启动8个进程查询知识库）。
 
@@ -10,7 +10,7 @@ CANN\_KNOWLEDGE\_BANK\_PROCESS\_NUM用于设置知识库管理模块查询知识
 
 启动的进程数越少，消耗的host内存越少，编译越慢。
 
-当CANN\_KNOWLEDGE\_BANK\_PROCESS\_NUM=0时，表示不启动知识库管理模块，不查询知识库。
+当CANN_KNOWLEDGE_BANK_PROCESS_NUM=0时，表示不启动知识库管理模块，不查询知识库。
 
 ## 配置示例
 
