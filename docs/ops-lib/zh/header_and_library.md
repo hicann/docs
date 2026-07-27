@@ -21,7 +21,7 @@
 - 调用torch\_extension API时，需导入如下模块，其中cann\_ops\_transformer定义在`${INSTALL_DIR}/python/site-packages/cann_ops_transformer`目录。
 
     ```python
-    import torch 
+    import torch
     import torch_npu
     import cann_ops_transformer
     ```
@@ -38,7 +38,7 @@
 |----------|--------|-----------|--------------|--------------|
 |  [公共接口](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/00_aclnn_api_list.md)   |调用aclnn API依赖的公共Meta接口，如创建aclTensor、aclScalar、aclIntArray等。|以acl为前缀，要求大驼峰风格。|<li>aclnn/acl_meta.h</li><li>aclnn/aclnn_base.h</li>|libnnopbase.so|
 |  [算子接口（aclnn）](op_interface_aclnn.md)  | 提供一套C API实现CANN算子调用，包括Math、NN、CV、Transformer等类算子。 | 以aclnn为前缀，一般分为两段式接口，其中“Xxx”表示算子名（要求大驼峰风格）。<li>一阶段：aclnnXxxGetWorkspaceSize</li><li>二阶段：aclnnXxx</li>|<li>每类API依赖的头文件（推荐）：aclnnop/aclnn_ops_math.h、aclnnop/aclnn_ops_nn.h、aclnnop/aclnn_ops_cv.h、aclnnop/aclnn_ops_transformer.h</li><li>每个API依赖的头文件：aclnnop/aclnn_*.h（*表示具体算子名）</li>  | <li>aclnn API依赖的总库文件：libopapi.so（废弃）</li><li>每类API依赖的库文件：libopapi_math.so、libopapi_nn.so、libopapi_cv.so、libopapi_transformer.so</li> |
-|   [算子接口（torch_extension）](op_interface_torch_extension.md)  | 针对非PyTorch原生但常见的大模型算子，提供一套兼容PyTorch风格的API实现CANN算子调用。 | 以\$\{op\_name\}为接口名，要求小写和下划线形式，调用样式cann\_ops\_transformer.\$\{op\_name\}，一般定义在`${INSTALL_DIR}/python/site-packages/cann_ops_transformer`目录. | - | - |
+|   [算子接口（torch_extension）](https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_torch_api.md)  | 针对非PyTorch原生但常见的大模型算子，提供一套兼容PyTorch风格的API实现CANN算子调用。 | 以\$\{op\_name\}为接口名，要求小写和下划线形式，调用样式cann\_ops\_transformer.\$\{op\_name\}，一般定义在`${INSTALL_DIR}/python/site-packages/cann_ops_transformer`目录. | - | - |
 |   [Ascend IR算子规格](ascendIR_op_specification.md)  | 提供GE图场景下会用到的CANN算子规格信息，包括功能、数据类型、format等。 | IR命名是大驼峰风格：XxxYyyZzz，例如AsinGrad。 | <li>ops_proto_math.h</li><li>ops_proto_nn.h</li><li>ops_proto_cv.h</li><li>ops_proto_transformer.h</li><li>ops_proto_legacy.h</li> |  <li>libopgraph_math.so</li><li>libopgraph_nn.so</li><li>libopgraph_cv.so</li><li>libopgraph_transformer.so</li><li>libopgraph_legacy.so</li> |
 |   [附录>nnopbase接口>框架能力接口](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/opbase_frame_interface.md)   | 提供开发aclnn API依赖的公共框架能力接口。 | 大驼峰风格 | aclnn/opdev/*.h，具体文件名参见[nnopbase接口列表](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/01-aclnn_development_interface_list.md)。 | - |
 |   [附录>nnopbase接口>基础张量操作接口](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/L0/basic_l0_Interface.md)  | 提供开发aclnn API依赖的Level0接口。 | 大驼峰风格 | aclnn_kernels/*.h，具体文件名参见[nnopbase接口列表](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/01-aclnn_development_interface_list.md)。 | libopapi_math.so |

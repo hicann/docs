@@ -16,21 +16,13 @@
 
 2. 编译静态Kernel包。
 
-    在任意目录下，以运行用户（如HwHiAiUser）身份执行如下命令，进行算子编译：
+    在任意目录下，以运行用户（如HwHiAiUser）身份执行如下静态编译命令：
 
-    - **（默认）静态编译**命令样例：
+    ```bash
+    op_compiler --op_params_dir=<dump_dir>  --soc_version=<soc_version> --log=info --job=8 --output=<output_dir>
+    ```
 
-        ```bash
-        op_compiler --op_params_dir=<dump_dir>  --soc_version=<soc_version> --log=info --job=8 --output=<output_dir>
-        ```
-
-    - **调优编译**命令样例：
-
-        ```bash
-        op_compiler --op_params_dir=<dump_dir>  --soc_version=<soc_version> --log=info --job=8 --compile_mode=tune --output=<output_dir>
-        ```
-
-    关键参数释义如下，全量的参数说明可参考[《算子编译工具》](https://hiascend.com/document/redirect/CannCommunityopcompiler)中“**参数说明**”章节，请根据实际情况设置。
+    关键参数释义如下，全量参数详细介绍请参考[《算子编译工具》](https://hiascend.com/document/redirect/CannCommunityopcompiler)中“**参数说明**”章节，请根据实际情况设置。
 
     - --op\_params\_dir：简写为-p，必选，Dump工具导出的统计数据所在的文件夹路径，支持绝对和相对路径。
     - --soc\_version：简写为-v，执行算子编译功能时必选，指定算子编译时AI处理器的型号。
@@ -39,7 +31,6 @@
 
     - --log：简写为-l，可选，设置算子编译过程中日志的级别。可设置为debug/info/warning/error/null级别，默认为null。
     - --job：简写为-j，可选，设置编译时工作进程数。最小取值为1，默认为16。
-    - --compile\_mode：简写为-m，可选，取值支持配置为tune，代表开启调优模式，执行调优编译流程。不使用该参数的情况下，执行默认编译流程。
     - --output：简写为-o，可选，编译输出的安装包路径+名称，如xxx/xxx/xxx.run，支持相对路径和绝对路径。不输入路径的情况下，在当前路径下生成；不输入安装包名称的情况下，安装包默认命名为“static\_kernel\_$\{datetime\}\_$\{pid\}.run”。
 
     当出现类似如下回显信息代表编译成功。
@@ -56,7 +47,7 @@
     >   op_compiler -p <dump_dir> --count
     >   ```
     >
-    >   只有动态shape才能dump出算子统计信息，安装静态Kernel包后，静态Kernel包对应算子的统计信息就不会dump出来。所以在安>   装静态Kernel包后，如果网络有调整，可以通过调整前后dump的json文件的数量来判断静态Kernel包和当前网络是否匹配。
+    >   只有动态shape才能dump出算子统计信息，安装静态Kernel包后，静态Kernel包对应算子的统计信息就不会dump出来。所以在安装静态Kernel包后，如果网络有调整，可以通过调整前后dump的json文件的数量来判断静态Kernel包和当前网络是否匹配。
     >   通过调整网络前后，各执行一次dump操作，并通过`--count`命令来统计dump生成的json文件的数目，如果调整后的数目比调整前
     >   大，则说明静态Kernel包中有部分算子不再匹配当前网络，此时开发者可以：
     >
@@ -88,7 +79,7 @@
     ```text
     |-- ${install_path}/opp/static_kernel
         |-- ai_core
-            |-- config                                
+            |-- config
                |-- ascendxxxx
                    |-- binary_info_config.json             # 全量静态Kernel包的总索引
             |-- config.ini                                 # 记录安装顺序的配置文件。
@@ -96,7 +87,7 @@
                |-- ascendxxxx
                |   |-- Add                                 # 算子二进制目录
                |      |-- static_kernel_Add_float16_NCL_xxxx_d0.json
-               |      |-- static_kernel_Add_float16_NCL_xxxx_d1.json 
+               |      |-- static_kernel_Add_float16_NCL_xxxx_d1.json
                |      |-- static_kernel_Add_float16_NCL_xxxx_d0.o
                |      |-- static_kernel_Add_float16_NCL_xxxx_d1.o
                |   |-- xxxx
@@ -105,10 +96,10 @@
                |   |-- ......
                |-- config                              # 单个静态Kernel包索引
                |   |-- ascendxxxx
-               |       |-- binary_info_config.json     
-               |-- scripts                             # 工具涉及的通用脚本                          
-               |   |-- ......                         
-               |-- uninstall.sh                        # 单包卸载脚本  
+               |       |-- binary_info_config.json
+               |-- scripts                             # 工具涉及的通用脚本
+               |   |-- ......
+               |-- uninstall.sh                        # 单包卸载脚本
             |-- static_kernel_xxxx                     # 不同时间戳的静态Kernel文件
             |-- uninstall.sh                           # 全量卸载脚本
             |-- version.info                           # 版本信息

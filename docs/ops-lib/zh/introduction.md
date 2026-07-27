@@ -21,7 +21,7 @@
 
 **图 1**  算子库架构图 <a id="fig1"></a>
 
-![fig1](figures/算子库架构图.png "算子库架构图")
+![fig1](figures/ops_lib_architecture.png "算子库架构图")
 
 如需调用算子库中的算子，CANN提供了多种调用方式，请根据实际情况选择。
 
@@ -36,7 +36,7 @@
 <!-- npu="950,A3,910b,910,310p,310b" id4 -->
 **图 2**  aclnn API调用流程 <a id="fig2"></a>
 
-![fig2](figures/aclnn-API调用流程.png "aclnn-API调用流程")
+![fig2](figures/aclnn_call_flowchart.png "aclnn调用流程")
 <!-- end id4 -->
 
 ## 使用说明
@@ -76,34 +76,34 @@
   </tr>
   <tr>
       <td>2.算子库<b>基础领域知识</b></td>
-    <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md">基本概念</a></td>
+    <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/basic_concept.md">基本概念</a></td>
     <td>介绍算子的基本概念、术语及关键技术，帮助用户更好地理解算子文档。</td>
   </tr>
   <tr>
     <td>3.算子API调用时<b>依赖哪些公共接口</b></td>
-    <td><a href="https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/00_aclnn_api_list.md">公共接口</a></td>
+    <td><a href="https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/0_aclnn_meta_api.md">公共接口</a></td>
     <td>调用算子接口时依赖的公共Meta接口，如创建aclTensor、aclScalar、aclIntArray等。</td>
   </tr>
   <tr>
     <td rowspan="4">4.算子库中有哪些<b>aclnn API</b></td>
-    <td><a href="bookmap_aclnn_math.md">Math类接口</a></td>
+    <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/menu_aclnn_api.md">Math类接口</a></td>
     <td>数学计算类算子库，提供Add、Abs等算子API。</td>
   </tr>
   <tr>
-    <td><a href="bookmap_aclnn_nn.md">NN类接口</a></td>
+    <td><a href="https://gitcode.com/cann/ops-nn/blob/master/docs/zh/menu_aclnn_api.md">NN类接口</a></td>
     <td>Neural Network，即神经网络类算子库，提供Matmul等算子API。目前该类算子在整个算子库中占最大比重。</td>
   </tr>
   <tr>
-    <td><a href="bookmap_aclnn_cv.md">CV类接口</a></td>
+    <td><a href="https://gitcode.com/cann/ops-cv/blob/master/docs/zh/menu_aclnn_api.md">CV类接口</a></td>
     <td>Computer Vision，即计算机视觉类算子库，提供GridSample等算子API。</td>
   </tr>
   <tr>
-    <td><a href="bookmap_aclnn_trans.md">Transformer类接口</a></td>
+    <td><a href="https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_aclnn_api.md">Transformer类接口</a></td>
     <td>大模型计算类算子库，提供FlashAttention、MC2（通算融合）、MoE（Mixture of Experts）等算子API。</td>
   </tr>
   <tr>
     <td>5.算子库有哪些<b>Torch扩展接口</b></td>
-    <td><a href="op_interface_torch_extension.md">torch_extension接口</a></td>
+    <td><a href="https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_torch_api.md">torch_extension接口</a></td>
     <td>针对非PyTorch原生但常见的大模型算子，提供PyTorch API。通过JIT即时编译C++ Kernel Wrapper，将PyTorch函数桥接到aclnn API，同时通过GE Converter支持TorchAir图模式。</td>
   </tr>
   <tr>
@@ -143,29 +143,29 @@
   </tr>
   <tr>
       <td>2.算子库<b>基础领域知识</b></td>
-    <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md">基本概念</a></td>
+    <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/basic_concept.md">基本概念</a></td>
     <td>介绍算子的基本概念、术语及关键技术，帮助用户更好地理解算子文档。</td>
   </tr>
   <tr>
     <td>3.算子API调用时<b>依赖哪些公共接口</b><br>（当前版本不支持）</td>
-    <td><a href="https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/00_aclnn_api_list.md">公共接口</a></td>
+    <td><a href="https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/0_aclnn_meta_api.md">公共接口</a></td>
     <td>调用算子接口时依赖的公共Meta接口，如创建aclTensor、aclScalar、aclIntArray等。</td>
   </tr>
   <tr>
     <td rowspan="4">4.算子库中有哪些<b>aclnn API</b><br>（当前版本不支持）</td>
-    <td><a href="bookmap_aclnn_math.md">Math类接口</a></td>
+    <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/menu_aclnn_api.md">Math类接口</a></td>
     <td>数学计算类算子库，提供Add、Abs等算子API。</td>
   </tr>
   <tr>
-    <td><a href="bookmap_aclnn_nn.md">NN类接口</a></td>
+    <td><a href="https://gitcode.com/cann/ops-nn/blob/master/docs/zh/menu_aclnn_api.md">NN类接口</a></td>
     <td>Neural Network，即神经网络类算子库，提供Matmul等算子API。目前该类算子在整个算子库中占最大比重。</td>
   </tr>
   <tr>
-    <td><a href="bookmap_aclnn_cv.md">CV类接口</a></td>
+    <td><a href="https://gitcode.com/cann/ops-cv/blob/master/docs/zh/menu_aclnn_api.md">CV类接口</a></td>
     <td>Computer Vision，即计算机视觉类算子库，提供GridSample等算子API。</td>
   </tr>
   <tr>
-    <td><a href="bookmap_aclnn_trans.md">Transformer类接口</a></td>
+    <td><a href="https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_aclnn_api.md">Transformer类接口</a></td>
     <td>大模型计算类算子库，提供FlashAttention、MC2（通算融合）、MoE（Mixture of Experts）等算子API。</td>
   </tr>
   <tr>

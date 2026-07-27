@@ -19,45 +19,25 @@
 
 **使用约束**
 
-目前仅支持静态编译和调优编译模式。
-
-- （默认）静态编译模式支持的产品型号：
-  <!-- npu="310p" id1 -->
-  - <term>Atlas 推理系列产品</term>
-  <!-- end id1 -->
-  <!-- npu="910" id2 -->
-  - <term>Atlas 训练系列产品</term>
-  <!-- end id2 -->
-  <!-- npu="910b" id3 -->
-  - <term>Atlas A2 训练系列产品/Atlas A2 推理系列产品</term>
-  <!-- end id3 -->
-  <!-- npu="950" id4 -->
-  - <term>Ascend 950PR/Ascend 950DT</term>
-  <!-- end id4 -->
-
-- 调优模式相关的使用约束如下：
-  - 产品型号支持度：
-    <!-- npu="310p" id5 -->
-    - <term>Atlas 推理系列产品</term>：不支持
-    <!-- end id5 -->
-    <!-- npu="910" id6 -->
-    - <term>Atlas 训练系列产品</term>：不支持
-    <!-- end id6 -->
-    <!-- npu="910b" id7 -->
-    - <term>Atlas A2 训练系列产品/Atlas A2 推理系列产品</term>：支持
-    <!-- end id7 -->
-    <!-- npu="950" id8 -->
-    - <term>Ascend 950PR/Ascend 950DT</term>：不支持
-    <!-- end id8 -->
-
-  - 不支持不同用户同时使用同一device进行调优。
-  - 调优前，请确保关闭Profiling功能，避免影响调优结果。关闭Profiling功能具体操作请参见[《性能调优工具》](https://hiascend.com/document/redirect/CannCommunityToolProfiling)。
+静态编译模式支持的产品型号：
+<!-- npu="310p" id1 -->
+- <term>Atlas 推理系列产品</term>
+<!-- end id1 -->
+<!-- npu="910" id2 -->
+- <term>Atlas 训练系列产品</term>
+<!-- end id2 -->
+<!-- npu="910b" id3 -->
+- <term>Atlas A2 训练系列产品/Atlas A2 推理系列产品</term>
+<!-- end id3 -->
+<!-- npu="950" id4 -->
+- <term>Ascend 950PR/Ascend 950DT</term>
+<!-- end id4 -->
 
 ## 整体流程
 
 **图 1**  使用静态Kernel提升性能的原理图
 
-![fig1](../figures/使用静态Kernel提升性能的原理图.png "使用静态Kernel提升性能的原理图")
+![fig1](../figures/staticKernel_flowchart.png "使用静态Kernel提升性能的原理图")
 
 通过编译静态Kernel提升网络模型中算子执行性能的基本流程如上图所示，整个调优步骤如下：
 
@@ -73,14 +53,6 @@
     通过**算子编译工具**对Dump的算子信息统计文件（\*.json）进行编译并生成Kernel包。
 
     > **说明：** 算子编译工具（op\_compiler）是CANN提供的用于进行算子编译生成算子二进制文件的命令行工具。当算子shape固定或者变化较少时，可使用该工具编译静态kernel包并安装，提升算子调用的性能。关于该工具的详细介绍，请参考[《算子编译工具》](https://hiascend.com/document/redirect/CannCommunityopcompiler)。
-
-    1. 选择编译模式。
-
-        算子编译工具默认是**静态编译**模式。如果想要进一步提升算子性能，可尝试进行算子调优，即开启“tune”**调优编译**模式。
-
-    2. 打包静态Kernel包。
-
-        算子编译工具将编译生成的Kernel文件打包成run包。
 
 3. 安装静态Kernel包。
 
