@@ -28,7 +28,7 @@ docs/
 ### 编程指南
 
 - [Ascend C算子开发](https://gitcode.com/cann/asc-devkit/blob/master/docs/zh/guide/index.md)
-- [PyPTO算子开发](https://gitcode.com/cann/pypto/blob/master/docs/zh/tutorials/index_hiascend.md)
+- [PyPTO算子开发](https://gitcode.com/cann/pypto/blob/9.2.0-beta.1/docs/zh/tutorials/index_hiascend.md)
 - [通信算子开发](https://gitcode.com/cann/hcomm/blob/master/docs/zh/comm_op_dev_guide/README.md)
 - [应用开发](docs/app-dev/zh/00_acl_cpp_dev.md)
 - [图开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/graph_dev/README.md)
@@ -37,7 +37,7 @@ docs/
 
 - [Ascend C API](https://gitcode.com/cann/asc-devkit/blob/master/docs/zh/api/README.md)
 - [Runtime运行时 API](https://gitcode.com/cann/runtime/blob/master/docs/zh/api_ref/README.md)
-- [PyPTO API](https://gitcode.com/cann/pypto/blob/master/docs/zh/api/index_hiascend.md)
+- [PyPTO API](https://gitcode.com/cann/pypto/blob/9.2.0-beta.1/docs/zh/api/index_hiascend.md)
 - [HCCL集合通信库](https://gitcode.com/cann/hccl/blob/master/docs/zh/user_guide/README.md)
 - [算子库](docs/ops-lib/zh/0_README.md)
 
@@ -45,6 +45,10 @@ docs/
 
 - [ATC离线模型编译工具](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/atc_tools/README.md)
 - [性能调优工具](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/profiling/README.md)
+
+ ### 编译器
+
+- [PTO虚拟指令集](https://gitcode.com/cann/pto-isa/blob/9.2.0-beta.1/docs/menu_ops_development.md)
 
 ### 参考
 
