@@ -18,7 +18,9 @@
   <!-- end id2 -->
 <!-- end id5 -->
 - [GE图引擎<a name="sub_menu"></a>](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/env_vars/README.md)
+<!-- npu="950,A3,910b" id8 -->
 - [PyPTO](./pypto_env.md)
+<!-- end id8 -->
 <!-- npu="950,A3,910b,910,310p" id1 -->
 - [集合通信](./hccl_env.md)
 <!-- end id1 -->

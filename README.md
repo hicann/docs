@@ -17,7 +17,8 @@ docs/
 ├── docs/                       # 文档
 │   ├── app-dev                 # 应用开发
 │   ├── env-vars                # 环境变量参考
-│   └── ops-lib                 # 算子库公共
+│   ├── ops-lib                 # 算子库公共
+│   └── troubleshooting         # 故障处理
 └── README.md                   # 本文件
 ```
 
@@ -45,6 +46,10 @@ docs/
 
 - [ATC离线模型编译工具](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/atc_tools/README.md)
 - [性能调优工具](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/profiling/README.md)
+
+### 编译器
+
+- [PTO虚拟指令集](https://gitcode.com/cann/pto-isa/blob/master/docs/menu_ops_development.md)
 
 ### 参考
 
