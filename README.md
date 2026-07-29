@@ -54,7 +54,8 @@ docs/
 ### 参考
 
 - [故障处理](docs/troubleshooting/zh/00_troubleshooting.md)
-- [日志参考](https://gitcode.com/cann/runtime/blob/master/docs/log_ref/README.md)
+- [日志参考](https://gitcode.com/cann/runtime/blob/master/docs/zh/log_ref/README.md)
+- [环境变量参考](https://gitcode.com/cann/docs/blob/master/docs/env-vars/zh/README.md)
 
 ### 其他
 
