@@ -7,18 +7,15 @@
 - 路径支持大小写字母（a-z，A-Z）、数字（0-9）、下划线（_）、中划线（-）、句点（.）、中文字符。
 - 需要确保指定的路径存在且有效，执行用户具有读、写、执行权限。
 
-`${ASCEND_CACHE_PATH}`路径下的文件包括：
+**${ASCEND_CACHE_PATH}路径下的文件包括：**
 
-  <!-- npu="A3,910b,910,310p,310b" id2 -->
-- `${ASCEND_CACHE_PATH}/aoe_data`：AOE调优知识库文件，支持多机共享。
+- **${ASCEND_CACHE_PATH}/aoe_data**：AOE调优知识库文件，支持多机共享。
 
   优先级说明：
 
   TUNE_BANK_PATH> ASCEND_CACHE_PATH> 默认知识库路径
-  <!-- end id2 -->
-<!-- @ref: docs/res/env-vars/zh/ASCEND_CACHE_PATH_res.md#id1 -->
 
-- `${ASCEND_CACHE_PATH}/kernel_cache`：算子编译缓存文件，支持单机多卡共享。
+- **${ASCEND_CACHE_PATH}/kernel_cache**：算子编译缓存文件，支持单机多卡共享。
 
   以下场景提供了设置算子编译缓存文件存储路径的参数或接口，其优先级高于ASCEND_CACHE_PATH环境变量，详细描述如下：
   - 使用ATC工具进行离线模型编译的场景参数
@@ -46,28 +43,4 @@ export ASCEND_CACHE_PATH=/repo/task001/cache
 
 ## 支持的型号
 
-<!-- npu="950" id3 -->
-Ascend 950PR/Ascend 950DT
-<!-- end id3 -->
-
-<!-- npu="A3" id4 -->
-Atlas A3 训练系列产品/Atlas A3 推理系列产品
-<!-- end id4 -->
-
-<!-- npu="910b" id5 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
-<!-- end id5 -->
-
-<!-- npu="910" id6 -->
-Atlas 训练系列产品
-<!-- end id6 -->
-
-<!-- npu="310p" id7 -->
-Atlas 推理系列产品
-<!-- end id7 -->
-
-<!-- npu="310b" id8 -->
-Atlas 200I/500 A2 推理产品
-<!-- end id8 -->
-
-<!-- @ref: docs/res/env-vars/zh/ASCEND_CACHE_PATH_res.md#id2 -->
+全量芯片支持

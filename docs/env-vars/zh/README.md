@@ -1,5 +1,6 @@
 # 环境变量参考
 
+- [简介](./intro.md)
 - [安装配置相关](./_dump_inst_config.md)
   - [安装后自动配置环境变量](./install.md)
   - [ASCEND_CACHE_PATH](./ASCEND_CACHE_PATH.md)
