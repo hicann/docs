@@ -18,8 +18,8 @@ GetResult times out. Reason: the configured timeout might be too short.
 
 1. 输入超时时间设置不当。
 2. 缓冲区已满。
-3. 发生内部错误。
 
 ## 解决方法
 
-需设置为合理的超时时间，尝试复跑业务，若还是同样的报错，您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
+1. 需设置为合理的超时时间，尝试复跑业务。
+2. 调用hi_mpi_vpc_get_result接口释放缓冲区。

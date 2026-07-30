@@ -104,7 +104,7 @@ void callback(acldvppStreamDesc *input, acldvppPicDesc *output, void *userdata)
         aclError ret = acldvppDestroyStreamDesc(input);
     }
 
-    INFO_LOG("success to callback %d.", count);
+    INFO_LOG("callback success %d.", count);
     count++;
 }
 
@@ -198,7 +198,7 @@ aclvdecDestroyChannelDesc(vdecChannelDesc);
 | AICPU_DVPP_KERNEL_STATE_QUEUE_FULL = 6 | 系统内部队列满。 | - |
 | AICPU_DVPP_KERNEL_STATE_QUEUE_EMPTY = 7 | 系统内部队列空。 | - |
 | AICPU_DVPP_KERNEL_STATE_QUEUE_NOT_EXIST = 8 | 系统内部队列不存在。 | - |
-| AICPU_DVPP_KERNEL_STATE_GET_CONTEX_FAILED = 9 | 获取系统内部上下文失败。 | - |
+| AICPU_DVPP_KERNEL_STATE_GET_CONTEXT_FAILED = 9 | 获取系统内部上下文失败。 | - |
 | AICPU_DVPP_KERNEL_STATE_SUBMIT_EVENT_FAILED = 10 | 提交系统内部事件失败。 | - |
 | AICPU_DVPP_KERNEL_STATE_MEMORY_FAILED = 11 | 系统内部申请内存失败。 | 请检查系统是否有可用内存。 |
 | AICPU_DVPP_KERNEL_STATE_SEND_NOTIFY_FAILED = 12 | 发送系统内部通知失败。 | - |

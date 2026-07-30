@@ -2,7 +2,7 @@
 
 ## 问题现象描述
 
-视频解码失败，Device日志提示-512返回码：\[dvpp\_ioct1\_vpc 845\] call proc failed:-512, engine\_id:1，如下所示。
+视频解码失败，Device日志提示-512返回码：\[dvpp\_ioctl\_vpc 845\] call proc failed:-512, engine\_id:1，如下所示。
 
 ```bash
 [ERROR] KERNEL(1200,sklogd):2019-11-29-21:42:07.421.714 [8078.067669] [dvpp] [dvpp_print_vpc_job 156] outctl out2_select:0

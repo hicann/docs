@@ -551,7 +551,7 @@ for (uint32_t index=0; index<2; ++index){
 
 // 8. 创建roiNums,每张图对应需要抠图和贴图的数量
 
-uint32_ttotalNum = 0;
+uint32_t totalNum = 0;
 std::unique_ptr<uint32_t[]> roiNums(new (std::nothrow) uint32_t[1]);
 roiNums[0]=2;
 // 11. 执行异步抠图贴图，再调用aclrtSynchronizeStream接口阻塞程序运行，直到指定Stream中的所有任务都完成

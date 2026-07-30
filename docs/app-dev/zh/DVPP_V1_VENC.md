@@ -83,7 +83,7 @@ void callback(acldvppPicDesc *input, acldvppStreamDesc *outputStreamDesc, void *
     if (!Utils::WriteToFile(g_outFileFp, outputDev, streamDescSize)) {
         ERROR_LOG("write file:%s failed.", g_outFile.c_str());
     }
-    INFO_LOG("success to callback, stream size:%u", streamDescSize);
+    INFO_LOG("callback success, stream size:%u", streamDescSize);
 }
 
 // 3. 创建视频编码处理通道时的通道描述信息，设置通道描述信息的属性，其中线程、callback回调函数需要用户提前创建

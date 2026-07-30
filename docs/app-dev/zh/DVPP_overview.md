@@ -28,7 +28,7 @@ Atlas 200I/500 A2 推理产品上还支持以下功能：
 | 获取视频数据 | VI（Video Input） | VI模块捕获视频图像，可对其做裁剪、颜色优化、亮度优化、噪声去除等处理，并输出YUV或RAW格式的图像数据。 |
 | 展示视频数据 | VO（Video Output） | VO模块接收VPSS处理后的输出图像，可进行播放控制等处理，最后按用户配置的输出协议（当前仅支持HDMI）输出给外围视频设备。<br>VO可配合TDE（Two Dimensional Engine）模块、HIFB（Hisilicon Framebuffer）模块，利用硬件分别进行图形绘制、叠加图形层管理。 |
 | 展示视频数据 | HDMI（High Definition Multimedia Interface） | HDMI是全数字化影像和声音发送接口，可以发送未压缩的音频及视频信号。 |
-| 展示视频数据 | TDE（Two Dimensional Engine） | TDE是图形二维加速引擎，它利用硬件为OSD（On Screen Display）和GUI（Graphics User Interface）提供快速的图形绘制功能，主要有快速拷贝、快速色彩填充、模式填充（当前仅支持Alpha Blending操作）。 |
+| 展示视频数据 | TDE（Two Dimensional Engine） | TDE是图形二维加速引擎，它利用硬件为OSD（On Screen Display）和GUI（Graphical User Interface）提供快速的图形绘制功能，主要有快速拷贝、快速色彩填充、模式填充（当前仅支持Alpha Blending操作）。 |
 | 展示视频数据 | HIFB（Hisilicon Framebuffer） | HIFB用于管理叠加图形层，它不仅提供Linux Framebuffer的基本功能，还在Linux Framebuffer的基础上增加图层显示起始位置修改、层间Alpha等扩展功能。 |
 | 区域管理 | Region | 叠加在视频上的OSD (On Screen Display)和遮挡在视频上的色块统称为区域。区域管理模块，用于统一管理这些区域资源，用于在视频上显示一些特定信息（如通道号、时间戳等）、或在视频中填充色块用于遮挡，当前该功能需配合VPSS一起使用。 |
 | 图像/视频数据处理 | VPSS（Video Process Sub-System） | VPSS模块支持对输入图像进行统一预处理，如去噪、去隔行、裁剪等，然后再对各通道分别进行处理，如缩放、加边框等。 |

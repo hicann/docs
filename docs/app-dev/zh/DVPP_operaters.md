@@ -168,7 +168,7 @@ int32_t encode_jpeg(aclrtStream stream) {
 
 int32_t Init(int32_t deviceId, aclrtContext* context, aclrtStream* stream)
 {
-    // 涉及Profiling功能需要调用aclint接口初始化，如果不需要Profiling功能则直接调用acldvppInit接口即可
+    // 涉及Profiling功能需要调用aclInit接口初始化，如果不需要Profiling功能则直接调用acldvppInit接口即可
     initFunc = acldvppInit;
     finalizeFunc = acldvppFinalize;
 

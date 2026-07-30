@@ -210,7 +210,7 @@ NVR视频解码智能分析业务资源释放接口调用流程说明如下：
 
 ## TDE图形绘制功能
 
-TDE是图形二维加速引擎，它利用硬件为OSD（On Screen Display）和GUI（Graphics User Interface）提供快速的图形绘制功能，主要有快速拷贝、快速色彩填充、模式填充（当前仅支持Alpha Blending操作）。
+TDE是图形二维加速引擎，它利用硬件为OSD（On Screen Display）和GUI（Graphical User Interface）提供快速的图形绘制功能，主要有快速拷贝、快速色彩填充、模式填充（当前仅支持Alpha Blending操作）。
 
 **图 5** **TDE接口调用流程**  
 ![](figures/TDE接口调用流程.png "TDE接口调用流程")
