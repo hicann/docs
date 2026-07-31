@@ -49,4 +49,5 @@ Atlas 200I/500 A2 推理产品
 <!-- npu="IPV350" id7 -->
 IPV350
 <!-- end id7 -->
+
 <!-- @ref: runtime/res/docs/05_env-vars/ASCEND_DUMP_PATH_res.md#id1 -->
