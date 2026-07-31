@@ -9,7 +9,7 @@
 
 **${ASCEND_WORK_PATH}路径下的文件包括：**
 
-- **${ASCEND_WORK_PATH}/aoe_data/**：记录AOE调优过程中的相关信息，包括调优任务名称、调优耗时、调优前后的模型执行时间/算子执行时间、知识库命中信息等。
+- **`${ASCEND_WORK_PATH}/aoe_data/`**：记录AOE调优过程中的相关信息，包括调优任务名称、调优耗时、调优前后的模型执行时间/算子执行时间、知识库命中信息等。
 
   优先级说明：
 
@@ -18,20 +18,20 @@
   AOE默认调优工作目录为：\${install_path}/latest/tools/aoe/conf/aoe.ini中“WORK_PATH”参数的取值。
 
   <!-- npu="950,A3,910b,910,310p,310b" id2 -->
-- **${ASCEND_WORK_PATH}/log/**：日志文件。
+- **`${ASCEND_WORK_PATH}/log/`**：日志文件。
 
   优先级说明：
 
   ASCEND_PROCESS_LOG_PATH > ASCEND_WORK_PATH > 日志默认存储路径（$HOME/ascend/log）
   <!-- end id2 -->
 
-- **${ASCEND_WORK_PATH}/atrace/**：trace日志文件。
+- **`${ASCEND_WORK_PATH}/atrace/`**：trace日志文件。
 
   优先级说明：
 
   ASCEND_WORK_PATH > trace日志默认存储路径（\$HOME/ascend/atrace）
 
-- **${ASCEND_WORK_PATH}/profiling_data/**：Profiling工具收集到的性能数据的存放路径。
+- **`${ASCEND_WORK_PATH}/profiling_data/`**：Profiling工具收集到的性能数据的存放路径。
 
   优先级说明：
 
@@ -60,7 +60,7 @@
   若配置tensorboard_trace_handler函数后未指定具体路径，可以通过环境变量ASCEND_WORK_PATH设置，此时落盘的性能数据会自动解析；若代码中未使用on_trace_ready=torch_npu.profiler.tensorboard_trace_handler函数，那么通过环境变量ASCEND_WORK_PATH设置并落盘的性能数据为原始数据。
   <!-- end id4 -->
 
-- **${ASCEND_WORK_PATH}/kernel_meta/**：算子编译生成的调试相关的过程文件，包括但不限于算子.o（算子二进制文件）、.json（算子描述文件）、.cce等文件。
+- **`${ASCEND_WORK_PATH}/kernel_meta/`**：算子编译生成的调试相关的过程文件，包括但不限于算子.o（算子二进制文件）、.json（算子描述文件）、.cce等文件。
 
   以下场景提供了设置算子编译生成的调试过程文件存储路径的参数或接口，其优先级高于ASCEND_WORK_PATH环境变量，详细描述如下：
   
@@ -82,19 +82,19 @@
     TF Adapter配置参数“debug_dir” > ASCEND_WORK_PATH  > 默认路径（./当前执行路径）。
     <!-- end id5 -->
 
-- **\$\{ASCEND_WORK_PATH}/\$\{pid}_${device_id}**：开启DUMP图描述信息打印的场景下（即配置环境变量DUMP_GE_GRAPH的场景），会落盘相应的DUMP图文件。
+- **`${ASCEND_WORK_PATH}/${pid}_${device_id}`**：开启DUMP图描述信息打印的场景下（即配置环境变量DUMP_GE_GRAPH的场景），会落盘相应的DUMP图文件。
 
   优先级说明：
   
   环境变量“DUMP_GRAPH_PATH” > ASCEND_WORK_PATH > 默认路径（./当前执行路径）
 
-- **${ASCEND_WORK_PATH}/extra-info/data-dump/**：exception dump文件、异常算子编译信息。
+- **`${ASCEND_WORK_PATH}/extra-info/data-dump/`**：exception dump文件、异常算子编译信息。
   
   优先级说明：
 
   环境变量“NPU_COLLECT_PATH” > ASCEND_WORK_PATH > 默认存储路径（当前执行路径）。
 
-- **\$\{ASCEND_WORK_PATH}/tmp_weight_${pid}_${session_id}**：开启权重外置的场景下，此目录下存储Const、Constant节点的权重文件。
+- **`${ASCEND_WORK_PATH}/tmp_weight_${pid}_${session_id}`**：开启权重外置的场景下，此目录下存储Const、Constant节点的权重文件。
 
   不同场景下开启权重外置的方法不同，具体可参考对应场景的用户指南或开发指南。
   
@@ -102,13 +102,13 @@
 
    ASCEND_WORK_PATH > 默认路径（./当前执行路径）
 
-- **\$\{ASCEND_WORK_PATH}/FE/${pid}/fusion_result.json**：除去“fusion_switch.cfg”文件中已关闭的融合规则后，仍然在使用的融合规则。
+- **`${ASCEND_WORK_PATH}/FE/${pid}/fusion_result.json`**：除去“fusion_switch.cfg”文件中已关闭的融合规则后，仍然在使用的融合规则。
 
   优先级说明：
 
   ASCEND_WORK_PATH > 默认路径（./当前执行路径）
 
-- **${ASCEND_WORK_PATH}/check_result.json**：模型预检结果文件。
+- **`${ASCEND_WORK_PATH}/check_result.json`**：模型预检结果文件。
 
   使用ATC工具进行离线模型编译时，当atc命令中的--mode=0且模型解析失败时，或者--mode=3仅做模型预检时，通过该环境变量可指定预检结果文件的保存路径。
 
@@ -116,7 +116,7 @@
 
   参数“--check_report”> ASCEND_WORK_PATH > 默认路径（./当前执行路径）
 
-- **${ASCEND_WORK_PATH}/printf/**：算子Kernel数据Dump的数据文件。
+- **`${ASCEND_WORK_PATH}/printf/`**：算子Kernel数据Dump的数据文件。
 
   优先级说明：
 

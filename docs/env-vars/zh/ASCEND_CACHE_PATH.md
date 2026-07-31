@@ -9,13 +9,13 @@
 
 **${ASCEND_CACHE_PATH}路径下的文件包括：**
 
-- **${ASCEND_CACHE_PATH}/aoe_data**：AOE调优知识库文件，支持多机共享。
+- **`${ASCEND_CACHE_PATH}/aoe_data`**：AOE调优知识库文件，支持多机共享。
 
   优先级说明：
 
   TUNE_BANK_PATH> ASCEND_CACHE_PATH> 默认知识库路径
 
-- **${ASCEND_CACHE_PATH}/kernel_cache**：算子编译缓存文件，支持单机多卡共享。
+- **`${ASCEND_CACHE_PATH}/kernel_cache`**：算子编译缓存文件，支持单机多卡共享。
 
   以下场景提供了设置算子编译缓存文件存储路径的参数或接口，其优先级高于ASCEND_CACHE_PATH环境变量，详细描述如下：
   - 使用ATC工具进行离线模型编译的场景参数
