@@ -1,4 +1,4 @@
-﻿# Camera处理图片问题
+# Camera处理图片问题
 
 - **[Camera找不到设备](camera_device_not_found.md)**  
 

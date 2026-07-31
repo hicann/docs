@@ -1,4 +1,4 @@
-﻿# Camera一直丢帧，无图片dump出来
+# Camera一直丢帧，无图片dump出来
 
 ## 适用场景
 

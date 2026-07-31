@@ -1,4 +1,4 @@
-﻿# AI Core Error问题定位思路
+# AI Core Error问题定位思路
 
 您可以按如下步骤定位问题，若无法解决问题，再联系技术支持。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
 

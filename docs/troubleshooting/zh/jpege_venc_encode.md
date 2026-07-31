@@ -1,1 +1,1 @@
-﻿# JPEGE图片编码/VENC视频编码
+# JPEGE图片编码/VENC视频编码

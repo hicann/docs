@@ -1,4 +1,4 @@
-﻿# 使用msaicerr工具分析AI Core Error问题
+# 使用msaicerr工具分析AI Core Error问题
 
 msaicerr工具的功能及约束请参见[msaicerr工具功能及约束](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/msaicerr/msaicerr_functions_and_restrictions.md)，环境准备请参见[msaicerr工具环境准备](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/msaicerr/msaicerr_environment_preparation.md)。
 

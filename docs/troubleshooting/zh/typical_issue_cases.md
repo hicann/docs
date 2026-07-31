@@ -1,4 +1,4 @@
-﻿# 典型问题案例
+# 典型问题案例
 
 - **[HBM比特ECC故障](hbm_bit_ecc_fault.md)**  
 

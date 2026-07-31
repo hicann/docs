@@ -1,4 +1,4 @@
-﻿# DVPP处理图片/视频问题
+# DVPP处理图片/视频问题
 
 - **[DVPP驱动引擎异常返回码](dvpp_driver_engine_error_code.md)**  
 

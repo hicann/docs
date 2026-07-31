@@ -1,4 +1,4 @@
-﻿# 通过Device日志获取故障ID并排查RAS硬件故障
+# 通过Device日志获取故障ID并排查RAS硬件故障
 
 RAS硬件故障是指与硬件的可靠性（Reliability）、可用性（Availability）和可服务性（Serviceability）有关的故障。此处可通过日志中的“event\_id”的值（即RAS硬件故障码），在对应版本的故障码手册中查找解决方法。
 

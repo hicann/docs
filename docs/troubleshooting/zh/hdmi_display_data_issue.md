@@ -1,4 +1,4 @@
-﻿# HDMI显示数据问题
+# HDMI显示数据问题
 
 - **[HDMI OPEN失败](hdmi_open_failed.md)**  
 

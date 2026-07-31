@@ -1,4 +1,4 @@
-﻿# 调用SetDevice接口错误导致无可用Context
+# 调用SetDevice接口错误导致无可用Context
 
 ## 问题现象
 

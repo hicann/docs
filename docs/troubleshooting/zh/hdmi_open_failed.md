@@ -1,4 +1,4 @@
-﻿# HDMI OPEN失败
+# HDMI OPEN失败
 
 ## 适用场景
 

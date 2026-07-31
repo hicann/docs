@@ -1,4 +1,4 @@
-﻿# 常用定位操作
+# 常用定位操作
 
 - **[通过Device日志获取故障ID并排查RAS硬件故障](device_log_ras_hardware_fault.md)**  
 

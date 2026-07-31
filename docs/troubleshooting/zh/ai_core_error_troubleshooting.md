@@ -1,4 +1,4 @@
-﻿# AI Core Error问题定位专题
+# AI Core Error问题定位专题
 
 - **[AI Core Error问题现象描述](ai_core_error_description.md)**  
 

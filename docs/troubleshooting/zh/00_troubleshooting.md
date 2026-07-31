@@ -1,4 +1,4 @@
-﻿# 故障处理
+# 故障处理
 
 - [故障处理简介](troubleshooting_intro.md)
 - [典型故障专题](typical_troubleshooting_cases.md)

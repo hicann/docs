@@ -1,4 +1,4 @@
-﻿# 典型故障专题
+# 典型故障专题
 
 - **[AI Core Error问题定位专题](ai_core_error_troubleshooting.md)**  
 

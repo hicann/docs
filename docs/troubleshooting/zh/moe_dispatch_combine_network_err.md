@@ -1,4 +1,4 @@
-﻿# 网络问题导致Moe Dispatch/Combine算子执行报错
+# 网络问题导致Moe Dispatch/Combine算子执行报错
 
 ## 问题现象
 

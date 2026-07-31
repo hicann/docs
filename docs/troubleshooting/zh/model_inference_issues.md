@@ -1,4 +1,4 @@
-﻿# 模型推理问题
+# 模型推理问题
 
 - **[使用dump功能未获取dump结果](dump_result_not_obtained.md)**  
 

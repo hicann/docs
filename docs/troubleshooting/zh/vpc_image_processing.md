@@ -1,4 +1,4 @@
-﻿# VPC图片处理
+# VPC图片处理
 
 - **[调用错误的内存申请接口，导致内存地址校验出错](wrong_memory_api_error.md)**  
 

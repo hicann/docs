@@ -1,4 +1,4 @@
-﻿# 手动收集算子编译信息（算子.o和.json文件）
+# 手动收集算子编译信息（算子.o和.json文件）
 
 **先从CANN软件安装路径下查找算子.json和.o文件**，CANN软件默认安装路径为/usr/local/Ascend/cann，**如果找不到，再从缓存目录下查找**，默认为$\{HOME\}/atc\_data目录，如果配置了ASCEND\_CACHE\_PATH环境变量，则从该环境变量配置的路径下查找。关于环境变量的详细说明及约束，请参见[《环境变量参考》](https://hiascend.com/document/redirect/CannCommunityEnvRef)。
 

@@ -1,4 +1,4 @@
-﻿# rtMemcpyAsync异步参数校验报错
+# rtMemcpyAsync异步参数校验报错
 
 ## 问题现象
 

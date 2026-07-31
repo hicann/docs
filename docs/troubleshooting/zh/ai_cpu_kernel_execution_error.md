@@ -1,4 +1,4 @@
-﻿# AI CPU算子Kernel执行报错
+# AI CPU算子Kernel执行报错
 
 ## 问题现象
 

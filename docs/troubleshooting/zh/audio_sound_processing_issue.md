@@ -1,4 +1,4 @@
-﻿# Audio处理声音问题
+# Audio处理声音问题
 
 - **[无法正常播音](audio_playback_failed.md)**  
 

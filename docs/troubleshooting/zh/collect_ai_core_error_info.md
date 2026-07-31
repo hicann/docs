@@ -1,4 +1,4 @@
-﻿# 收集AI Core Error问题信息
+# 收集AI Core Error问题信息
 
 ## 收集信息类别介绍
 

@@ -1,4 +1,4 @@
-﻿# 参考信息
+# 参考信息
 
 - **[使用msnpureport工具收集更多AI Core Error信息](use_msnpureport_ai_core_err.md)**  
 
