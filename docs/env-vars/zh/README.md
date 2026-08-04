@@ -34,6 +34,7 @@
   - [PROFILING_MODE](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/env-vars/PROFILING_MODE.md)
   - [PROFILING_OPTIONS](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/env-vars/PROFILING_OPTIONS.md)
 <!-- end id7 -->
+<!-- npu="950,A3,910b,910,310p,310b" id9 -->
 - [日志](./_dump_log.md)
   - [ASCEND_PROCESS_LOG_PATH](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_PROCESS_LOG_PATH.md)
   - [ASCEND_SLOG_PRINT_TO_STDOUT](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_SLOG_PRINT_TO_STDOUT.md)
@@ -45,6 +46,8 @@
   - [ASCEND_COREDUMP_SIGNAL](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_COREDUMP_SIGNAL.md)
   - [ASCEND_LOG_SYNC_SAVE](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_LOG_SYNC_SAVE.md)
   - [ASCEND_TRACE_RECORD_NUM](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_TRACE_RECORD_NUM.md)
+<!-- end id9 -->
+<!-- @ref: docs/res/docs/env-vars/zh/README_res.md#id1 -->
 - [故障信息收集](./_dump_fault_collect.md)
   - [NPU_COLLECT_PATH](./NPU_COLLECT_PATH.md)
   - [ASCEND_DUMP_SCENE](./ASCEND_DUMP_SCENE.md)
