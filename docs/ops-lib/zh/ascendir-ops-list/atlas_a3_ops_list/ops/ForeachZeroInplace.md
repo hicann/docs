@@ -1,0 +1,27 @@
+# ForeachZeroInplace
+
+```c
+REG_OP(ForeachZeroInplace)
+    .DYNAMIC_INPUT(x, TensorType({DT_FLOAT, DT_FLOAT16, DT_INT32, DT_INT16, DT_BF16}))
+    .OP_END_FACTORY_REG(ForeachZeroInplace)
+```
+
+## Brief
+
+Apply zero operation for each tensor in a tensor list in manner of element-wise
+
+## Inputs
+
+One inputs:
+- x: A tensor list containing multiple tensors meanwhile, this value is also an output
+
+## Data Types
+
+Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x: bfloat16,float16,float32,int16,int32
+
+
+---
+
+[Back to Operator Specifications (Atlas A3 Series Product)](../README.md)

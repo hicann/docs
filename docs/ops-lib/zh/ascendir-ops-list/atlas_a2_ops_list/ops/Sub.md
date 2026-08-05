@@ -1,0 +1,51 @@
+# Sub
+
+```c
+REG_OP(Sub)
+    .INPUT(x1, TensorType({DT_FLOAT, DT_FLOAT16, DT_DOUBLE, DT_UINT8, DT_INT8,
+                           DT_UINT16, DT_INT16, DT_INT32, DT_INT64, DT_BOOL,
+                           DT_COMPLEX64, DT_COMPLEX128, DT_BF16, DT_COMPLEX32}))
+    .INPUT(x2, TensorType({DT_FLOAT, DT_FLOAT16, DT_DOUBLE, DT_UINT8, DT_INT8,
+                           DT_UINT16, DT_INT16, DT_INT32, DT_INT64, DT_BOOL,
+                           DT_COMPLEX64, DT_COMPLEX128, DT_BF16, DT_COMPLEX32}))
+    .OUTPUT(y, TensorType({DT_FLOAT, DT_FLOAT16, DT_DOUBLE, DT_UINT8, DT_INT8,
+                           DT_UINT16, DT_INT16, DT_INT32, DT_INT64, DT_BOOL,
+                           DT_COMPLEX64, DT_COMPLEX128, DT_BF16, DT_COMPLEX32}))
+    .OP_END_FACTORY_REG(Sub)
+```
+
+## Brief
+
+Returns x1 - x2 element-wise. Support broadcasting operations.
+
+## Inputs
+
+Two inputs, including:
+- x1: A ND Tensor. Must be one of the following types: int8, int16, int32, int64, uint8, float64,
+    float16, float32, complex128, complex64, complex32, uint16, bfloat16, bool.
+- x2: A ND Tensor of the same dtype as "x1".
+
+## Outputs
+
+y: A ND Tensor. Has the same dtype as "x1".
+
+## Data Types
+
+Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x1: bfloat16,bool,complex32,complex64,float16,float32,int8,int32,int64,uint8
+- input1 x2: bfloat16,bool,complex32,complex64,float16,float32,int8,int32,int64,uint8
+- output0 y: bfloat16,bool,complex32,complex64,float16,float32,int8,int32,int64,uint8
+### AI CPU
+- input0 x1: complex64,complex128,double,float16,float32,int8,int16,int32,int64,uint8,uint16
+- input1 x2: complex64,complex128,double,float16,float32,int8,int16,int32,int64,uint8,uint16
+- output0 y: complex64,complex128,double,float16,float32,int8,int16,int32,int64,uint8,uint16
+
+## Third-party framework compatibility
+
+Compatible with the TensorFlow operator Subtract.
+
+
+---
+
+[Back to Operator Specifications (Atlas A2 Series Product)](../README.md)

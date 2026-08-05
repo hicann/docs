@@ -1,0 +1,83 @@
+# BNTrainingUpdateV3
+
+```c
+REG_OP(BNTrainingUpdateV3)
+    .INPUT(x, TensorType({DT_FLOAT16, DT_FLOAT, DT_BF16}))
+    .INPUT(sum, TensorType({DT_FLOAT}))
+    .INPUT(square_sum, TensorType({DT_FLOAT}))
+    .INPUT(scale, TensorType({DT_FLOAT}))
+    .INPUT(offset, TensorType({DT_FLOAT}))
+    .REQUIRED_ATTR(epsilon, Float)
+    .OUTPUT(y, TensorType({DT_FLOAT16, DT_FLOAT, DT_BF16}))
+    .OUTPUT(batch_mean, TensorType({DT_FLOAT}))
+    .OUTPUT(batch_variance, TensorType({DT_FLOAT}))
+    .OUTPUT(reserve_1, TensorType({DT_FLOAT}))
+    .OUTPUT(reserve_2, TensorType({DT_FLOAT}))
+    .OP_END_FACTORY_REG(BNTrainingUpdateV3)
+```
+
+## Brief
+
+Performs reduced batch normalization v3. For some scenes which
+don't contain assign moving average .
+
+## Inputs
+
+Five inputs, including:
+- x: A 4D tensor of type float16 or float32 or bfloat16, with format NHWC or NCHW. Empty tensors are not
+supported.
+Input tensor, that is, the original data that needs to be normalized.
+- sum: A 1D tensor of type float32, the shape is same as dim C of input "x", for the output of operator
+BNTrainingReduce.
+It represents the sum of the input tensor "x" on the C axis. Has the same format as "x".
+- square_sum: A 1D tensor of type float32, the shape is same as dim C of input "x", for the output of operator
+BNTrainingReduce.
+It represents the sum of squares of the input tensor "x" on the C axis. Has the same format as "x".
+- scale: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling factor. Has the
+same format as "x".
+- offset: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling offset. Has the
+same format as "x". 
+
+## Outputs
+
+- y: A 4D tensor of type float16 or float32 or bfloat16, for normalized "x". Empty tensors are not supported.
+Has the same dype, format and shape as "x".
+- batch_mean: A 1D tensor of type float32, for the mean of "x". shape must be C channel. Has the same format as
+"x".
+- batch_variance: A 1D tensor of type float32, for the variance of "x" . shape must be C channel. Has the same
+format as "x".
+- reserve_1: A 1D tensor of type float32, for the mean of batch "x".
+Has the same type, shape and format as input "sum".
+- reserve_2: A 1D tensor of type float32, for the variance of batch "x".
+Has the same type, shape and format as input "sum". 
+
+## Attributes
+
+epsilon: A required float32, specifying the small value added to variance
+to avoid dividing by zero. 
+
+## Data Types
+
+Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x: float16,float32
+- input1 sum: float32
+- input2 square_sum: float32
+- input3 scale: float32
+- input4 offset: float32
+- output0 y: float16,float32
+- output1 batch_mean: float32
+- output2 batch_variance: float32
+- output3 reserve_1: float32
+- output4 reserve_2: float32
+
+## Attention Constraints
+
+- This operator is used in conjunction with BNTrainingReduce.
+- For Atlas 200/300/500 Inference Product, the result accuracy fails to reach 1/1000 due to
+the square root instruction.
+
+
+---
+
+[Back to Operator Specifications (Atlas Inference Series Product)](../README.md)
