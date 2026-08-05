@@ -1,14 +1,11 @@
 # 算子库参考
 
-- [简介](introduction.md)
-- [头文件和库文件说明](header_and_library.md)
+- [简介](introduction_bak.md)
+- [头文件和库文件说明](header_and_library_bak.md)
 - [基本概念<a name="sub_menu"></a>](https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/basic_concept.md)
 <!-- npu="950,A3,910b,910,310p,310b" id1 -->
 - [公共接口<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/0_aclnn_meta_api.md)
 <!-- end id1 -->
-<!-- npu="IPV350" id2 -->
-- [公共接口（当前版本不支持）<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/0_aclnn_meta_api.md)
-<!-- end id2 -->
 <!-- npu="950,A3,910b,910,310p,310b" id3 -->
 - [算子接口（aclnn）](op_interface_aclnn.md)
   - [Math类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-math/blob/master/docs/zh/menu_aclnn_api.md)
@@ -16,13 +13,6 @@
   - [CV类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-cv/blob/master/docs/zh/menu_aclnn_api.md)
   - [Transformer类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_aclnn_api.md)
 <!-- end id3 -->
-<!-- npu="IPV350" id4 -->
-- [算子接口（aclnn）（当前版本不支持）](op_interface_aclnn.md)
-  - [Math类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-math/blob/master/docs/zh/menu_aclnn_api.md)
-  - [NN类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-nn/blob/master/docs/zh/menu_aclnn_api.md)
-  - [CV类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-cv/blob/master/docs/zh/menu_aclnn_api.md)
-  - [Transformer类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_aclnn_api.md)
-<!-- end id4 -->
 <!-- npu="950,A3,910b" id5 -->
 - [算子接口（torch\_extension）](op_interface_torch.md)
   - [NN类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-nn/blob/master/docs/zh/menu_torch_api.md)
@@ -35,15 +25,9 @@
   <!-- npu="950,A3,910b,910,310p,310b" id6 -->
   - [nnopbase接口<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/0_opdev_api_list.md)
   <!-- end id6 -->
-  <!-- npu="IPV350" id7 -->
-  - [nnopbase接口（当前版本不支持）<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/0_opdev_api_list.md)
-  <!-- end id7 -->
   <!-- npu="950,A3,910b,910,310p,310b" id9 -->
   - [op_common接口<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/op_common/0_op_common_list.md)
   <!-- end id9 -->
-  <!-- npu="IPV350" id10 -->
-  - [op_common接口（当前版本不支持）<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/op_common/0_op_common_list.md)
-  <!-- end id10 -->
   <!-- npu="950,910b,910,310p" id8 -->
   - [算子性能提升专题](appendix/performance_improve_series.md)
     - [使用静态Kernel提升算子执行性能](appendix/performance_improve_by_staticKernel.md)
