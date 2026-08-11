@@ -5,6 +5,7 @@
   - [安装后自动配置环境变量](./install.md)
   - [ASCEND_CACHE_PATH](./ASCEND_CACHE_PATH.md)
   - [ASCEND_WORK_PATH](./ASCEND_WORK_PATH.md)
+  - [ASCEND_CUSTOM_OPP_PATH](./ASCEND_CUSTOM_OPP_PATH.md)
   - [CANN_KNOWLEDGE_BANK_PROCESS_NUM](./CANN_KNOWLEDGE_BANK_PROCESS_NUM.md)
 <!-- npu="950,A3,910b,910,310p,310b" id5 -->
 - [资源配置](./_dump_resource_config.md)
