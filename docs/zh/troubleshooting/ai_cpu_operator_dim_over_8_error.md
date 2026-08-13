@@ -9,11 +9,11 @@ Ascend EP形态，应用程序运行日志默认在$HOME/ascend/log/\[run|debug\
 Ascend RC形态，应用程序运行日志默认在$HOME/ascend/log/\[run|debug\]/device-app-_pid_路径下，日志文件为device-app-_pid_\_\*.log。
 
 ```bash
-[ERROR] OP(1491846,main):2024-09-27-10:49:20.272.060 [aicpu_ext_info_handle.cpp:290][NNOP][UpdateShape][1491965] errno[561000] OpName:[aclnnGatherV2_0_GatherV2AiCPU] shape dim num should be less than 8, but got [9].
-[INFO] GE(1491846,main):2024-09-27-10:49:20.272.133 [error_manager.cc:411]1491965 ReportErrMessage:report error_message, error_code:EZ9999, work_stream_id:149186091965, error_mode:0.
-[ERROR] OP(1491846,main):2024-09-27-10:49:20.272.448 [aicpu_ext_info_handle.cpp:290][NNOP][UpdateShape][1491965] errno[561000] OpName:[aclnnGatherV2_0_GatherV2AiCPU] shape dim num should be less than 8, but got [9].
-[INFO] GE(1491846,main):2024-09-27-10:49:20.272.473 [error_manager.cc:411]1491965 ReportErrMessage:report error_message, error_code:EZ9999, work_stream_id:149186091965, error_mode:0.
-[ERROR] OP(1491846,main):2024-09-27-10:49:20.272.491 [aicpu_ext_info_handle.cpp:101][NNOP][AppendExtInfoShape][1491965] errno[561000] OpName:[aclnnGatherV2_0_GatherV2AiCPU] Assert ((UpdateShape(shape, &inputs[index])) == OK) failed
+[ERROR] OP(1491846,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [aicpu_ext_info_handle.cpp:290][NNOP][UpdateShape][1491965] errno[561000] OpName:[aclnnGatherV2_0_GatherV2AiCPU] shape dim num should be less than 8, but got [9].
+[INFO] GE(1491846,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_manager.cc:411]1491965 ReportErrMessage:report error_message, error_code:EZ9999, work_stream_id:149186091965, error_mode:0.
+[ERROR] OP(1491846,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [aicpu_ext_info_handle.cpp:290][NNOP][UpdateShape][1491965] errno[561000] OpName:[aclnnGatherV2_0_GatherV2AiCPU] shape dim num should be less than 8, but got [9].
+[INFO] GE(1491846,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_manager.cc:411]1491965 ReportErrMessage:report error_message, error_code:EZ9999, work_stream_id:149186091965, error_mode:0.
+[ERROR] OP(1491846,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [aicpu_ext_info_handle.cpp:101][NNOP][AppendExtInfoShape][1491965] errno[561000] OpName:[aclnnGatherV2_0_GatherV2AiCPU] Assert ((UpdateShape(shape, &inputs[index])) == OK) failed
 ```
 
 ## 可能原因

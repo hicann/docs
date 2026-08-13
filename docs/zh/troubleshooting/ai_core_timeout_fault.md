@@ -2,13 +2,10 @@
 
 ## 问题现象
 
-Host应用类日志（log/\[run|debug\]/plog/plog-_pid_\_\*.log）中存在如下报错：
+Host应用类日志（log/\[run|debug\]/plog/plog-_pid_\_\*.log）中存在如下报错。YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
 ```bash
-[ERROR] RUNTIME(3813,python3):2025-01-10-17:53:52.846.403 [device_error_proc.cc:1409] 3813 ProcessStarsCoreErrorInfo:[INIT][DEFAULT]report error module_type=5, module_name=EZ9999
-[ERROR] RUNTIME(3813,python3):2025-01-10-17:53:52.846.427 [device_error_proc.cc:1409] 3813 ProcessStarsCoreErrorInfo:[INIT][DEFAULT]The error from device(chipId:4, dield:0), serial number is 67, there is an aivector error exception, core id is 18, error code = 0, dump info: pc start: 0x124800000000, current: 0x12480000008c, vec error info: 0x5a1e95250c, mte error info: 0xf3ff16bb18, ifu error info: 0xcd34130e0080, ccu error info : 0x8405bf692593f308, cube error info: 0, biu error info: 0, aic error mask: 0x6500020bd00028c, para base: 0x12c1c001c00． 
-[ERROR] RUNTIME(3813,python3):2025-01-10-17:53:52.846.526 [device_error_proc.cc:1421] 3813 ProcessStarsCoreErrorInfo: report error module_type=5, module_name=EZ9999
-[ERROR] RUNTIME(3813,python3):2025-01-10-17:53:52.846.528 [device_error_proc.cc:1421] 3813 ProcessStarsCoreErrorInfo: The extend info: errcode:(0, 0, 0) errorStr: timeout or trap error. fixp_error0 info: 0xf16bb18, fixp_error1 info: 0xf3 fsmId:0, tslot:5, thread:0, ctxid:0, blk:11, subblk:0, subErrType:4.
+[ERROR] RUNTIME(2897353,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [device_error_core_proc.cc:1227]2897467 PrintCoreInfo:An error occurs on the device(chipId:0, dieId:0), the serial number is 7, the error is aivec error, core id is 9, error code = 0, dump info: pc start: 0x1240000000e4, current: 0x12400000013c, vec error info: 0x6211f34358, mte error info: 0x7e33ba0d8b, ifu error info: 0x2075ca373f800, ccu error info: 0x2447806309616cb7, cube error info: 0, biu error info: 0, aic error mask: 0x6500020bd00028c, para base: 0x12c100001000, aic cond: 0. The extend info: errcode:(0, 0, 0) errorStr: timeout or trap error. fixp_error0 info: 0x3ba0d8b, fixp_error1 info: 0x7e, fsmId:1, tslot:0, thread:0, ctxid:0, blk:0, sublk:0, subErrType:2. For details, see the troubleshooting document on the Ascend official website. Search for the keyword "AI Core Error".
 ```
 
 Device的event日志（slog/dev-os-_id_/run/event/event\_\*.log）中存在“**event\_id=0x80C98001**”或“**event\_id=0x80CB8001**”关键字。

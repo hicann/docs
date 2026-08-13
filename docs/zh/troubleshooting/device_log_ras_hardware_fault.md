@@ -31,6 +31,6 @@ RAS硬件故障是指与硬件的可靠性（Reliability）、可用性（Availa
 
     查询结果示例如下：
 
-    ![](figures/zh-cn_image_0000001937528841.png)
+    ![](figures/image_0000001937528841.png)
 
 3. 从第1步中收集的黑匣子日志中，在hisi\_logs/device-_id_/\*/bbox目录下找到发生问题附近时间、对应Device的黑匣子日志，检查日志中是否存在“Hardware Error”关键字，若不存在，则表示暂未识别到硬件故障；若存在，表示未知硬件问题，需联系技术支持进一步定位处理。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。

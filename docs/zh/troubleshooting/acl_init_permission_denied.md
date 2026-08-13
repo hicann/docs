@@ -7,15 +7,15 @@
 查看应用类日志，提示获取Device信息失败，最终导致初始化失败，日志片段示例如下：
 
 ```bash
-[ERROR] RUNTIME(89696,main):2023-03-07-17:13:27.994.635 [runtime.cc:1065]89696 CheckHaveDevice:[INIT][DEFAULT]Call halGetDeviceInfo failed: drvRet=4, module type=0, info type=1.
-[ERROR] ASCENDCL(89696,main):2023-03-07-17:13:27.994.723 [acl.cpp:164]89696 aclInit: [INIT][DEFAULT][Init][Version]init soc version failed, ret = 507008
-[ERROR] RUNTIME(89696,main):2023-03-07-17:13:27.994.774 [api_impl.cc:3490]89696 GetDevErrMsg:report error module_type=3, module_name=EE8888
-[ERROR] RUNTIME(89696,main):2023-03-07-17:13:27.994.798 [api_impl.cc:3490]89696 GetDevErrMsg:ctx is NULL!
-[ERROR] RUNTIME(89696,main):2023-03-07-17:13:27.994.827 [api_impl.cc:3546]89696 GetDevMsg:Failed to GetDeviceErrMsg, retCode=0x7070001.
-[ERROR] RUNTIME(89696,main):2023-03-07-17:13:27.994.849 [logger.cc:1348]89696 GetDevMsg:GetDeviceMsg failed, getMsgType=0.
-[ERROR] RUNTIME(89696,main):2023-03-07-17:13:27.994.888 [api_c.cc:3595]89696 rtGetDevMsg:ErrCode=107002, desc=[context pointer null], InnerCode=0x7070001
-[ERROR] RUNTIME(89696,main):2023-03-07-17:13:27.994.910 [error_message_manage.cc:49]89696 FuncErrorReason:report error module_type=3, module_name=EE8888
-[ERROR] RUNTIME(89696,main):2023-03-07-17:13:27.994.932 [error_message_manage.cc:49]89696 FuncErrorReason:rtGetDevMsg execute failed, reason=[context pointer null]
+[ERROR] RUNTIME(89696,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [runtime.cc:1065]89696 CheckHaveDevice:[INIT][DEFAULT]Call halGetDeviceInfo failed: drvRet=4, module type=0, info type=1.
+[ERROR] ASCENDCL(89696,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [acl.cpp:164]89696 aclInit: [INIT][DEFAULT][Init][Version]init soc version failed, ret = 507008
+[ERROR] RUNTIME(89696,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_impl.cc:3490]89696 GetDevErrMsg:report error module_type=3, module_name=EE8888
+[ERROR] RUNTIME(89696,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_impl.cc:3490]89696 GetDevErrMsg:ctx is NULL!
+[ERROR] RUNTIME(89696,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_impl.cc:3546]89696 GetDevMsg:Failed to GetDeviceErrMsg, retCode=0x7070001.
+[ERROR] RUNTIME(89696,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [logger.cc:1348]89696 GetDevMsg:GetDeviceMsg failed, getMsgType=0.
+[ERROR] RUNTIME(89696,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_c.cc:3595]89696 rtGetDevMsg:ErrCode=107002, desc=[context pointer null], InnerCode=0x7070001
+[ERROR] RUNTIME(89696,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_message_manage.cc:49]89696 FuncErrorReason:report error module_type=3, module_name=EE8888
+[ERROR] RUNTIME(89696,main):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_message_manage.cc:49]89696 FuncErrorReason:rtGetDevMsg execute failed, reason=[context pointer null]
 EL0003: The argument is invalid.
         Solution: Try again with a valid argument.
         TraceBack (most recent call last):
@@ -53,7 +53,7 @@ EL0003: The argument is invalid.
 
         正常查询返回信息类似如下：
 
-        ![](figures/zh-cn_image_0000001882036538.png)
+        ![](figures/image_0000001882036538.png)
 
 2. 其次，检查运行应用程序的用户权限是否正确。
 

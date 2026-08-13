@@ -9,7 +9,7 @@ VENC（Video Encoder）将YUV420SP格式的图片编码成H264/H265格式的视�
 ## 接口调用流程
 
 **图 1**  VENC视频编码功能调用流程  
-![](figures/VENC视频编码功能调用流程.png "VENC视频编码功能调用流程")
+![](figures/VENC_API_call_process_V2.png "VENC视频编码功能调用流程")
 
 当前系统支持H264/H265格式的视频码流，关键接口的说明如下：
 

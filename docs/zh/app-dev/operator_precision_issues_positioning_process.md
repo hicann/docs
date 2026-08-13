@@ -1,7 +1,7 @@
 # 问题定位流程
 
 **图 1**  定位流程  
-![](figures/定位流程.png "定位流程")
+![](figures/operator_precision_issues_positioning_process.png "定位流程")
 
 <a id="li1678610773511"></a>
 

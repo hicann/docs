@@ -31,10 +31,10 @@
     或
 
     ```bash
-    [ERROR] DVPP:2020-12-31-20:51:51.318.218 [VDEC][InitPic:6039][T3]  line 6039: frame gap(=48) > dpb size(=2)
-    [ERROR] DVPP:2020-12-31-20:51:51.318.266 [VDEC][H264_DecSlice:8238][T3]  init pic err, find next recover point or next valid sps, pps, or exit
-    [ERROR] DVPP:2020-12-31-20:51:51.318.336 [VDEC][H264_DecOneNal:10077][T3]  DecList error, ret=-1
-    [ERROR] DVPP:2020-12-31-20:51:51.318.392 [VDEC][ReceivePacket:10400][T3]  nal_release-err
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][InitPic:6039][T3]  line 6039: frame gap(=48) > dpb size(=2)
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][H264_DecSlice:8238][T3]  init pic err, find next recover point or next valid sps, pps, or exit
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][H264_DecOneNal:10077][T3]  DecList error, ret=-1
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][ReceivePacket:10400][T3]  nal_release-err
     ```
 
 - H264码流缺少P帧日志报错信息（3）
@@ -49,10 +49,10 @@
     或
 
     ```bash
-    [ERROR] DVPP:2020-12-31-20:30:22.188.008 [VDEC][InitListX:4513][T3]  for P slice size of list equal 0.
-    [ERROR] DVPP:2020-12-31-20:30:22.188.056 [VDEC][DecList:4832][T3] line: 4832 InitListX failed
-    [ERROR] DVPP:2020-12-31-20:30:22.188.128 [VDEC][H264_DecSlice:8260][T3] DecList error, ret=-1
-    [ERROR] DVPP:2020-12-31-20:30:22.188.199 [VDEC][H264_DecOneNal:10077][T3] Decoder Slice failed
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][InitListX:4513][T3]  for P slice size of list equal 0.
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][DecList:4832][T3] line: 4832 InitListX failed
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][H264_DecSlice:8260][T3] DecList error, ret=-1
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][H264_DecOneNal:10077][T3] Decoder Slice failed
     ```
 
 - H264码流缺少B帧日志报错信息（4）
@@ -66,9 +66,9 @@
     或
 
     ```bash
-    [ERROR] DVPP:2020-12-31-10:20:28.528.090 [VDEC][InitListX:4653][T3] for B slice size of two list all equal 0.
-    [ERROR] DVPP:2020-12-31-10:20:28.528.168 [VDEC][DecList:4830][T3] line: 4832 InitListX failed
-    [ERROR] DVPP:2020-12-31-10:20:28.528.266 [VDEC][H264_DecSlice:8257][T3] DecList error, ret=-1
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][InitListX:4653][T3] for B slice size of two list all equal 0.
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][DecList:4830][T3] line: 4832 InitListX failed
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][H264_DecSlice:8257][T3] DecList error, ret=-1
     ```
 
 - H265码流缺少IDR帧日志报错信息（5）
@@ -83,10 +83,10 @@
     或
 
     ```bash
-    [ERROR] DVPP:2020-12-31-10:30:22.130.500 [VDEC][HEVC_VpsSpsPpsCheck:8084][T10] pps with this pic_parameter_set_id = 0 haven't be decoded
-    [ERROR] DVPP:2020-12-31-10:30:22.130.598 [VDEC][HEVC_DecSliceSegmentHeader:2793][T10] HEVC_VpsSpsPpsCheck != HEVC_DEC_NORMAL
-    [ERROR] DVPP:2020-12-31-10:30:22.130.686 [VDEC][HEVC_InquireSliceProperty:10169][T10] HEVC_DecSliceSegmentHeader dec err
-    [ERROR] DVPP:2020-12-31-10:30:22.130.789 [VDEC][HEVCDEC_DecodePacket:753][T10] HEVC_InquireSliceProperty error.
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_VpsSpsPpsCheck:8084][T10] pps with this pic_parameter_set_id = 0 haven't be decoded
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_DecSliceSegmentHeader:2793][T10] HEVC_VpsSpsPpsCheck != HEVC_DEC_NORMAL
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_InquireSliceProperty:10169][T10] HEVC_DecSliceSegmentHeader dec err
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVCDEC_DecodePacket:753][T10] HEVC_InquireSliceProperty error.
     ```
 
 - H265码流缺少I帧或者P帧日志报错现象（6）
@@ -100,21 +100,21 @@
     或
 
     ```bash
-    [ERROR] DVPP:2020-12-31-11:22:28.800.158 [VDEC][HEVC_RefPicProcess:2480][T10] Ref frame(poc 15) lost.
-    [ERROR] DVPP:2020-12-31-11:22:28.800.236 [VDEC][HEVC_CreateLostPicture:6392][T10] DPB no suited fs for lost pic.
-    [ERROR] DVPP:2020-12-31-11:22:28.800.352 [VDEC][HEVC_RefPicProcess:2480][T10] Ref frame(poc 18) lost.
-    [ERROR] DVPP:2020-12-31-11:22:28.800.426 [VDEC][HEVC_CreateLostPicture:6392] [T10] DPB no suited fs for lost pic.
-    [ERROR] DVPP:2020-12-31-11:22:28.800.522 [VDEC][HEVC_RefPicProcess:2480] [T10] Ref frame(poc 18) lost.
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_RefPicProcess:2480][T10] Ref frame(poc 15) lost.
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_CreateLostPicture:6392][T10] DPB no suited fs for lost pic.
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_RefPicProcess:2480][T10] Ref frame(poc 18) lost.
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_CreateLostPicture:6392] [T10] DPB no suited fs for lost pic.
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_RefPicProcess:2480] [T10] Ref frame(poc 18) lost.
     ```
 
 - H265码流缺少I帧或者B帧日志报错信息（7）
 
     ```bash
-    [ERROR] DVPP:2020-12-31-11:56:35.038.109 [VDEC][HEVC_RefPicProcess:2480] [T56] Ref frame(poc 15) lost.
-    [ERROR] DVPP:2020-12-31-11:56:35.038.283 [VDEC][HEVC_CreateLostPicture:6392] [T56] Take poc(17) to create lost poc(15).
-    [ERROR] DVPP:2020-12-31-11:56:35.038.502 [VDEC][FSP_SetRef:934] [T56] check condition: pstLogicFs->IsDummyFs == 0 fail
-    [ERROR] DVPP:2020-12-31-11:56:35.038.801 [VDEC][FSP_SetRef:934] [T56] check condition: pstLogicFs->IsDummyFs == 0 fail
-    [ERROR] DVPP:2020-12-31-11:56:35.039.128 [VDEC][FSP_SetRef:934] [T56] check condition: pstLogicFs->IsDummyFs == 0 fail
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_RefPicProcess:2480] [T56] Ref frame(poc 15) lost.
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][HEVC_CreateLostPicture:6392] [T56] Take poc(17) to create lost poc(15).
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][FSP_SetRef:934] [T56] check condition: pstLogicFs->IsDummyFs == 0 fail
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][FSP_SetRef:934] [T56] check condition: pstLogicFs->IsDummyFs == 0 fail
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][FSP_SetRef:934] [T56] check condition: pstLogicFs->IsDummyFs == 0 fail
     ```
 
 ## 可能原因

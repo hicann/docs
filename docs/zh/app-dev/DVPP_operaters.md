@@ -16,7 +16,7 @@ aclnnStatus acldvppXxx(void *workspace, uint64_t workspaceSize, aclOpExecutor *e
 
 接口调用流程如下所示：
 
-![](figures/CJ220919103020546.png)
+![](figures/DVPP_operators_API_call_process.png)
 
 ## 示例代码
 

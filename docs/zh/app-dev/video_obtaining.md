@@ -18,7 +18,7 @@
 
 ## 总体接口调用流程
 
-![](figures/总体接口调用流程.png)
+![](figures/video_data_obtaining_overall_process.png)
 
 接口调用流程说明如下：
 
@@ -36,7 +36,7 @@
 
 ## 初始化MIPI/Sensor硬件对接信息
 
-![](figures/初始化MIPISENSOR硬件对接信息.png)
+![](figures/initializing_MIPI_SENSOR_hardware_interconnection_info.png)
 
 1. 使用HI\_MIPI\_SET\_HS\_MODE命令字设置模式。
 2. 使用HI\_MIPI\_ENABLE\_MIPI\_CLOCK命令字打开MIPI时钟。
@@ -54,11 +54,11 @@
 
 不同数据来源、不同数据格式、不同模式，初始化VI视频输入模块的流程不同。
 
-![](figures/初始化VI视频输入模块.png)
+![](figures/initializing_VI.png)
 
 1. 从Sensor传入数据，若要获取YUV格式的数据，则通过VI通道处理，线性模式。流程说明如下：
 
-    ![](figures/接口调用流程-1.png)
+    ![](figures/obtain_YUV_through_VI_linear_mode.png)
 
     1. 依次调用hi\_mpi\_vi\_set\_dev\_attr、hi\_mpi\_vi\_enable\_dev接口，配置VI设备的属性并启用VI设备。
     2. 调用hi\_mpi\_vi\_set\_dev\_bind\_pipe接口，完成设备和PIPE的绑定关系设置。
@@ -67,7 +67,7 @@
 
 2. 从Sensor传入数据，若要获取YUV格式的数据，则通过VI通道处理，WDR模式。流程说明如下：
 
-    ![](figures/接口调用流程-2.png)
+    ![](figures/obtain_YUV_through_VI_wdr_mode.png)
 
     相对于普通线性模式，WDR模式下，Sensor模组会通过长短曝光方式同时产生两帧图像数据，VI需要创建两个PIPE资源，并将两个PIPE绑定到同一个VI设备上，分别接收和处理对应的长短曝光帧图像，然后在主PIPE对应的通道中，输出长短曝光融合后的图像数据。所以，接口调用流程存在如下差异：
 
@@ -80,7 +80,7 @@
 
 3. 若要获取RAW格式的数据，则通过VI PIPE处理。流程说明如下：
 
-    ![](figures/接口调用流程-3.png)
+    ![](figures/obtain_RAW_through_VI.png)
 
     1. 调用hi\_mpi\_vi\_set\_dev\_attr、hi\_mpi\_vi\_enable\_dev接口，配置VI设备的属性并启用VI设备。
     2. 调用hi\_mpi\_vi\_set\_dev\_bind\_pipe接口，完成设备和PIPE的绑定关系设置。
@@ -99,7 +99,7 @@
 
 4. 由用户指定RAW图数据，VI PIPE灌入并处理，获取YUV图。流程说明如下：
 
-    ![](figures/接口调用流程-4.png)
+    ![](figures/user_specified_raw_image.png)
 
     用户回灌图片场景，图片的数据来源不再是外部的摄像头设备，但因为当前版本还不支持虚拟PIPE，只能通过物理PIPE进行灌图，所以即使数据不从Sensor输入，仍旧需要设置对应dev并调用hi\_mpi\_vi\_set\_dev\_bind\_pipe接口做dev和pipe的绑定。
 
@@ -117,7 +117,7 @@
 
 ## 初始化并运行ISP图像信号处理模块
 
-![](figures/初始化并运行ISP图像信号处理模块.png)
+![](figures/initializing_and_running_ISP.png)
 
 1. 调用hi\_mpi\_isp\_sensor\_reg\_callback接口注册Sensor驱动通用算法。
 2. （可选）调用hi\_mpi\_ae\_sensor\_reg\_callback接口、hi\_mpi\_awb\_sensor\_reg\_callback接口注册系统内置的Sensor驱动AE、AWB算法。
@@ -139,7 +139,7 @@
 
 - **获取YUV数据**
 
-    ![](figures/获取YUV数据.png)
+    ![](figures/obtain_YUV_data.png)
 
     VI图像处理完成后，可在对应的VI通道上获取已完成图像并进行相关处理，典型接口调用流程如下：
 
@@ -149,7 +149,7 @@
 
 - **获取RAW数据**
 
-    ![](figures/获取RAW数据.png)
+    ![](figures/obtain_RAW_data.png)
 
     VI图像处理完成后，可在对应的VI PIPE上获取已完成图像并进行相关处理，典型接口调用流程如下：
 
@@ -161,7 +161,7 @@
 
 ## 释放ISP图像信号处理模块资源
 
-![](figures/释放ISP图像信号处理模块资源.png)
+![](figures/release_ISP_resource.png)
 
 1. 调用hi\_mpi\_isp\_exit接口去初始化ISP firmware。
 2. 调用hi\_mpi\_ae\_unregister接口、hi\_mpi\_awb\_unregister接口去初始化2A算法。
@@ -172,7 +172,7 @@
 
 ## 释放VI视频输入模块资源
 
-![](figures/释放VI视频输入模块资源.png)
+![](figures/release_VI_resource.png)
 
 1. 调用hi\_mpi\_vi\_disable\_chn接口关闭VI通道。
 2. 依次调用hi\_mpi\_vi\_stop\_pipe、hi\_mpi\_vi\_destroy\_pipe接口停止并销毁VI PIPE。
@@ -182,7 +182,7 @@
 
 ## 退出MIPI/Sensor硬件
 
-![](figures/退出MIPI-SENSOR硬件.png)
+![](figures/exiting_MIPI_SENSOR_hardware.png)
 
 1. 使用HI\_MIPI\_RESET\_SENSOR命令字复位Sensor。
 2. 使用HI\_MIPI\_DISABLE\_SENSOR\_CLOCK命令字关闭Sensor所连接的时钟。

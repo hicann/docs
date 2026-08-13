@@ -25,13 +25,13 @@ Ringbuffer是上报error信息的一片共享内存，任务拉起时会进行cr
     grep -rn ringbuffer
     ```
 
-    日志片段举例如下：
+    日志片段举例如下，日志片段中的YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
     ```bash
-    device-0_20231201062601524.log:23102:[EVENT] TSCH(-1,null):2023-12-02-14:29:25.780.720 17641 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
-    device-0_20231201062601524.log:23103:[EVENT] TSCH(-1,null):2023-12-02-14:29:25.780.756 17642 (dieid:0,cpuid:0) ringbuffer.c:134 create_ringbuffer: pid=3299758, vf_id=0, buffer_len=10, runtime ver=2, offset=276096, ringbuffer_addr=0x1f7dc00000.
-    device-0_20231201062601524.log:23104:[EVENT] TSCH(-1,null):2023-12-02-14:29:25.780.774 17643 (dieid:0,cpuid:0) ringbuffer.c:163 create_ringbuffer: last_Id=21, vf_id=0, pid=3299758
-    device-0_20231204114303693.log:23503:[EVENT] TSCH(-1,null):2023-12-04-11:44:15.752.017 47266 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
+    device-0_******.log:23102:[EVENT] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 17641 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
+    device-0_******.log:23103:[EVENT] TSCH(-1,null):2YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 17642 (dieid:0,cpuid:0) ringbuffer.c:134 create_ringbuffer: pid=3299758, vf_id=0, buffer_len=10, runtime ver=2, offset=276096, ringbuffer_addr=0x1f7dc00000.
+    device-0_******.log:23104:[EVENT] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 17643 (dieid:0,cpuid:0) ringbuffer.c:163 create_ringbuffer: last_Id=21, vf_id=0, pid=3299758
+    device-0_******.log:23503:[EVENT] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 47266 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
     ```
 
     如上图所示：
@@ -57,13 +57,13 @@ Ringbuffer是上报error信息的一片共享内存，任务拉起时会进行cr
     grep -rn ringbuffer
     ```
 
-    日志举例如下：
+    日志举例如下，日志片段中的YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
     ```bash
-    device-0_20231201062601524.log:23102:[EVENT] TSCH(-1,null):2023-12-02-14:29:25.780.720 17641 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
-    device-0_20231201062601524.log:23103:[EVENT] TSCH(-1,null):2023-12-02-14:29:25.780.756 17642 (dieid:0,cpuid:0) ringbuffer.c:134 create_ringbuffer: pid=3299758, vf_id=0, buffer_len=10, runtime ver=2, offset=276096, ringbuffer_addr=0x1f7dc00000.
-    device-0_20231201062601524.log:23104:[EVENT] TSCH(-1,null):2023-12-02-14:29:25.780.774 17643 (dieid:0,cpuid:0) ringbuffer.c:163 create_ringbuffer: last_Id=21, vf_id=0, pid=3299758
-    device-0_20231204114303693.log:23503:[EVENT] TSCH(-1,null):2023-12-04-11:44:15.752.017 47266 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
+    device-0_******.log:23102:[EVENT] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 17641 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
+    device-0_******.log:23103:[EVENT] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 17642 (dieid:0,cpuid:0) ringbuffer.c:134 create_ringbuffer: pid=3299758, vf_id=0, buffer_len=10, runtime ver=2, offset=276096, ringbuffer_addr=0x1f7dc00000.
+    device-0_******.log:23104:[EVENT] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 17643 (dieid:0,cpuid:0) ringbuffer.c:163 create_ringbuffer: last_Id=21, vf_id=0, pid=3299758
+    device-0_******.log:23503:[EVENT] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 47266 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
     ```
 
     如上图所示：

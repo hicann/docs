@@ -3,7 +3,7 @@
 VPSS必须配合VI模块一起使用，本节介绍其接口调用流程及注意事项。
 
 **图 1**  VPSS调用流程  
-![](figures/VPSS调用流程.png "VPSS调用流程")
+![](figures/VPSS_API_call_process.png "VPSS调用流程")
 
 接口调用流程说明如下：
 

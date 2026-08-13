@@ -5,17 +5,17 @@
 **场景1：**模型执行报错，日志信息中包含以下关键信息：
 
 ```bash
-[INFO] GE(2284607, ir_build):2021-11-08-19:31:33.920.888 [task_context.cc:257]2284607 AllocateOutput: To allocate output for node: add2. index = 0, tensor desc = [TensorDescl DataType = 6 , Format = 2 · Shape = [50, ] 
-[ERROR] GE(2284607, ir_build):2021-11-08-19:31:33.920.900 [task_context.cc:257]2284607 AllocateOutput: ErrorNo: 50331649() [LOAD][LOAD][Check][Size] add2(Add) index[0] mem size out of range! Expected size: 128, but given input size: 2. 
+[INFO] GE(2284607, ir_build):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [task_context.cc:257]2284607 AllocateOutput: To allocate output for node: add2. index = 0, tensor desc = [TensorDescl DataType = 6 , Format = 2 · Shape = [50, ] 
+[ERROR] GE(2284607, ir_build):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [task_context.cc:257]2284607 AllocateOutput: ErrorNo: 50331649() [LOAD][LOAD][Check][Size] add2(Add) index[0] mem size out of range! Expected size: 128, but given input size: 2. 
 ```
 
 **场景2：**单算子场景执行报错，日志信息中包含以下关键信息：
 
 ```bash
-[INFO] GE(130191,python):2021-09-27-17:23:17.922.047 [single op.cc:161]131511 ValidateArgs:lnput [1], aligned_size:96, inputs.length:40, input_sizes_:96 
-[INFO] GE(130191,python):2021-09-27-17:23:17.922.054 [single op.cc:186]131511 ValidateArgs:Output [0], aligned_size:3145760, outputs.length:3145728, input_sizes_:18446744073709551615 
-[ERROR] GE(130191,python):2021-09-27-17:23:17,922.095 [single op.cc:161]131511 ValidateArgs: ErrorNo: 145000(Parameter invalid.) [FINALI][FlNALl][CheCkl][Param.Outputs]Output Size mismatch. index = 0, model expect  18446744073709551615, but given ....
-[ERROR] ASCENDCL(130191,python):2021-09-27-17:23:17,922.213 [op_executor.cpp:68]131511 DoExecteAsync:  [FINALI][FlNALl][Exec][Op]Execute op failed. ge result = 145000
+[INFO] GE(130191,python):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [single op.cc:161]131511 ValidateArgs:lnput [1], aligned_size:96, inputs.length:40, input_sizes_:96 
+[INFO] GE(130191,python):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [single op.cc:186]131511 ValidateArgs:Output [0], aligned_size:3145760, outputs.length:3145728, input_sizes_:18446744073709551615 
+[ERROR] GE(130191,python):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [single op.cc:161]131511 ValidateArgs: ErrorNo: 145000(Parameter invalid.) [FINALI][FlNALl][CheCkl][Param.Outputs]Output Size mismatch. index = 0, model expect  18446744073709551615, but given ....
+[ERROR] ASCENDCL(130191,python):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [op_executor.cpp:68]131511 DoExecteAsync:  [FINALI][FlNALl][Exec][Op]Execute op failed. ge result = 145000
 ```
 
 ## 可能原因

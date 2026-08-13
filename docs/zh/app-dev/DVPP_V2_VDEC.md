@@ -9,7 +9,7 @@ VDEC（Video Decoder）负责将H264/H265格式的视频码流解码为YUV/RGB�
 开发应用时，如果涉及视频解码，则应用程序中必须包含解码的代码逻辑。
 
 **图 1**  VDEC视频解码功能调用的流程  
-![](figures/VDEC视频解码功能调用的流程.png "VDEC视频解码功能调用的流程")
+![](figures/VDEC_API_call_process_V2.png "VDEC视频解码功能调用的流程")
 
 当前系统支持解码H264/H265的视频码流，关键接口的说明如下：
 

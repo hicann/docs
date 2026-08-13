@@ -48,7 +48,7 @@
     - 需设置动态Batch/动态分辨率/动态维度参数值：
 
         **图 1**  接口调用流程  
-        ![](figures/接口调用流程-11.png "接口调用流程-11")
+        ![](figures/dynamic_shape_API_call_process.png "接口调用流程")
 
         1. 调用aclmdlGetInputIndexByName接口根据输入名称（固定为ACL\_DYNAMIC\_TENSOR\_NAME）获取模型中标识该输入的index。
         2. 设置动态Batch/动态分辨率/动态维度参数值。

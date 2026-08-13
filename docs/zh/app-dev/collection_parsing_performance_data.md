@@ -51,12 +51,12 @@
     - json文件需要在Chrome浏览器中输入**chrome://tracing**，将文件拖到空白处进行打开，通过键盘上的快捷键（w：放大，s：缩小，a：左移，d：右移）。通过该文件可查看当前AI任务运行的时序信息，比如运行过程中接口调用时间线，如图1所示。
 
         **图 1**  查看json文件  
-        ![](figures/查看json文件.png "查看json文件")
+        ![](figures/view_json_file.png "查看json文件")
 
     - csv文件可直接打开查看。通过该文件可以看到AI任务运行时的软硬件数据，比如各算子在AI处理器软硬件上的运行耗时，通过字段排序等可以快速找出需要的信息，如图2所示。
 
         **图 2**  查看csv文件  
-        ![](figures/查看csv文件.png "查看csv文件")
+        ![](figures/view_csv_file.png "查看csv文件")
 
 ## 性能分析
 
@@ -65,7 +65,7 @@
 - 通过msprof\_\*.json文件从整体角度查看AI任务运行的时序信息，进而分析出可能存在的瓶颈点。
 
     **图 3**  msprof\_\*.json文件示例  
-    ![](figures/msprof_-json文件示例.png "msprof_-json文件示例")
+    ![](figures/msprof_json_example.png "msprof_-json文件示例")
 
     - 区域1：CANN层数据，主要包含Runtime等组件以及Node（算子）的耗时数据。
     - 区域2：底层NPU数据，主要包含Ascend Hardware下各个Stream任务流的耗时数据和迭代轨迹数据、AI处理器系统数据等。
@@ -76,13 +76,13 @@
 - 通过op\_statistic\_\*.csv文件分析各类算子的调用总时间、总次数等，排查某类算子总耗时是否较长，进而分析这类算子是否有优化空间。
 
     **图 4**  op\_statistic\_\*.csv文件示例  
-    ![](figures/op_statistic_-csv文件示例.png "op_statistic_-csv文件示例")
+    ![](figures/op_statistic_csv_file_example.png "op_statistic_-csv文件示例")
 
     可以按照Total Time排序，找出哪类算子耗时较长。
 
 - 通过op\_summary\_\*.csv文件分析具体某个算子的信息和耗时情况，从而找出高耗时算子，进而分析该算子是否有优化空间。
 
     **图 5**  op\_summary\_\*.csv文件示例  
-    ![](figures/op_summary_-csv文件示例.png "op_summary_-csv文件示例")
+    ![](figures/op_summary_csv_file_example.png "op_summary_-csv文件示例")
 
     Task Duration字段为算子耗时信息，可以按照Task Duration排序，找出高耗时算子；也可以按照Task Type排序，查看不同核（AI Core和AI CPU）上运行的高耗时算子。

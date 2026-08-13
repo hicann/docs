@@ -5,14 +5,14 @@
 视频解码失败，Device日志提示-512返回码：\[dvpp\_ioctl\_vpc 845\] call proc failed:-512, engine\_id:1，如下所示。
 
 ```bash
-[ERROR] KERNEL(1200,sklogd):2019-11-29-21:42:07.421.714 [8078.067669] [dvpp] [dvpp_print_vpc_job 156] outctl out2_select:0
-[ERROR] KERNEL(1200,sklogd):2019-11-29-21:42:07.421.740 [8078.067672] [dvpp] [dvpp_print_vpc_job 184] OUT
-[ERROR] KERNEL(1200,sklogd):2019-11-29-21:42:07.421.764 [8078.067673] [dvpp] [dvpp_print vpc_job 185] out use_flag:1
-[ERROR] KERNEL(1200,sklogd):2019-11-29-21:42:07.421.789 [8078.067675] [dvpp] [dvpp_print_vpc_job 186] wr0 addr_frame_start:ffff35a00000
-[ERROR] KERNEL(1200,sk1ogd):2019-11-29-21:42:07.421.823 [8078.067677] [dvpp] [dvpp_print_vpc_job 187] wr1 addr_frame_start:ffff35aca800
-[ERROR] KERNEL(1200,sk1ogd):2019-11-29-21:42:07.421.853 [8078.067679] [dvpp] [dvpp_print_vpc_job 188] wr2 addr_frame_start:0
-[ERROR] KERNEL(1200,sk1ogd):2019-11-29-21:42:07.421.880 [8078.067680] [dvpp] [dvpp_print_vpc_job 189] wr3 addr_frame_start:0
-[ERROR] KERNEL(1200,sk1ogd):2019-11-29-21:42:07.421.905 [8078.067693] [dvpp] [dvpp_ioctl_vpc 845] call proc failed:-512, engine_id:1
+[ERROR] KERNEL(1200,sklogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [8078.067669] [dvpp] [dvpp_print_vpc_job 156] outctl out2_select:0
+[ERROR] KERNEL(1200,sklogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [8078.067672] [dvpp] [dvpp_print_vpc_job 184] OUT
+[ERROR] KERNEL(1200,sklogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [8078.067673] [dvpp] [dvpp_print vpc_job 185] out use_flag:1
+[ERROR] KERNEL(1200,sklogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [8078.067675] [dvpp] [dvpp_print_vpc_job 186] wr0 addr_frame_start:ffff35a00000
+[ERROR] KERNEL(1200,sk1ogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [8078.067677] [dvpp] [dvpp_print_vpc_job 187] wr1 addr_frame_start:ffff35aca800
+[ERROR] KERNEL(1200,sk1ogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [8078.067679] [dvpp] [dvpp_print_vpc_job 188] wr2 addr_frame_start:0
+[ERROR] KERNEL(1200,sk1ogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [8078.067680] [dvpp] [dvpp_print_vpc_job 189] wr3 addr_frame_start:0
+[ERROR] KERNEL(1200,sk1ogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [8078.067693] [dvpp] [dvpp_ioctl_vpc 845] call proc failed:-512, engine_id:1
 ```
 
 ## 可能原因

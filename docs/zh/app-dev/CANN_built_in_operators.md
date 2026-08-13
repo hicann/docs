@@ -42,7 +42,7 @@ CANN算子主要包含如下几类：
 ## 单算子API调用流程
 
 **图 1**  单算子API调用流程  
-![](figures/单算子API调用流程.png "单算子API调用流程")
+![](figures/aclnn_API_call_process.png "单算子API调用流程")
 
 关键接口说明如下，过程中使用的acl前缀接口详细介绍可参考《Runtime运行时 API》。
 
@@ -334,4 +334,4 @@ target_link_libraries(opapi_test PRIVATE
 
         以Add算子的运行结果为例，运行后的结果如下：
 
-        ![](figures/image.png)
+        ![](figures/add_operator_execution_result.png)

@@ -11,17 +11,8 @@
 在执行通过VO模块及HDMI接口送显业务时，在日志中产生如下的不支持多进程错误。
 
 ```bash
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:26.632.632 [klogd.c:246][3146.786343] [drv_vo][ERR][vo_open:433]:VO functions must work in the same pid!!!
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:26.632.666 [klogd.c:246][3146.786375] [drv_vo][ERR][vo_open:433]:VO functions must work in the same pid!!!
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:26.647.470 [klogd.c:246][3146.793796] [drv_vo][ERR][vo_open:433]:VO functions must work in the same pid!!!
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:26.662.320 [klogd.c:246][3146.801217] [drv_vo][ERR][vo_open:433]:VO functions must work in the same pid!!!
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:26.662.343 [klogd.c:246][3146.808650] [drv_vo][ERR][vo_open:433]:VO functions must work in the same pid!!!
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:26.662.353 [klogd.c:246][3146.816065] [drv_vo][ERR][vo open:433]:VO functions must work in the same pid!!!
-[ERROR] DSS(5303,vo test nvr hdmi hi test):2023-01-01-08:52:26.669.726 [mpi hdmi com.c:264][Lib_hdmi][mpi hdmi_com_init]:open HDMI err.
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:26.678.229 [klogd.c:246][3146.823479] [drv_hdmi][ERR][hdmi file open:2750]:HDMI functions must work in the same pid!!!
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:38.192.079 [klogd.c:246][3158.345748] [drv_vo][ERR][vo_open:433]:VO functions must work in the same pid!!!
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:38.192.199 [klogd.c:246][3158.345800] [drv_vo][ERR][vo_open:433]:VO functions must work in the same pid!!!
-[ERROR] KERNEL(3720,sklogd):2023-01-01-08:52:38.207.148 [klogd.c:246][3158.353257] [drv_vo][ERR][vo_open:433]:VO functions must work in the same pid!!!
+[ERROR] KERNEL(3720,sklogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [klogd.c:246][3146.816065] [drv_vo][ERR][vo open:433]:VO functions must work in the same pid!!!
+[ERROR] DSS(5303,vo test nvr hdmi hi test):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [mpi hdmi com.c:264][Lib_hdmi][mpi hdmi_com_init]:open HDMI err.
 ```
 
 ## 可能原因

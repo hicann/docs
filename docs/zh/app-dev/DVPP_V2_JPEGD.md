@@ -7,7 +7,7 @@ JPEGD（JPEG Decoder）负责完成图像解码功能，将.jpg、.jpeg、.JPG�
 ## 接口调用流程
 
 **图 1**  JPEGD图片解码功能调用流程  
-![](figures/JPEGD图片解码功能调用流程.png "JPEGD图片解码功能调用流程")
+![](figures/JPEGD_API_call_process_V2.png "JPEGD图片解码功能调用流程")
 
 当前系统支持解码JPEG图片，关键接口的说明如下：
 

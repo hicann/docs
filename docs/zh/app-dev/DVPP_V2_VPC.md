@@ -7,7 +7,7 @@ VPC（Vision Preprocessing Core）负责图像处理功能，支持对图片做�
 ## 典型功能接口调用流程（以缩放为例）
 
 **图 1**  缩放功能调用流程  
-![](figures/缩放功能调用流程.png "缩放功能调用流程")
+![](figures/resize_API_call_process.png "缩放功能调用流程")
 
 当前系统支持对输入图片做抠图、缩放等处理，关键接口的说明如下：
 

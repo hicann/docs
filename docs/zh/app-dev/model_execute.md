@@ -11,7 +11,7 @@
 ## 模型执行流程
 
 **图 1**  基本的模型推理流程  
-![](figures/基本的模型推理流程.png "基本的模型推理流程")
+![](figures/basic_model_inference_process.png "基本的模型推理流程")
 
 关键接口的说明如下：
 
@@ -86,12 +86,12 @@
     调用aclDataBuffer类型下的操作接口获取内存地址、内存大小等。
 
     **图 2**  aclmdlDataset类型与aclDataBuffer类型的关系  
-    ![](figures/aclmdlDataset类型与aclDataBuffer类型的关系.png "aclmdlDataset类型与aclDataBuffer类型的关系")
+    ![](figures/relationship_between_aclmdlDataset_and_aclDataBuffer.png "aclmdlDataset类型与aclDataBuffer类型的关系")
 
 了解相关的数据类型后，可以使用这些数据类型的操作接口准备模型的输入、输出数据结构，如下图所示。
 
 **图 3**  模型执行的输入/输出数据结构的准备流程  
-![](figures/模型执行的输入-输出数据结构的准备流程.png "模型执行的输入-输出数据结构的准备流程")
+![](figures/prepare_model_input_output.png "模型执行的输入-输出数据结构的准备流程")
 
 关键说明如下：
 

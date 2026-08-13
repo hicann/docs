@@ -26,7 +26,7 @@
 
     通过码流分析工具查看SPS字段的video\_full\_range\_flag，flag=1表示原始YUV是full\_range的，flag=0表示是limited\_range的。
 
-    ![](figures/zh-cn_image_0000001927915793.png)
+    ![](figures/image_0000001927915793.png)
 
 3. 解码时指定video\_full\_range\_flag，然后再将解码后YUV文件与原始YUV对比亮暗。
 
@@ -44,7 +44,7 @@
     - **vui0\_ffmpeg1**图像“更暗”，这是因为ffmpeg认为需要从limited\_range转换为full\_range，所以对像素值分布进行了往两侧拉伸，而该场景本身偏暗，像素值更多地往0值靠拢，表现为变暗；
     - **vui1\_ffmpeg0**图像“更亮”，因为ffmpeg做了标准的值域压缩，从0\~255压到16\~235，图中大量低像素值往中间区间抬升，图像表现为变亮。
 
-    ![](figures/zh-cn_image_0000001927835405.png)
+    ![](figures/image_0000001927835405.png)
 
 <a id="section98371392323"></a>
 

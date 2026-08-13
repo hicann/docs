@@ -19,7 +19,7 @@
 HCCL是CANN的核心组件，为NPU集群提供高性能、高可靠性的通信方案。HCCL向上支持多种AI框架，向下实现多款昇腾AI处理器之间的高效互联，其架构如下图所示。
 
 **图 1**  集合通信库软件架构图  
-![](figures/集合通信库软件架构图.png "集合通信库软件架构图")
+![](figures/HCCL_arch.png "集合通信库软件架构图")
 
 HCCL包含HCCL集合通信库与HCOMM（Huawei Communication）通信基础库：
 

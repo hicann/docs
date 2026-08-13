@@ -7,14 +7,14 @@ Device的event日志（slog/dev-os-_id_/run/event/event\_\*.log）中存在“**
 Device黑匣子日志（在hisi\_logs/device-_id_/\*/bbox目录中）中存在“Hardware Error”报错关键字：
 
 ```bash
-/hisi_logs/device-2/20240420162417-271713000/bbox/kbox.txt:2014[2454.830692] {6}[Hardware Error] Hardware error from APEI Generic Hardware Error Source: 0
-/hisi_logs/device-2/20240420162417-271713000/bbox/kbox.txt:2015[2454.830693] {6}[Hardware Error]event severity: recoverable
-/hisi_logs/device-2/20240420162417-271713000/bbox/kbox.txt:2016[2454.830694] {6}[Hardware Error] Error 0, type: recoverable
-/hisi_logs/device-2/20240420162417-271713000/bbox/kbox.txt:2017[2454.830696] {6}[Hardware Error]  section_type: memory error
-/hisi_logs/device-2/20240420162417-271713000/bbox/kbox.txt:2018[2454.830697] {6}[Hardware Error]  physical_address: 0x0000101efe36d3c0
-/hisi_logs/device-2/20240420162417-271713000/bbox/kbox.txt:2019[2454.830699] {6}[Hardware Error]  node: 2 card: 259 module: 51 rank: 1 bank: 10 row: 30691  column: 56
-/hisi_logs/device-2/20240420162417-271713000/bbox/kbox.txt:2020[2454.830701] {6}[Hardware Error]  error_type: 3, multi-bit ECC
-/hisi_logs/device-2/20240420162417-271713000/bbox/kbox.txt:2024[2454.830702] {6}[Hardware Error]  DIMM location: not present. DMI handle: 0x0000
+/hisi_logs/device-2/******/bbox/kbox.txt:2014[2454.830692] {6}[Hardware Error] Hardware error from APEI Generic Hardware Error Source: 0
+/hisi_logs/device-2/******/bbox/kbox.txt:2015[2454.830693] {6}[Hardware Error]event severity: recoverable
+/hisi_logs/device-2/******/bbox/kbox.txt:2016[2454.830694] {6}[Hardware Error] Error 0, type: recoverable
+/hisi_logs/device-2/******/bbox/kbox.txt:2017[2454.830696] {6}[Hardware Error]  section_type: memory error
+/hisi_logs/device-2/******/bbox/kbox.txt:2018[2454.830697] {6}[Hardware Error]  physical_address: 0x0000101efe36d3c0
+/hisi_logs/device-2/******/bbox/kbox.txt:2019[2454.830699] {6}[Hardware Error]  node: 2 card: 259 module: 51 rank: 1 bank: 10 row: 30691  column: 56
+/hisi_logs/device-2/******/bbox/kbox.txt:2020[2454.830701] {6}[Hardware Error]  error_type: 3, multi-bit ECC
+/hisi_logs/device-2/******/bbox/kbox.txt:2024[2454.830702] {6}[Hardware Error]  DIMM location: not present. DMI handle: 0x0000
 ```
 
 ## 故障根因

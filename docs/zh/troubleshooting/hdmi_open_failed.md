@@ -11,7 +11,7 @@
 在执行HDMI接口送显业务时，在日志中产生如下HDMI OPEN失败的用户态错误：
 
 ```bash
-[ERROR] DSS(4808,vo_test_nvr_hdmi_hi_test):1970-01-01-08:31:51.173.346 [mpi_hdmi_com.c:338][lib_hdmi][mpi_hdmi_com_open]:HDMI device not init
+[ERROR] DSS(4808,vo_test_nvr_hdmi_hi_test):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [mpi_hdmi_com.c:338][lib_hdmi][mpi_hdmi_com_open]:HDMI device not init
 ```
 
 ## 可能原因

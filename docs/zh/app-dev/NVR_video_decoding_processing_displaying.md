@@ -20,7 +20,7 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 
     视频解码智能分析流程涉及视频解码模块\(VDEC\)、视频处理模块\(VPSS\)、智能分析（模型推理）, 以及增强的功能，例如Region区域管理模块。区域管理功能的接口调用流程请参见[Region区域管理功能](NVR_video_decoding_processing_displaying.md#section13836172315012)。
 
-![](figures/视频解码智能分析流程.png)
+![](figures/video_intelligent_analysis_process.png)
 
 <a id="section4761182923310"></a>
 
@@ -29,7 +29,7 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 视频解码显示流程涉及视频解码模块\(VDEC\)、视频处理模块\(VPSS\)、视频输出模块\(VO\)、HDMI接口模块, 以及增强的功能，例如[Region区域管理功能](#section13836172315012)、[TDE图形绘制功能](#section107971821203)、[HIFB叠加图形层管理功能](#section53701215202019)
 
 **图 1** **业务启动、运行接口调用流程**  
-![](figures/业务启动-运行接口调用流程.png "业务启动-运行接口调用流程")
+![](figures/video_display_sevice_start_run.png "业务启动-运行接口调用流程")
 
 NVR视频解码显示业务启动、运行接口调用流程说明如下：
 
@@ -94,7 +94,7 @@ NVR视频解码显示业务启动、运行接口调用流程说明如下：
 <br>
 
 **图 2** **资源释放接口调用流程**  
-![](figures/资源释放接口调用流程.png "资源释放接口调用流程")
+![](figures/video_display_resource_release.png "资源释放接口调用流程")
 
 NVR视频解码显示业务资源释放接口调用流程说明如下：
 
@@ -128,7 +128,7 @@ NVR视频解码显示业务资源释放接口调用流程说明如下：
 视频解码智能分析流程涉及视频解码模块\(VDEC\)、视频处理模块\(VPSS\)、智能分析（模型推理）, 以及增强的功能，例如Region区域管理模块。区域管理功能的接口调用流程请参见[Region区域管理功能](#section13836172315012)。
 
 **图 3** **业务启动、运行接口调用流程**  
-![](figures/业务启动-运行接口调用流程-8.png "业务启动-运行接口调用流程-8")
+![](figures/video_intelligent_analysis_sevice_start_run.png "业务启动-运行接口调用流程")
 
 视频解码智能分析业务启动、运行流程：
 
@@ -163,7 +163,7 @@ NVR视频解码显示业务资源释放接口调用流程说明如下：
     VPSS处理后的图像，在送入模型推理前，若图片尺寸、格式等不满足要求，需要经过DVPP的VPC功能模块、AIPP功能进一步处理，请参见[媒体数据处理功能简介](DVPP_overview.md)中关于VPC、AIPP的介绍。
 
 **图 4** **资源释放接口调用流程**  
-![](figures/资源释放接口调用流程-9.png "资源释放接口调用流程-9")
+![](figures/video_intelligent_analysis_resource_release.png "资源释放接口调用流程-9")
 
 NVR视频解码智能分析业务资源释放接口调用流程说明如下：
 
@@ -187,7 +187,7 @@ NVR视频解码智能分析业务资源释放接口调用流程说明如下：
 
 区域管理功能（Region）必须配合VPSS模块一起使用，且区域管理功能需关联的VPSS组、VPSS通道已创建，接口调用流程如下所示。
 
-![](figures/Region区域管理功能.png)
+![](figures/Region_API_call_process.png)
 
 1. **初始化**：
     1. 调用hi\_mpi\_rgn\_create创建区域。
@@ -213,7 +213,7 @@ NVR视频解码智能分析业务资源释放接口调用流程说明如下：
 TDE是图形二维加速引擎，它利用硬件为OSD（On Screen Display）和GUI（Graphical User Interface）提供快速的图形绘制功能，主要有快速拷贝、快速色彩填充、模式填充（当前仅支持Alpha Blending操作）。
 
 **图 5** **TDE接口调用流程**  
-![](figures/TDE接口调用流程.png "TDE接口调用流程")
+![](figures/TDE_API_call_process.png "TDE接口调用流程")
 
 1. 调用hi\_tde\_open接口**打开TDE设备**。
 2. 调用hi\_tde\_begin\_job接口**创建TDE任务**。
@@ -233,7 +233,7 @@ TDE是图形二维加速引擎，它利用硬件为OSD（On Screen Display）和
 HIFB用于管理叠加图形层，它不仅提供Linux Framebuffer的基本功能，还在Linux Framebuffer的基础上增加图层显示起始位置修改、层间Alpha等扩展功能。
 
 **图 6**  HIFB接口调用流程  
-![](figures/HIFB接口调用流程.png "HIFB接口调用流程")
+![](figures/HIFB_API_call_process.png "HIFB接口调用流程")
 
 1. 通过系统调用open**打开fb设备**。设备文件fb0\~fb4对应图层G0\~G4。其中，G0和G1为高清图层、G2为鼠标图层、G3和G4为标清图层。
 

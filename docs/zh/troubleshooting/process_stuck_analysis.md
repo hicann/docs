@@ -104,7 +104,7 @@
 
             算子编译各阶段的状态一般包括：
 
-            ![](figures/zh-cn_image_0000001922247672.png)
+            ![](figures/image_0000001922247672.png)
 
         - schedule\_tracer\_FE\_Statistics\_Trace.txt用于记录整体算子的编译状态，有缓存未使用、更新缓存失败
 
@@ -220,4 +220,4 @@
 
         **日志示例及解析如下**：通过event\_id=1，找到对应的event\_record任务所在的stream 2，通过日志中的信息发现stream 2上的任务执行停留在任务0（即pos\[0\]任务），导致任务卡住，这是因为该流的event\_record任务（即pos\[1\]）没有执行，进而导致其它流卡住。
 
-        ![](figures/zh-cn_image_0000001936414773.png)
+        ![](figures/image_0000001936414773.png)

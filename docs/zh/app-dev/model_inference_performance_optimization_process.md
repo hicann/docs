@@ -4,4 +4,4 @@
 
 在下图的性能调优流程中，涉及调优的关键工具为：模型调优工具AOE（Ascend Optimization Engine）、模型压缩工具AMCT（Ascend Model Compression Toolkit）。在调优过程中，涉及转换模型、记录模型推理耗时、分析性能瓶颈点等操作时，还会辅助使用模型转换工具ATC、性能数据采集工具、精度比对工具。
 
-![](figures/zh-cn_image_0000001594647953.png)
+![](figures/image_0000001594647953.png)

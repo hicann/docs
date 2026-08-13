@@ -13,10 +13,10 @@
     或
 
     ```bash
-    [ERROR] DVPP:2020-12-31-20:50:51.318.218 [VDEC][IsValidResolution:639][T56] Invalid width or height, valid range (w:128~4096) (h:128~4096), current width = 32, height = 32, realWidth = 18, realHeight = 18
-    [ERROR] DVPP:2020-12-31-20:50:51.318.365 [VDEC][upgrade_picture_info_in_detail:679][T56] check condition: ret == OMX_ErrorNone fail
-    [ERROR] DVPP:2020-12-31-20:50:51.318.429 [VDEC][EventHandLer:386][T56] Dynamic Resources Unavailable now
-    [ERROR] DVPP:2020-12-31-20:50:51.368.106 [VDEC][handle_release_instance:1352][T56] wait Component Exit Message Thread
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][IsValidResolution:639][T56] Invalid width or height, valid range (w:128~4096) (h:128~4096), current width = 32, height = 32, realWidth = 18, realHeight = 18
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][upgrade_picture_info_in_detail:679][T56] check condition: ret == OMX_ErrorNone fail
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][EventHandLer:386][T56] Dynamic Resources Unavailable now
+    [ERROR] DVPP:YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][handle_release_instance:1352][T56] wait Component Exit Message Thread
     ```
 
 - 日志信息：bit\_depth\_luma\(\*\) not equal \*
@@ -29,8 +29,8 @@
     或
 
     ```bash
-    [ERROR] DVPP(13757,dvpp_performance):2020-12-31-21:18:26.998.657 [VDEC][ProcessSPS:9055][T26] bit_depth_luma(10) not equal 8.
-    [ERROR] DVPP(13757,dvpp_performance):2020-12-31-21:18:26.998.763 [VDEC][ProcessSPS:9070][T26] bit_depth_chroma(10) not equal 8.
+    [ERROR] DVPP(13757,dvpp_performance):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][ProcessSPS:9055][T26] bit_depth_luma(10) not equal 8.
+    [ERROR] DVPP(13757,dvpp_performance):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [VDEC][ProcessSPS:9070][T26] bit_depth_chroma(10) not equal 8.
     ```
 
 ## 可能原因

@@ -7,7 +7,7 @@
 开发应用时，如果涉及异步场景下的同步等待，则应用程序中必须包含相关的代码逻辑，关于该场景的接口调用流程，请参见下图。
 
 **图 1**  同步等待流程Callback场景  
-![](figures/同步等待流程Callback场景.png "同步等待流程Callback场景")
+![](figures/asynchronous_model_inference_process.png "同步等待流程Callback场景")
 
 关键接口说明如下：
 

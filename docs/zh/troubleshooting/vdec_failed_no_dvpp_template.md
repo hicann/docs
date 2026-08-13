@@ -28,9 +28,7 @@ pid 0 usr chn 0 device 0 chn 0 vf_id 1 has created chn num(0) is full, max chn n
 
     如下图所示，vf 1下没有分配vdec core，才会导致创建VDEC通道失败，这种情况下的报错属于正常情况。
 
-    ![](figures/image.png)
-
-    ![](figures/image-(1).png)
+    ![](figures/image_vf1.png)
 
 2. 若需要使用DVPP能力，可使用含DVPP能力的算力模板，算力模板信息如下所示。
 

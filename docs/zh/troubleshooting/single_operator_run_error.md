@@ -15,7 +15,7 @@ Failed to execute the single-operator test case. The operator logic may be incor
 
     ```text
     ***********************1. Basic information********************
-    error time   : 2023-06-09-06:55:34.798.772
+    error time   : YYYY‑MM‑DD‑HH:MM:SS.fff.uuu
     device id    : 0
     core id      : 0
     task id      : 6

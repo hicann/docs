@@ -8,14 +8,14 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 
 **本章节描述NVR音频业务（语音对讲功能）的接口调用流程。**在语音对讲功能中，包括媒体数据处理系统初始化&去初始化、[接收IP Camera发送的语音并播放声音](#section3741201132710)、[录制声音并向IP Camera发送语音](#section86391611152718)，涉及的模块包括公共模块、音频输入模块（AI）,音频编码模块（AENC）、音频输出模块（AO）、音频解码模块（ADEC）。
 
-![](figures/NVR音频场景说明.png)
+![](figures/NVR_audio.png)
 
 <a id="section3741201132710"></a>
 
 ## 接收IP Camera发送的语音并播放声音
 
 **图 1** **接收IP Camera发送的语音并播放声音**  
-![](figures/接收IP-Camera发送的语音并播放声音.png "接收IP-Camera发送的语音并播放声音")
+![](figures/receiving_audios_from_IPCamera.png "接收IP-Camera发送的语音并播放声音")
 
 接口调用流程说明如下：
 
@@ -46,7 +46,7 @@ NVR，全称Network Video Recorder，即网络视频录像机，是网络视频�
 ## 录制声音并向IP Camera发送语音
 
 **图 2** **录制声音并向IP Camera发送语音**  
-![](figures/录制声音并向IP-Camera发送语音.png "录制声音并向IP-Camera发送语音")
+![](figures/recording_audios_and_sending_audios_to_IPCamera.png "录制声音并向IP-Camera发送语音")
 
 接口调用流程说明如下：
 

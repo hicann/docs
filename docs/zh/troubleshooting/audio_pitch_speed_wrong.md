@@ -12,11 +12,11 @@
 
 例如：原始pcm为单音正弦波，频率为1kHz。
 
-![](figures/zh-cn_image_0000001927915797.png)
+![](figures/image_0000001927915797.png)
 
 经过播放之后频率变为2kHz，播放速度变快，音调变高。
 
-![](figures/zh-cn_image_0000001927835417.png)
+![](figures/image_0000001927835417.png)
 
 ## 可能原因
 

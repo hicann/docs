@@ -2,11 +2,11 @@
 
 ## 问题现象
 
-Host应用类日志（log/\[run|debug\]/plog/plog-_pid_\_\*.log）中存在如下报错：
+Host应用类日志（log/\[run|debug\]/plog/plog-_pid_\_\*.log）中存在如下报错，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
 ```bash
-[ERROR] RUNTIME(85483,python):2024-04-19-18:13:17.186.318 [task_info.cc:1678]85658 PrintErrorInfoForDavinciTask:Aicore kernel execute failed, device_id=0, stream_id=2, report_stream_id=2, task_id=57783, flip_num=3, fault kernel_name=RealDiv_ee98c6628030785f610b924ab1557b31_high_precision_210000000, fault kernel info ext=none, program id=9, hash=10612039229658031084.
-[ERROR] RUNTIME(85483,python):2024-04-19-18:13:17.186.336 [task_info.cc:1617]85658 GetArgsInfo:[AIC_INFO] args(0 to 9) after execute:0x4f453840, 0x124201ea7400, 0x12420240cc00, 0x1241c006dc28, 0x124100011000, 0x1, 0x1, 0x1, 0,  
+[ERROR] RUNTIME(85483,python):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [task_info.cc:1678]85658 PrintErrorInfoForDavinciTask:Aicore kernel execute failed, device_id=0, stream_id=2, report_stream_id=2, task_id=57783, flip_num=3, fault kernel_name=RealDiv_ee98c6628030785f610b924ab1557b31_high_precision_210000000, fault kernel info ext=none, program id=9, hash=10612039229658031084.
+[ERROR] RUNTIME(85483,python):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [task_info.cc:1617]85658 GetArgsInfo:[AIC_INFO] args(0 to 9) after execute:0x4f453840, 0x124201ea7400, 0x12420240cc00, 0x1241c006dc28, 0x124100011000, 0x1, 0x1, 0x1, 0,  
 ```
 
 ## 故障根因

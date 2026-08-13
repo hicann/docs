@@ -7,7 +7,7 @@ JPEGE（JPEG Encoder）负责完成图像编码功能，将YUV格式图片编码
 ## 接口调用流程
 
 **图 1**  JPEGE图片编码功能调用流程  
-![](figures/JPEGE图片编码功能调用流程.png "JPEGE图片编码功能调用流程")
+![](figures/JPEGE_API_call_process_V2.png "JPEGE图片编码功能调用流程")
 
 当前系统支持将YUV格式图片编码成JPEG压缩格式的图片文件，关键接口的说明如下：
 

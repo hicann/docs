@@ -2,12 +2,12 @@
 
 1. **查看并解读日志**
 
-    **关键字：**host侧用户态plog日志中搜索“mem\_stats”，搜索结果示例如下所示：
+    **关键字：**host侧用户态plog日志中搜索“mem\_stats”，搜索结果示例如下所示，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
     ```bash
-    [INFO] DRV(4176893,python3.7):2024-06-29-16:19:28.436.386 [ascend][curpid: 4176893, 4185695][drv][devmm][_svm_mem_stats_show 148]SVM_MEM Mem stats (Bytes). (module_name=RUNTIME; module_id=7; current_alloced_size=19927040; alloced_peak_size=19927040; alloc_cnt=37; free_cnt=0)
-    [INFO] DRV(4176893,python3.7):2024-06-29-16:19:28.436.393 [ascend][curpid: 4176893, 4185695][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev6 Mem stats (Bytes). (module_name=HCCL; module_id=3; current_alloced_size=419467264; alloced_peak_size=419500032; alloc_cnt=6; free_cnt=2)
-    [INFO] DRV(4176893,python3.7):2024-06-29-16:19:28.436.401 [ascend][curpid: 4176893, 4185695][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev6 Mem stats (Bytes). (module_name=APP; module_id=33; current_alloced_size=64680361984; alloced_peak_size=64680361984; alloc_cnt=3113; free_cnt=0)
+    [INFO] DRV(4176893,python3.7):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4176893, 4185695][drv][devmm][_svm_mem_stats_show 148]SVM_MEM Mem stats (Bytes). (module_name=RUNTIME; module_id=7; current_alloced_size=19927040; alloced_peak_size=19927040; alloc_cnt=37; free_cnt=0)
+    [INFO] DRV(4176893,python3.7):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4176893, 4185695][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev6 Mem stats (Bytes). (module_name=HCCL; module_id=3; current_alloced_size=419467264; alloced_peak_size=419500032; alloc_cnt=6; free_cnt=2)
+    [INFO] DRV(4176893,python3.7):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4176893, 4185695][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev6 Mem stats (Bytes). (module_name=APP; module_id=33; current_alloced_size=64680361984; alloced_peak_size=64680361984; alloc_cnt=3113; free_cnt=0)
     ```
 
     **日志级别：**ERROR级别（申请内存失败时）、进程退出时也会打印内存统计信息
@@ -32,15 +32,15 @@
         历史成功版本的内存统计信息示例（APP申请约2G内存）：
 
         ```bash
-        [INFO] DRV(4052516,main_aarch64):2024-07-08-22:27:45.354.856 [ascend][curpid: 4052516, 4052516][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=RUNTIME; module_id=7; current_alloced_size=44138496; alloced_peak_size=44138496; alloc_cnt=18; free_cnt=0)
-        [INFO] DRV(4052516,main_aarch64):2024-07-08-22:27:45.354.866 [ascend][curpid: 4052516, 4052516][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=APP; module_id=33; current_alloced_size=2078195712; alloced_peak_size=2078195712; alloc_cnt=996; free_cnt=0)
+        [INFO] DRV(4052516,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052516, 4052516][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=RUNTIME; module_id=7; current_alloced_size=44138496; alloced_peak_size=44138496; alloc_cnt=18; free_cnt=0)
+        [INFO] DRV(4052516,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052516, 4052516][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=APP; module_id=33; current_alloced_size=2078195712; alloced_peak_size=2078195712; alloc_cnt=996; free_cnt=0)
         ```
 
         当前问题版本的内存统计信息示例（APP申请约20G内存）：
 
         ```bash
-        [INFO] DRV(4052522,main_aarch64):2024-07-09-22:47:56.352.884 [ascend][curpid: 4052522, 4052522][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=RUNTIME; module_id=7; current_alloced_size=44138496; alloced_peak_size=44138496; alloc_cnt=18; free_cnt=0)
-        [INFO] DRV(4052522,main_aarch64):2024-07-09-22:47:56.352.894 [ascend][curpid: 4052522, 4052522][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=APP; module_id=33; current_alloced_size=20781957120; alloced_peak_size=20781957120; alloc_cnt=996; free_cnt=0)
+        [INFO] DRV(4052522,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052522, 4052522][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=RUNTIME; module_id=7; current_alloced_size=44138496; alloced_peak_size=44138496; alloc_cnt=18; free_cnt=0)
+        [INFO] DRV(4052522,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052522, 4052522][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=APP; module_id=33; current_alloced_size=20781957120; alloced_peak_size=20781957120; alloc_cnt=996; free_cnt=0)
         ```
 
     **注意事项：**

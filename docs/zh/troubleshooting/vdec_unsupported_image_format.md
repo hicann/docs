@@ -9,17 +9,17 @@
 - Device日志：
 
 ```bash
-[ERROR] KERNEL(2234,sklogd):2023-06-13-19:21:22.987.969 [klogd.c:246][652145.056916] [HiDvpp][A618] [Vdec]:vdec_check_resize_param [Line]:6768 pid 23973 usr chn 0 device 0 chn 0 the out format 0 is not supported. 
+[ERROR] KERNEL(2234,sklogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [klogd.c:246][652145.056916] [HiDvpp][A618] [Vdec]:vdec_check_resize_param [Line]:6768 pid 23973 usr chn 0 device 0 chn 0 the out format 0 is not supported. 
 ```
 
 - Host日志：
 
 ```bash
-[ERROR] RUNTIME(17174,AIMCDemo):2023-06-13-19:21:23.664.211 [api_c.cc:721]17184 rtStreamSynchronize:[DVPP][DEFAULT]ErrCode=507018, desc=[aicpu exception], InnerCode=0x715002a
-[ERROR] RUNTIME(17174,AIMCDemo):2023-06-13-19:21:23.664.215 [error_message_manage.cc:49]17184 FuncErrorReason:[DVPP][DEFAULT]report error module_type=3, module_name=EE8888
-[ERROR] RUNTIME(17174,AIMCDemo):2023-06-13-19:21:23.664.221 [error_message_manage.cc:49]17184 FuncErrorReason:[DVPP][DEFAULT]rtStreamSynchronize execute failed, reason=[aicpu exception]
-[INFO] GE(17174,AIMCDemo):2023-06-13-19:21:23.664.227 [error_manager.cc:252]17184 ReportInterErrMessage:report error_message, error_code:EE8888, work_stream_id:1717417184
-[ERROR] ASCENDCL(17174,AIMCDemo):2023-06-13-19:21:23.664.234 [video_processor_v200.cpp:1089]17184 aclvdecSendFrame: [DVPP][DEFAULT][Sync][Stream]vdec fail to synchronize sendFrameStream, runtime errorCode = 507018, channelId = 0.
+[ERROR] RUNTIME(17174,AIMCDemo):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_c.cc:721]17184 rtStreamSynchronize:[DVPP][DEFAULT]ErrCode=507018, desc=[aicpu exception], InnerCode=0x715002a
+[ERROR] RUNTIME(17174,AIMCDemo):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_message_manage.cc:49]17184 FuncErrorReason:[DVPP][DEFAULT]report error module_type=3, module_name=EE8888
+[ERROR] RUNTIME(17174,AIMCDemo):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_message_manage.cc:49]17184 FuncErrorReason:[DVPP][DEFAULT]rtStreamSynchronize execute failed, reason=[aicpu exception]
+[INFO] GE(17174,AIMCDemo):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_manager.cc:252]17184 ReportInterErrMessage:report error_message, error_code:EE8888, work_stream_id:1717417184
+[ERROR] ASCENDCL(17174,AIMCDemo):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [video_processor_v200.cpp:1089]17184 aclvdecSendFrame: [DVPP][DEFAULT][Sync][Stream]vdec fail to synchronize sendFrameStream, runtime errorCode = 507018, channelId = 0.
 ```
 
 ## 原因分析

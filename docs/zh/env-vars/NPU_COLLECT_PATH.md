@@ -42,9 +42,11 @@ export NPU_COLLECT_PATH=$HOME/demo/
     BatchMatMulReduceScatterAlltoAll
 
 - 若配置NPU_COLLECT_PATH环境变量，不支持打开“检测Global Memory是否内存越界”的开关，否则编译出来的模型文件或算子kernel包在使用时会报错。打开“检测Global Memory是否内存越界”的开关有以下方式：
-    - 使用ATC模型转换工具时，在--op_debug_config参数指定的配置文件中配置oom，详细配置请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)。
-    <!-- npu="950,A3,910b,910,310p,310b" id1 -->
-    - 使用op_compiler算子编译工具时，在--op_debug_config参数指定的配置文件中配置oom，详细配置请参见[《算子编译工具》](https://hiascend.com/document/redirect/CannCommunityopcompiler)。
-    <!-- end id1 -->
-    - 使用Ascend Graph方式构图时，在op_debug_config或OP_DEBUG_CONFIG参数指定的配置文件中配置oom，详细配置请参见《图开发》。
-    - 基于TensorFlow的Python API开发的训练脚本迁移到AI处理器上执行训练时，将op_debug_config参数指定的配置文件中配置oom，详细配置请参见[《TensorFlow 1.15模型迁移》](https://hiascend.com/document/redirect/canncommercial-tfmigr115)、[《TensorFlow 2.6.5模型迁移》](https://hiascend.com/document/redirect/canncommercial-tfmigr26)。
+  - 使用ATC模型转换工具时，在--op_debug_config参数指定的配置文件中配置oom，详细配置请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)。
+  <!-- npu="950,A3,910b,910,310p,310b" id1 -->
+  - 使用op_compiler算子编译工具时，在--op_debug_config参数指定的配置文件中配置oom，详细配置请参见[《算子编译工具》](https://hiascend.com/document/redirect/CannCommunityopcompiler)。
+  <!-- end id1 -->
+  - 使用Ascend Graph方式构图时，在op_debug_config或OP_DEBUG_CONFIG参数指定的配置文件中配置oom，详细配置请参见[《图开发》](https://hiascend.com/document/redirect/CannCommunityGraphguide)。
+  <!-- npu="950,A3,910b,910,310p" id2 -->
+  - 基于TensorFlow的Python API开发的训练脚本迁移到AI处理器上执行训练时，将op_debug_config参数指定的配置文件中配置oom，详细配置请参见[《TensorFlow 产品文档》](https://www.hiascend.com/document/detail/zh/TensorFlowCommunity/latest/index/index.html)。
+  <!-- end id2 -->

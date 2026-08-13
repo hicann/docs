@@ -4,20 +4,20 @@
 
 参见[收集进程中断问题信息](collect_process_interrupt_info.md)收集日志文件，收集的日志所存放的目录，下文以$\{HOME\}/err\_log\_info/为例。
 
-Host应用类日志（$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log）日志中存在“Memory async failed” 、“kind=x is invalid”关键词，日志示例如下：
+Host应用类日志（$\{HOME\}/err\_log\_info/log/\[run|debug\]/plog/plog-_pid_\_\*.log）日志中存在“Memory async failed” 、“kind=x is invalid”关键词，日志示例如下，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
 ```bash
-[ERROR] RUNTIME(291088,python3):2024-01-29-19:2856.519.792 [api_error.cc:963]291577 MemcpyAsyncCheckKindAndLocation:[EXEC][EXEC]report error module_name=EE1001
-[ERROR] RUNTIME(291088,python3):2024-01-29-19:2856.519.799 [api_error.cc:963]291577 MemcpyAsyncCheckKindAndLocation:[EXEC][EXEC]Memory async failed, src loc type=2, dst loc type=2, kind=1 is invalid!
-[INFO] GE(291088,python3):2024-01-29-19:2856.519.818 [error_manager.cc:301]291577 ReportErrMessage:report error_message, error_code:EE1001, work_stream_id:11.
-[ERROR] RUNTIME(291088,python3):2024-01-29-19:2856.519.868 [api_error.cc:881]291577 MemcpyAsync:[EXEC][EXEC]report error module_type=3, module_name=EE8888
-[ERROR] RUNTIME(291088,python3):2024-01-29-19:2856.519.877 [api_error.cc:881]291577 MemcpyAsync:[EXEC][EXEC]Memory async failed, check kind and loc,retCode=0x7110001
-[INFO] GE(291088,python3):2024-01-29-19:2856.519.887 [error_manager.cc:2551]291577 ReportInterErrMessage:report error_message, error_code:EE8888, work_stream_id:11
-[ERROR] RUNTIME(291088,python3):2024-01-29-19:2856.519.911 [api_c.cc:1428]291577 rtMemcpyAsync:[EXEC][EXEC]ErrCode=107000, desc=[invalid value], InnertCode=0x7110001
-[ERROR] RUNTIME(291088,python3):2024-01-29-19:2856.519.920 [error_message_manage.cc:48]291577 FuncErrorReason:[EXEC][EXEC]report error module_name=EE1001
-[ERROR] RUNTIME(291088,python3):2024-01-29-19:2856.519.929 [error_message_manage.cc:48]291577 FuncErrorReason:[EXEC][EXEC]rtMemcpyAsync execute failed, reason=[invalid value]
-[INFO] GE(291088,python3):2024-01-29-19:2856.519.938 [error_manager.cc:301]291577 ReportErrMessage:report error_message, error_code:EE1001, work_stream_id:11
-[ERROR] ASCENDCL(291088,python3):2024-01-29-19:2856.519.952 [memory.cc:336]291577 aclrtMemcpyAsync:[EXEC][EXEC]asynchronized memcpy failed, kind = 1, runtime result = 107000
+[ERROR] RUNTIME(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_error.cc:963]291577 MemcpyAsyncCheckKindAndLocation:[EXEC][EXEC]report error module_name=EE1001
+[ERROR] RUNTIME(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_error.cc:963]291577 MemcpyAsyncCheckKindAndLocation:[EXEC][EXEC]Memory async failed, src loc type=2, dst loc type=2, kind=1 is invalid!
+[INFO] GE(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_manager.cc:301]291577 ReportErrMessage:report error_message, error_code:EE1001, work_stream_id:11.
+[ERROR] RUNTIME(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_error.cc:881]291577 MemcpyAsync:[EXEC][EXEC]report error module_type=3, module_name=EE8888
+[ERROR] RUNTIME(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_error.cc:881]291577 MemcpyAsync:[EXEC][EXEC]Memory async failed, check kind and loc,retCode=0x7110001
+[INFO] GE(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_manager.cc:2551]291577 ReportInterErrMessage:report error_message, error_code:EE8888, work_stream_id:11
+[ERROR] RUNTIME(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [api_c.cc:1428]291577 rtMemcpyAsync:[EXEC][EXEC]ErrCode=107000, desc=[invalid value], InnertCode=0x7110001
+[ERROR] RUNTIME(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_message_manage.cc:48]291577 FuncErrorReason:[EXEC][EXEC]report error module_name=EE1001
+[ERROR] RUNTIME(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_message_manage.cc:48]291577 FuncErrorReason:[EXEC][EXEC]rtMemcpyAsync execute failed, reason=[invalid value]
+[INFO] GE(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [error_manager.cc:301]291577 ReportErrMessage:report error_message, error_code:EE1001, work_stream_id:11
+[ERROR] ASCENDCL(291088,python3):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [memory.cc:336]291577 aclrtMemcpyAsync:[EXEC][EXEC]asynchronized memcpy failed, kind = 1, runtime result = 107000
 ```
 
 日志中关键字段解释如下：

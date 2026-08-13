@@ -7,7 +7,7 @@ PNGD（PNG decoder）负责PNG格式图片的解码。关于PNGD功能的详细�
 ## 接口调用流程
 
 **图 1**  PNG图片解码  
-![](figures/PNG图片解码.png "PNG图片解码")
+![](figures/PNGD_API_call_process_V1.png "PNG图片解码")
 
 当前系统支持png图片的解码，支持输出RGB、RGBA编码格式的图片，关键接口的说明如下：
 

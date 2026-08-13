@@ -32,7 +32,7 @@
     - 设置动态AIPP参数值：
 
         **图 1**  接口调用流程  
-        ![](figures/接口调用流程.png "接口调用流程")
+        ![](figures/dynamic_AIPP_API_call_process.png "接口调用流程")
 
         1. 调用aclmdlGetInputIndexByName接口根据输入名称（固定为ACL\_DYNAMIC\_AIPP\_NAME）获取模型中标识该输入的index。
         2. 设置动态AIPP参数值。

@@ -5,18 +5,18 @@
 Device的event日志（slog/dev-os-_id_/run/event/event\_\*.log）中存在“**event\_id=0x80C98000**”关键字。
 
 <!-- npu="910b" id1 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品上，trace日志（默认在$HOME/ascend/atrace/路径下）中存在“stars\_print\_error\_pc\_icache\_and\_hbm\_info”报错关键字。
+Atlas A2 训练系列产品/Atlas A2 推理系列产品上，trace日志（默认在$HOME/ascend/atrace/路径下）中存在“stars\_print\_error\_pc\_icache\_and\_hbm\_info”报错关键字。YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
 ```bash
-2024-04-22-09-06-17/hisi_logs/device-2/20240422090623-533810000/log/ts.log:5177:[ERROR] TSCH(-1,null):2024-04-20-17:02:52.772.875 35906 (dieid:0,cpuid:0) aicore.c:767 stars_print_error_pc_icache_and_hbm_info: stat for dump pc start, aiv_id=47, icache_miss_num=8161, hbm_miss_num=0, compare_num=32, compare_fail_num=0
+2024-04-22-09-06-17/hisi_logs/device-2/******/log/ts.log:5177:[ERROR] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 35906 (dieid:0,cpuid:0) aicore.c:767 stars_print_error_pc_icache_and_hbm_info: stat for dump pc start, aiv_id=47, icache_miss_num=8161, hbm_miss_num=0, compare_num=32, compare_fail_num=0
 ```
 <!-- end id1 -->
 
 <!-- npu="310p" id2 -->
-Atlas 推理系列产品上，trace日志（默认在$HOME/ascend/atrace/路径下）中存在“check\_error\_pc\_icache\_and\_hbm\_info”报错关键字。
+Atlas 推理系列产品上，trace日志（默认在$HOME/ascend/atrace/路径下）中存在“check\_error\_pc\_icache\_and\_hbm\_info”报错关键字。YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
 ```bash
-[ERROR] TSCH(-1,null):2024-09-04-00:12:52.986.322 438 (dieid:0,cpuid:0) aicore_icache_plat.c:848 check_error_pc_icache_and_hbm_info: stat for dump pc start, aic_id=1, icache_miss_num=8176, hbm_miss_num=0, compare_num=17, compare_fail_num=0  
+[ERROR] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 438 (dieid:0,cpuid:0) aicore_icache_plat.c:848 check_error_pc_icache_and_hbm_info: stat for dump pc start, aic_id=1, icache_miss_num=8176, hbm_miss_num=0, compare_num=17, compare_fail_num=0  
 ```
 <!-- end id2 -->
 

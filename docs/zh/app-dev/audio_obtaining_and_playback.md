@@ -4,7 +4,7 @@
 
 ## 音频获取功能
 
-![](figures/音频获取功能.png)
+![](figures/obtain_audio.png)
 
 1. 调用hi\_mpi\_sys\_init接口初始化媒体公共模块。
 2. 调用hi\_mpi\_ai\_set\_pub\_attr接口配置属性。
@@ -15,7 +15,7 @@
 
 ## 音频播放功能
 
-![](figures/音频播放功能.png)
+![](figures/play_audio.png)
 
 1. 调用hi\_mpi\_sys\_init接口初始化媒体公共模块。
 2. 调用hi\_mpi\_ao\_set\_pub\_attr接口配置属性。

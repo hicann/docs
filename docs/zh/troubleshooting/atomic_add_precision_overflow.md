@@ -10,10 +10,10 @@ Analysis result: success.
 Atomic add has a precision overflow. Check the operator precision.Note that if tasks are concurrently executed on the NPU, a false warning may be reported.
 ```
 
-在Device的slog日志（report/\*/slog/dev-os-_id_/\[run|debug\]/device-os/device-os\_\*.log）中，检查是否出现"**Vm fault failed**"关键字，如果没有出现，则确定是atomic精度溢出问题导致的AI Core Error问题；如果出现，则说明是内存越界问题，不是atomic精度溢出。slog日志示例如下：
+在Device的slog日志（report/\*/slog/dev-os-_id_/\[run|debug\]/device-os/device-os\_\*.log）中，检查是否出现"**Vm fault failed**"关键字，如果没有出现，则确定是atomic精度溢出问题导致的AI Core Error问题；如果出现，则说明是内存越界问题，不是atomic精度溢出。slog日志示例如下，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
 ```bash
-2024-02-20-17-07-25/slog/dev-os-0/debug/device-os/device-os_20240122045443091.log:461:[EVENT] KERNEL(4128,sklogd):2024-01-22-05:03:02.259.649 [klogd.c:253][2572550.901383] [ascend] [ERROR] [devmm] [devmm_svm_device_fault 438] <kworker/u16:186:9871,9871> Vm fault failed. (hostpid=1885445; devid=0; vfid=0; ret=64; fault_addr=0x1240f1fa0000; start=0x1240f1fa0000)
+[EVENT] KERNEL(4128,sklogd):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [klogd.c:253][2572550.901383] [ascend] [ERROR] [devmm] [devmm_svm_device_fault 438] <kworker/u16:186:9871,9871> Vm fault failed. (hostpid=1885445; devid=0; vfid=0; ret=64; fault_addr=0x1240f1fa0000; start=0x1240f1fa0000)
 ```
 
 <!-- npu="910b" id1 -->
@@ -26,10 +26,4 @@ Atlas A2 训练系列产品/Atlas A2 推理系列产品上，由于硬件优化�
 
 ## 处理方法
 
-此类问题一般为输入数据错误导致，应通过精度调优手段进行下一步定位。
-
-**推理**场景下，请参考[《应用开发 \(C&C++\)》](https://hiascend.com/document/redirect/cannCommunityadev)中的“模型推理 > 精度/性能优化”章节调优精度。
-
-**训练**场景下，对于TensorFlow框架，请参考[《TensorFlow 2.6.5模型迁移》](https://hiascend.com/document/redirect/canncommercial-tfmigr26)的“精度调优”章节调优精度。
-
-**训练**场景下，对于PyTorch框架，请参考[《PyTorch 训练模型迁移调优指南》](https://hiascend.com/document/redirect/canncommercial-ptmigr)调优精度。
+此类问题一般为输入数据错误导致，应通过精度调优手段进行下一步定位。例如推理场景下，请参考[《应用开发 \(C&C++\)》](https://hiascend.com/document/redirect/cannCommunityadev)中的“模型推理 > 精度/性能优化”章节调优精度。

@@ -5,7 +5,7 @@
 如果用户需要借助DVPP进行视频解码，想要得到RGB格式图片，在部分AI处理器上当前视频解码接口hi\_mpi\_vdec\_send\_stream支持输出YUV420SP格式或RGB888格式，且支持在解码时对图片进行缩放，所以从提升性能的角度，可以优化代码逻辑，直接调用视频解码接口hi\_mpi\_vdec\_send\_stream输出RGB888格式。
 
 **图 1**  VDEC解码输出的组合场景  
-![](figures/VDEC解码输出的组合场景-10.png "VDEC解码输出的组合场景-10")
+![](figures/VDEC_output_V2.png "VDEC解码输出的组合场景")
 
 ## 基本原理
 

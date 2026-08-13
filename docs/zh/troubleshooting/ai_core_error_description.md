@@ -1,24 +1,31 @@
 # AI Core Error问题现象描述
 
-用户应用程序报错退出，终端屏幕日志错误码为EZ9999，且日志中包含“**there is an aivec error exception**”或“**there is an aicore error exception**”；或者plog日志中存在报错日志“**Aicore kernel execute failed**”。
+用户应用程序报错退出，终端屏幕日志错误码为EZ9999或EZ2001，且日志中包含“**the error is aivec error**”或“**the error is aicore error**”；或者plog日志中存在报错日志“**AI Core kernel execution failed**”。
 
-**报错示例如下所示**：
+**EZ9999终端屏幕报错示例如下所示**，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
 ```bash
------------------------------------------
-   Ascend Error Message:
------------------------------------------
 EZ9999: Internal error!
-EZ9999: The error from device(chipId:4, dieId:0), serial number is 2, there is an aivec error exception, core id is 11, error code = 0x10, dump info: pc start: 0x1240c46650b8, vec error info: 0xd019ddc1a, mte error info: 0x2ffeba07af, ifu error info: 0x4e5c097530000, ccu error info: 0x30c255954a000023, cude error info: 0,0, aic error mask: 0x65000020bd000288, para base: 0x1240c51b1dd0.[FUNC:ProcessStarsCoreErrorInfo][FILE:device_error_proc.cc][LINE:1100]
-        TraceBack (most recent call last):
-        The extend info: errcode:(0x10, 0, 0) errorStr: Illegal instruction, which is usually caused by unaligned UUB addresses, fixp_error0 info: 0xeba07af, fixp_error, mId:0, tslot:0, threadId:0, ctxid:0, blk:0, sublk:0, subErrType:4.[FUNC:ProcessStarsCoreErrorInfo][FILE:device_error_proc.cc][LINE:1112]
-        Aicore kernel execute failed, device_id=4, stream_id=450, report_stream_id=2, task_id=442, flip_num=0, fault kernel_name=00_131_Gradients/Default/AddN.op56419/program id=2089, hash=16296079633597215637.[FUNC:GetError][FILE:stream.cc][LINE:1467]
-        [AIC_INFO] after execute:args print end[FUNC:GetError][FILE:stream.cc][LINE:1467]
-        rtStreamSynchronize execute failed, reason=[The model stream execute failed][FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:50]
-(Please search "Ascend Error Message" at https://www.mindspore.cn for error code description)
------------------------------------------
-   C++ Call Stack: (For framework developers)
------------------------------------------
+EZ9999[PID: 2574461] YYYY‑MM‑DD‑HH:MM:SS.fff.uuu (EZ9999):  An error occurs on the device(chipId:0, dieId:0), the serial number is 329, the error is aivec error, core id is 0, error code = 286, dump info: pc start: 0x120041000100, current: 0x12004100016c, sc error info: 0xffffffffffff, su error info: 0xeadbe7fe29c20051,0x80400000f800f7da, mte error info: 0x2f40000025969, vec error info: 0xbf7f93fe007efefa, cube error info: 0, l1 error info: 0, aic error mask: 0x395856, para base: 0x120000200400, mte error: 0, aic cond: 0.
+The extend info: errcode:(286) errorStr: The trap instruction reports an error. subErrType: 0x4.
+For details, see the troubleshooting document on the Ascend official website. Search for the keyword "AI Core Error".[FUNC:PrintDavidCoreInfo][FILE:device_error_proc_c.cc][LINE:711]
+TraceBack (most recent call last):
+       An error occurred in the kernel task, retCode=0x31, [vector core exception].[FUNC:PreCheckTaskErr][FILE:davinci_kernel_task.cc][LINE:1006]
+       Vector Core kernel execution failed, retCode=0x31.[FUNC:GetError][FILE:stream.cc][LINE:1875]
+       [AIC_INFO] after execute:args print end[FUNC:GetError][FILE:stream.cc][LINE:1875]
+       [DFX_INFO]AI Core kernel execution failed, device_id=0, stream_id=60, report_stream_id=60, task_id=1, flip_num=0, fault kernel_name=ErrorOPf_1, fault kernel info ext=none, program id=0, hash=3348555330679819737.[FUNC:GetError][FILE:stream.cc][LINE:1875]
+       rtStreamSynchronize execution failed, reason=vector core exception[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:69]
+```
+
+**EZ2001终端屏幕报错示例如下所示**，YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
+
+```bash
+[PID: 235403] YYYY‑MM‑DD‑HH:MM:SS.fff.uuu Execution_Error(EZ2001): An error occurs on the device(chipId:0, dieId:0), the serial number is 4, the error is aicore error, core id is 14, error code = 0x800000, dump info: pc start: 0x124000000ce0, current: 0x124000000d88, vec error info: 0, mte error info: 0x30300005d, ifu error info: 0x6e17f6e304080, ccu error info: 0xe3c78a280004021e, cube error info: 0, biu error info: 0, aic error mask: 0x6500020bd00028c, para base: 0x12c100000000, aic cond: 0.
+The extend info: errcode:(0x800000, 0, 0) errorStr: MTE accesses an invalid GM address or the cross-device memory access times out. fixp_error0 info: 0x300005d, fixp_error1 info: 0x3, fsmId:1, tslot:0, thread:0, ctxid:0, blk:9, sublk:0, subErrType:4.
+Fault RAS occurs in the system: [event_id:0x80e01801] Uncorrectable ECC / other uncorrectable memory error. For details about troubleshooting, see Health Management Error Definition.
+TraceBack (most recent call last):
+        An error occurred in the kernel task, retCode=0x26, [aicore exception].[FUNC:PreCheckTaskErr][FILE:davinci_kernel_task.cc][LINE:1006]
+        rtStreamSynchronize execution failed, reason=device mem error[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:69]
 ```
 
 **报错日志解读：**

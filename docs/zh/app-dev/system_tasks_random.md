@@ -4,7 +4,7 @@
 
 通过aclrtRandomNumAsync执行随机数生成任务，调用代码示例如下：
 
-```
+```c
 aclError NormalFloatAsync(
     float mean, float stddev, uint64_t seed, uint64_t num, void *counterDevAddr, void *devOutput, aclrtStream stream)
 {

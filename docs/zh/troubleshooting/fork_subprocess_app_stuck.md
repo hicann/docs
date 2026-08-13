@@ -71,11 +71,11 @@
 
     在Python官网，针对Python3.8\~Python3.11版本都出了补丁版本，解决fork方式引起的bug。
 
-    ![](figures/zh-cn_image_0000002060369161.png)
+    ![](figures/image_0000002060369161.png)
 
     在这些补丁版本中，也有针对fork问题的相应说明，如下：
 
-    ![](figures/zh-cn_image_0000002024482132.png)
+    ![](figures/image_0000002024482132.png)
 
 - **方式二：修改客户业务代码，显式使用forkserver或者spawn方式。**
 
@@ -85,13 +85,13 @@
 
         执行**pip show torch**命令查找Python安装目录，查询结果示例如下：
 
-        ![](figures/zh-cn_image_0000002060783033.png)
+        ![](figures/image_0000002060783033.png)
 
     2. 在Python安装目录下执行**find -name popen\_fork.py**命令找到popen\_fork.py文件，在fork启进程的地方都增加触发堆栈的代码。
 
         在\_launch\(self,process\_obj\)函数内添加代码，目的是走fork的子进程都触发堆栈：
 
-        ![](figures/zh-cn_image_0000002028178270.png)
+        ![](figures/image_0000002028178270.png)
 
         例如，在上图70行的位置增加如下代码，用于在fork启进程的地方触发堆栈消息打印：
 
