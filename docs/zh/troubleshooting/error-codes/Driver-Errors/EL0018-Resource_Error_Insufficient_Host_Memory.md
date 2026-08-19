@@ -11,7 +11,7 @@ Failed to allocate %s host memory requested by the %s module.
 报错示例如下：
 
 ```text
-Failed to allocate 1024 bytes host memory requested by hdc module.
+Failed to allocate 1024 bytes host memory requested by DRV(hdc) module.
 ```
 
 ## 可能原因
