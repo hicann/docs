@@ -38,7 +38,8 @@
 <!-- npu="950,A3,910b,910,310p,310b" id9 -->
 - [日志](./_dump_log.md)
   - [ASCEND_PROCESS_LOG_PATH](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_PROCESS_LOG_PATH.md)
-  - [ASCEND_SLOG_PRINT_TO_STDOUT](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_SLOG_PRINT_TO_STDOUT.md)
+  - [ASCEND_LOG_PRINT_TO_STDOUT](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_LOG_PRINT_TO_STDOUT.md)
+  - [ASCEND\_SLOG\_PRINT\_TO\_STDOUT（废弃）](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_SLOG_PRINT_TO_STDOUT_deprecated.md)
   - [ASCEND_GLOBAL_LOG_LEVEL](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_GLOBAL_LOG_LEVEL.md)
   - [ASCEND_MODULE_LOG_LEVEL](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_MODULE_LOG_LEVEL.md)
   - [ASCEND_GLOBAL_EVENT_ENABLE](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_GLOBAL_EVENT_ENABLE.md)

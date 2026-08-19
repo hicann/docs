@@ -10,10 +10,10 @@
     $HOME/ascend/log/debug/plog/plog-pid_*.log
     ```
 
-    开启环境变量ASCEND\_SLOG\_PRINT\_TO\_STDOUT可以将log日志直接打屏显示（1表示开启打屏，0表示关闭打屏），配置示例如下：
+    开启环境变量ASCEND\_LOG\_PRINT\_TO\_STDOUT可以将log日志直接打屏显示（1表示开启打屏，0表示关闭打屏），配置示例如下：
 
     ```bash
-    export ASCEND_SLOG_PRINT_TO_STDOUT=1
+    export ASCEND_LOG_PRINT_TO_STDOUT=1
     ```
 
     日志相关介绍参见[《CANN 日志参考》](https://hiascend.com/document/redirect/CannCommunitylogref)，环境变量介绍参见[《CANN 环境变量》](https://hiascend.com/document/redirect/CannCommunityEnvRef)。
