@@ -16,7 +16,7 @@ Vector addition result:
 
 ## 编译及运行应用
 
-您可以单击[Link](https://gitcode.com/cann/runtime/tree/master/example/0_quickstart/0_hello_cann)获取完整样例代码，同时，该样例的README.md文件中也提供了编译和运行的指导。
+您可以单击[Link](https://gitcode.com/cann/runtime/tree/9.2.0-beta.2/example/0_quickstart/0_hello_cann)获取完整样例代码，同时，该样例的README.md文件中也提供了编译和运行的指导。
 
 ## 了解关键代码逻辑
 

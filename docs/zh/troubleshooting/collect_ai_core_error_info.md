@@ -33,7 +33,7 @@
 | 收集方式 | 使用说明 |
 | --- | --- |
 | 用户手动收集 | 仅收集与AI Core Error问题有关的信息，包括exception dump文件、算子编译信息、Host应用类日志文件。具体收集方法请参见[用户手动收集步骤](#section420651516422)。 |
-| 工具自动收集 | 使用[asys](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_functions_and_restrictions.md)工具，收集所有故障相关信息（比手动收集的信息要多），包括安装版本信息、Device健康状态信息、exception dump文件、算子编译信息、全量日志文件等。具体收集方法请参见[工具自动收集步骤](#section194651132144216)。<br>注意：asys工具使用场景有限，集群、容器、虚拟机、云场景不支持asys工具一键式收集故障信息。 |
+| 工具自动收集 | 使用[asys](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/asys_functions_and_restrictions.md)工具，收集所有故障相关信息（比手动收集的信息要多），包括安装版本信息、Device健康状态信息、exception dump文件、算子编译信息、全量日志文件等。具体收集方法请参见[工具自动收集步骤](#section194651132144216)。<br>注意：asys工具使用场景有限，集群、容器、虚拟机、云场景不支持asys工具一键式收集故障信息。 |
 
 <a id="section420651516422"></a>
 
@@ -63,7 +63,7 @@
         >**说明：** 
         >- 如果根据以上环境变量或默认目录，没有获取到异常算子编译信息，请参见[手动收集算子编译信息（算子.o和.json文件）](collect_operator_compile_info.md)中的指导获取这部分信息。
         >- 由于Host服务器中trace日志不会自动清理，占用磁盘空间可能比较大，如果内存空间有限，用户也可以按需拷贝$HOME/ascend/atrace/目录下的指定进程的trace日志，拷贝命令示例：cp -rf $HOME/ascend/atrace/trace\__\{进程组pid\}_\* aic\_err\_info/
-        >- 此处收集的dump文件无法通过文本工具直接查看其内容，若需查看dump文件内容，请参见[解析Dump文件](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/msaicerr/Dump_files_parsing.md)。
+        >- 此处收集的dump文件无法通过文本工具直接查看其内容，若需查看dump文件内容，请参见[解析Dump文件](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/msaicerr/Dump_files_parsing.md)。
     <a id="li222118555219"></a>
     3. 收集Device侧系统类日志和其他维测信息，包括slog日志、syslog日志、黑匣子等。
 
@@ -126,7 +126,7 @@
 
 ## 工具自动收集步骤
 
-asys工具的使用约束请参见[asys工具功能及约束](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_functions_and_restrictions.md)，在使用asys工具前需先安装、配置asys工具，请先参见[环境准备](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_environment_preparation.md)处的前提条件说明。
+asys工具的使用约束请参见[asys工具功能及约束](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/asys_functions_and_restrictions.md)，在使用asys工具前需先安装、配置asys工具，请先参见[环境准备](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/asys_environment_preparation.md)处的前提条件说明。
 
 - **无需复跑业务场景，执行asys collect命令，直接收集故障信息：**
 
@@ -134,7 +134,7 @@ asys工具的使用约束请参见[asys工具功能及约束](https://gitcode.co
     asys collect --output=path
     ```
 
-    output表示收集信息所存放的目录，详细参数说明及约束请参见[故障信息收集](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/fault_information_collection.md)。
+    output表示收集信息所存放的目录，详细参数说明及约束请参见[故障信息收集](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/fault_information_collection.md)。
 
 - **需复跑业务场景，执行asys launch命令，同时执行业务复跑和收集故障信息：**
 
@@ -142,7 +142,7 @@ asys工具的使用约束请参见[asys工具功能及约束](https://gitcode.co
     asys launch --task="sh ../app_run.sh" --output=path
     ```
 
-    task表示要复跑的任务，output表示收集信息所存放的目录，详细参数说明及约束请参见[业务复跑+故障信息收集](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/rerun_fault_information_collection.md)。
+    task表示要复跑的任务，output表示收集信息所存放的目录，详细参数说明及约束请参见[业务复跑+故障信息收集](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/rerun_fault_information_collection.md)。
 
     **注意：**离线推理场景下，若需要重新构建模型（例如通过ATC工具转换模型），需先使用asys launch命令复跑构建模型的任务，再使用重新编译的模型、使用asys launch命令复跑推理业务。另外，还需将构建模型时收集的维测信息与推理时收集的维测信息放到一个目录下，例如：$HOME/asys\_output。
 

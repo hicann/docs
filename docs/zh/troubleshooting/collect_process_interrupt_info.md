@@ -3,7 +3,7 @@
 支持用户手动收集、工具自动收集两种方式。
 
 - 用户手动收集：收集Host、Device日志和文件，**仅收集最小集信息**。
-- 工具自动收集：在Host服务上，使用[asys](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_functions_and_restrictions.md)工具**收集所有故障相关信息**，包括安装版本信息、Device健康状态信息、dump文件、算子编译信息、全量日志文件等。
+- 工具自动收集：在Host服务上，使用[asys](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/asys_functions_and_restrictions.md)工具**收集所有故障相关信息**，包括安装版本信息、Device健康状态信息、dump文件、算子编译信息、全量日志文件等。
 
     **注意**：asys工具使用场景有限，集群、容器、虚拟机、云场景不支持asys工具一键式收集故障信息。
 
@@ -36,7 +36,7 @@
 
 ## 工具自动收集方法
 
-asys工具的使用约束请参见[asys工具功能及约束](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_functions_and_restrictions.md)，在使用asys工具前需先安装、配置asys工具，请先参见[环境准备](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_environment_preparation.md)处的前提条件说明。
+asys工具的使用约束请参见[asys工具功能及约束](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/asys_functions_and_restrictions.md)，在使用asys工具前需先安装、配置asys工具，请先参见[环境准备](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/asys_environment_preparation.md)处的前提条件说明。
 
 asys工具命令示例如下，执行**asys collect**命令，**收集故障信息**：
 
@@ -44,4 +44,4 @@ asys工具命令示例如下，执行**asys collect**命令，**收集故障信�
 asys collect --output="path"
 ```
 
-output表示收集信息所存放的目录，详细参数说明及约束请参见[故障信息收集](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/fault_information_collection.md)。
+output表示收集信息所存放的目录，详细参数说明及约束请参见[故障信息收集](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/fault_information_collection.md)。

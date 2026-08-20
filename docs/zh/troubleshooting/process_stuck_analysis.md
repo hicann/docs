@@ -10,7 +10,7 @@
 
 1. 使用asys工具获取卡住进程的调用栈信息，同时结合plog运行日志排查框架在线编译算子时间长的问题。
 
-    asys工具命令示例如下，其安装及详细参数说明请参见[环境准备](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/asys_environment_preparation.md)。
+    asys工具命令示例如下，其安装及详细参数说明请参见[环境准备](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/asys_environment_preparation.md)。
 
     ```bash
     # pid表示卡住的用户进程ID，请根据实际情况替换

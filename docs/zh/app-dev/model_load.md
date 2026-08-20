@@ -39,7 +39,7 @@
 以下是关键步骤的代码示例，不能直接拷贝编译运行，仅供参考。调用接口后，需增加异常处理的分支，并记录报错日志、提示日志，此处不一一列举。
 
 <!-- npu="950,A3,910b,910,310p,310b" id1 -->
-您可以单击[resnet50\_imagenet\_classification](https://gitcode.com/cann/ge/tree/master/examples/acl/1_sample_resnet50_imagenet_classification)获取样例。
+您可以单击[resnet50\_imagenet\_classification](https://gitcode.com/cann/ge/tree/9.2.0-beta.2/examples/acl/1_sample_resnet50_imagenet_classification)获取样例。
 <!-- end id1 -->
 
 ```cpp

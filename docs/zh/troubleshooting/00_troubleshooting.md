@@ -52,8 +52,8 @@
       - [fork方式创建子进程导致应用进程卡死](fork_subprocess_app_stuck.md)
 
 - [故障定位工具](troubleshooting_tools.md)
-  - [asys工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/asys/README.md)
-  - [msaicerr工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/master/docs/zh/msaicerr/README.md)
+  - [asys工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/asys/README.md)
+  - [msaicerr工具使用指导<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/msaicerr/README.md)
 
 - [常用定位操作](common_diagnostic_operations.md)
   - [通过Device日志获取故障ID并排查RAS硬件故障](device_log_ras_hardware_fault.md)
@@ -63,7 +63,7 @@
 
 - [故障案例集](troubleshooting_case_collection.md)
   - [案例集说明](case_collection_guide.md)
-  - [运行时资源异常问题<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/master/docs/zh/FAQ/README.md)
+  - [运行时资源异常问题<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/9.2.0-beta.2/docs/zh/FAQ/README.md)
 
   - [模型推理问题](model_inference_issues.md)
     - [使用dump功能未获取dump结果](dump_result_not_obtained.md)
@@ -158,18 +158,20 @@
 
 - [错误码参考](error_code_ref.md)
 
-  - [GE Errors<a name="sub_menu"></a>](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/error_codes/README.md)
-  - [FE Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/master/docs/zh/error_code_ref/FE-Errors/FE-Errors.md)
+  - [GE Errors<a name="sub_menu"></a>](https://gitcode.com/cann/ge/blob/9.2.0-beta.2/docs/zh/user_guides/error_codes/README.md)
+  - [FE Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/9.2.0-beta.2/docs/zh/error_code_ref/FE-Errors/FE-Errors.md)
   - [AI CPU Errors<a name="sub_menu"></a>](error-codes/AI-CPU-Errors/AI-CPU-Errors.md)
-  - [TEFusion Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/master/docs/zh/error_code_ref/TEfusion-Errors/TEFusion-Errors.md)
-  - [RTS Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/master/docs/zh/error_code_ref/RTS-Errors/00_RTS-Errors.md)
-  - [ACL Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/master/docs/zh/error_code_ref/ACL-Errors/01_ACL-Errors.md)
-  - [HCCL Errors<a name="sub_menu"></a>](https://gitcode.com/cann/hcomm/blob/master/docs/zh/error_codes/README.md)
-  - [Profiling Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/master/docs/zh/error_code_ref/Profiling-Errors/Profiling-Errors.md)
+  - [TEFusion Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/9.2.0-beta.2/docs/zh/error_code_ref/TEfusion-Errors/TEFusion-Errors.md)
+  - [RTS Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/9.2.0-beta.2/docs/zh/error_code_ref/RTS-Errors/00_RTS-Errors.md)
+  - [ACL Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/9.2.0-beta.2/docs/zh/error_code_ref/ACL-Errors/01_ACL-Errors.md)
+  - [HCCL Errors<a name="sub_menu"></a>](https://gitcode.com/cann/hcomm/blob/9.2.0-beta.2/docs/zh/error_codes/README.md)
+  - [Profiling Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/9.2.0-beta.2/docs/zh/error_code_ref/Profiling-Errors/Profiling-Errors.md)
   - [Driver Errors<a name="sub_menu"></a>](error-codes/Driver-Errors/Driver-Errors.md)
   - [Queue Schedule Errors<a name="sub_menu"></a>](error-codes/Queue-Schedule-Errors/Queue-Schedule-Errors.md)
   - [DVPP Errors<a name="sub_menu"></a>](error-codes/DVPP-Errors/DVPP-Errors.md)
   - [AMCT Errors<a name="sub_menu"></a>](error-codes/AMCT-Errors/AMCT-Errors.md)
-  - [DUMP Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/master/docs/zh/error_code_ref/Dump-Errors)
+  - [DUMP Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/9.2.0-beta.2/docs/zh/error_code_ref/Dump-Errors)
+  - [Operator Errors<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/9.2.0-beta.2/docs/zh/error_code/Operator-Errors/Operator-Errors.md)
+  - [Nnopbase-Errors<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/9.2.0-beta.2/docs/zh/error_code/Nnopbase-Errors/Nnopbase-Errors.md)
   - [AOE相关错误码](error-codes/AOE-Error.md)
   - [E*9*** Internal error](error-codes/E-9-Inner-Error.md)
