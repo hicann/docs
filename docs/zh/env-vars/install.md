@@ -4,6 +4,7 @@
 
 CANN软件安装完成后，默认会自动配置程序编译、执行所依赖的基础环境变量，但用户进程结束后相关环境变量自动失效，您也可以通过如下环境变量脚本一键式配置。
 
+<!-- npu="950,A3,910b,910,310p,310b" id1 -->
 ```bash
 # root用户安装时环境变量配置示例：
 # 安装Toolkit包时
@@ -17,12 +18,14 @@ source /usr/local/Ascend/nnal/asdsip/set_env.sh
 ```bash
 # 非root用户安装时环境变量配置示例：
 # 安装Toolkit时
-source ${HOME}/Ascend/cann/set_env.sh 
+source ${HOME}/Ascend/cann/set_env.sh
 # 安装NNAL包时ATB加速库
 source ${HOME}/Ascend/nnal/atb/set_env.sh
 # 安装NNAL包SiP加速库
 source ${HOME}/Ascend/nnal/asdsip/set_env.sh
 ```
+<!-- end id1 -->
+<!-- @ref: docs/res/zh/env-vars/install_res.md#id1 -->
 
 用户也可以通过修改\~/.bashrc文件方式设置永久环境变量，操作如下：
 
@@ -30,6 +33,7 @@ source ${HOME}/Ascend/nnal/asdsip/set_env.sh
 2. 执行:wq!命令保存文件并退出。
 3. 执行source \~/.bashrc命令使其立即生效。
 
+<!-- npu="950,A3,910b,910,310p,310b" id3 -->
 ## 环境变量说明
 
 环境变量详细介绍参见以下内容。
@@ -74,3 +78,5 @@ source ${HOME}/Ascend/nnal/asdsip/set_env.sh
 - **神经网络加速库（NNAL）中SiP加速库**
   - ASDSIP_HOME_PATH：SiP软件包安装后文件存储路径。
   - LD_LIBRARY_PATH：Linux系统中加载动态库时的搜索路径列表。
+
+<!-- end id3 -->
