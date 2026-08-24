@@ -1,0 +1,18 @@
+# 性能调优工具
+
+- [简介](./overview.md)
+- [msProf模型调优工具]()
+  - [快速入门](https://gitcode.com/Ascend/msprof/blob/26.1.0/docs/zh/quick_start/msprof_quick_start.md)
+  - [性能数据采集和自动解析]()
+    - [使用前准备](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/profiling/preparation/before_you_start.md)
+    - [msprof采集命令<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/profiling/msprof_cmd/msprof_cmd.md)
+  - [离线解析]()
+    - [安装指南](https://gitcode.com/Ascend/msprof/blob/26.1.0/docs/zh/install_guide/msprof_install_guide.md)
+    - [msProf性能数据解析](https://gitcode.com/Ascend/msprof/blob/26.1.0/docs/zh/user_guide/msprof_parsing_instruct.md)
+  - [性能数据文件参考](https://gitcode.com/Ascend/msprof/blob/26.1.0/docs/zh/user_guide/profile_data_file_references.md)
+  - [DB格式性能数据文件参考](https://gitcode.com/Ascend/msprof/blob/26.1.0/docs/zh/user_guide/profile_data_file_references_db.md)
+  - [扩展功能](https://gitcode.com/Ascend/msprof/blob/26.1.0/docs/zh/user_guide/extended_functions.md)
+- [msPTI调优工具<a name="sub_menu"></a>](https://gitcode.com/Ascend/docs/blob/master/MindStudio/26.1.0/zh/menu/mstt_msit/mspti_menu.md)
+- [服务化调优工具<a name="sub_menu"></a>](https://gitcode.com/Ascend/docs/blob/master/MindStudio/26.1.0/zh/menu/mstt_msit/msserviceprofiler_menu.md)
+- [其他采集方式<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/profiling/other_method/other_method.md)
+- [附录<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/9.2.0-beta.2/docs/zh/profiling/appendices/appendices.md)
