@@ -8,7 +8,7 @@ Failed to connect the device.
 
 ## 可能原因
 
-1. Decice侧心跳丢失。
+1. Device侧心跳丢失。
 2. 底层通路断开连接。
 
 ## 解决方法

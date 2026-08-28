@@ -26,7 +26,7 @@
     - [媒体数据处理功能简介](DVPP_overview.md)
     - [媒体数据处理多版本接口的差异](DVPP_multiple_versions_differences.md)
     - [各产品型号功能支持情况](functions_supported_status.md)
-    - [媒体数据处理算子](DVPP_operaters.md)
+    - [媒体数据处理算子](DVPP_operators.md)
     - [媒体数据处理V2](DVPP_V2.md)
       - [DVPP图像/视频处理](DVPP_image_video_processing.md)
         - [VPC图片处理典型功能](DVPP_V2_VPC.md)

@@ -66,7 +66,7 @@ stStream.type = HI_PT_PNG;
 ret = hi_mpi_png_get_image_info(&stStream, &stImgInfo);
 if (g_runMode == ACL_HOST) {
     // 如果不使用Host上的数据，需及时释放
-   aclrtFreeHost(hostInputAddr);
+    aclrtFreeHost(hostInputAddr);
     hostInputAddr = nullptr;
 }
 stStream.addr = (uint8_t *)inputAddr;

@@ -34,7 +34,7 @@ Ringbuffer是上报error信息的一片共享内存，任务拉起时会进行cr
     device-0_******.log:23503:[EVENT] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 47266 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
     ```
 
-    如上图所示：
+    如上所示：
 
     - 日志中“create\_ringbuffer”关键字表示进程拉起，因此上图中device-0上ID为“3299758”的进程创建时间为“2023-12-02-14:29:25”。
 
@@ -66,14 +66,14 @@ Ringbuffer是上报error信息的一片共享内存，任务拉起时会进行cr
     device-0_******.log:23503:[EVENT] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 47266 (dieid:0,cpuid:0) ringbuffer.c:177 delete_ringbuffer: pid=3299758, vf_id=0
     ```
 
-    如上图所示：
+    如上所示：
 
-    - 日志中“create\_ringbuffer”关键字表示进程拉起，因此上图中device-0上ID为“3299758”的进程创建时间为“2023-12-02-14:29:25”。
+    - 日志中“create\_ringbuffer”关键字表示进程拉起，因此device-0上ID为“3299758”的进程创建时间为“2023-12-02-14:29:25”。
 
         为了避免重复创建，每一次创建ringbuffer前都会进行ringbuffer删除操作，所以创建的日志包括“delete\_ringbuffer”和“create\_ringbuffer”。
 
         日志中，若对于同一个进程，有多个“create\_ringbuffer”，则其中包含ringbuffer\_addr关键字的日志时间表示该进程的拉起时间。
 
-    - 日志中“delete\_ringbuffer”关键字表示进程结束，因此上图中device-0上ID为“3299758”的进程销毁时间为“2023-12-04-11:44:15”。
+    - 日志中“delete\_ringbuffer”关键字表示进程结束，因此device-0上ID为“3299758”的进程销毁时间为“2023-12-04-11:44:15”。
 
         日志中，若对于同一个进程，有多个“delete\_ringbuffer”，则最后一次“delete\_ringbuffer”的日志时间表示该进程的结束时间。

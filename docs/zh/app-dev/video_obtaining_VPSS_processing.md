@@ -27,7 +27,7 @@ VPSS必须配合VI模块一起使用，本节介绍其接口调用流程及注�
     1. 使用MIPI Rx ioctl命令字初始化MIPI/Sensor硬件对接信息，接口调用流程请参见[初始化MIPI/Sensor硬件对接信息](video_obtaining.md#section5234939161715)。
     2. 使用VI（Video Input）功能接口初始化VI模块，接口调用流程请参见[初始化VI视频输入模块](video_obtaining.md#section140011491810)。
     3. 使用ISP（Image Signal Processing）系统控制接口初始化并运行ISP模块，接口调用流程请参见[初始化并运行ISP图像信号处理模块](video_obtaining.md#section0926122591813)。
-    4. 根据hi\_mpi\_sys\_bind接口设置的绑定策略，系统内部自动将VI处理后的图像自动传递给VPSS；
+    4. 根据hi\_mpi\_sys\_bind接口设置的绑定策略，系统内部自动将VI处理后的图像传递给VPSS；
     5. 根据VPSS设置的参数，系统内部自动执行裁剪/3dnr/鱼眼矫正/缩放处理。
     6. 按需更新修改区域信息：
         - 设置区域通道显示属性：

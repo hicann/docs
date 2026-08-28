@@ -7,25 +7,25 @@
 - 日志1
 
     ```bash
-    device:0 chan 0, venc or jpege input buffer is invalid, make sure it has been allocated with hi_mpi_dvpp_malloc or aclDvppMalloc.
+    device:0 chan 0, venc or jpege input buffer is invalid, make sure it has been allocated with hi_mpi_dvpp_malloc or acldvppMalloc.
     ```
 
 - 日志2
 
     ```bash
-    device:0 chan 0, venc or jpege output buffer is invalid, make sure it has been allocated with hi_mpi_dvpp_malloc or aclDvppMalloc.
+    device:0 chan 0, venc or jpege output buffer is invalid, make sure it has been allocated with hi_mpi_dvpp_malloc or acldvppMalloc.
     ```
 
 - 日志3
 
     ```bash
-    device:0 chan 0, jpege input buffer is invalid, make sure it has been allocated with hi_mpi_dvpp_malloc or aclDvppMalloc.
+    device:0 chan 0, jpege input buffer is invalid, make sure it has been allocated with hi_mpi_dvpp_malloc or acldvppMalloc.
     ```
 
 - 日志4
 
     ```bash
-    device:0 chan 0, jpege output buffer is invalid, make sure it has been allocated with hi_mpi_dvpp_malloc or aclDvppMalloc.
+    device:0 chan 0, jpege output buffer is invalid, make sure it has been allocated with hi_mpi_dvpp_malloc or acldvppMalloc.
     ```
 
 ## 可能原因

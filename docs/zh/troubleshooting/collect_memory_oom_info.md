@@ -15,7 +15,7 @@
 2. 应用类日志的默认路径为Host服务器的$\{HOME\}/ascend/log目录。将日志文件移动至err\_log\_info目录下:
 
     ```bash
-    mv ${HOME}/ascend/log ${HOME}/err_log_info/ 
+    mv ${HOME}/ascend/log ${HOME}/err_log_info/
     ```
 
 3. 使用msnpureport工具将Device侧系统类日志和其他维测信息导出到Host侧，包括slog日志、syslog日志、黑匣子等。

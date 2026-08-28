@@ -5,7 +5,7 @@
 GE提供了以下两种模型编译方式：
 
 - 使用昇腾张量编译器（Ascend Tensor Compiler，简称ATC）将训练好的开源框架网络模型编译为OM模型文件。对于新手而言，使用ATC命令较为适宜，本章也将以此为例介绍如何编译模型。
-- 使用图开发接口训练好的开源框架网络模型转换为采用Ascend IR（Ascend Intermediate Representation）表示的计算图（Ascend Graph）。详细描述请参见[《图开发》](https://hiascend.com/document/redirect/CannCommunityGraphguide)。
+- 使用图开发接口将训练好的开源框架网络模型转换为采用Ascend IR（Ascend Intermediate Representation）表示的计算图（Ascend Graph）。详细描述请参见[《图开发》](https://hiascend.com/document/redirect/CannCommunityGraphguide)。
 
 编译出om模型之后，再基于GE提供的模型加载与执行接口实现模型推理。接口调用流程如下图所示：
 

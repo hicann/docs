@@ -33,7 +33,7 @@ Failed to execute the single-operator test case. The operator logic may be incor
 2. AICERROR code中给出的详细报错信息，示例如下：
 
     ```text
-    ***********************2. Ai Core DFX Register***********************
+    ***********************2. AI Core DFX Register***********************
     error code  : 0x10
     CCU_ERR_INFO: 0x2c6290000324442
     ccu_err_addr bit[22:8]=011001001000100  meaning:CCU Error Address [17:3]  approximate:0x19220
@@ -84,7 +84,7 @@ Failed to execute the single-operator test case. The operator logic may be incor
 
 在执行msaicerr.py工具分析结束后，在执行msaicerr.py工具的同级目录下，会生成“info\_\{时间戳\}/**debug\_info.txt**”文件、异常算子测试脚本“info\_\{时间戳\}/aicerror\_\{number\}\_\{时间戳\}/test\_single\_op.py”。
 
-在debug\_info.txt文件中异常算子测试脚本的执行命令（命令示例如下），再执行脚本，复现AI Core error问题。
+在debug\_info.txt文件中查找异常算子测试脚本的执行命令（命令示例如下），再执行脚本，复现AI Core error问题。
 
 ```text
 Run 'export PYTHONPATH=/usr/local/Ascend/CANN-7.3/tools/msaicerr/:$PYTHONPATH;cd /usr/local/Ascend/CANN-7.3/tools/msaicerr;python3 /home/xxxxxxx/xxx/info_xxxx/aicerror_xxxx/test_single_op.py' can test op!

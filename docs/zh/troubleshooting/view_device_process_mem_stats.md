@@ -15,14 +15,14 @@
     - 如果用户是第一次运行应用，则通过日志中的内存统计信息分析各进程占用的内存是否符合预期或超出硬件物理内存，若不符合预期或超出硬件物理内存，则需联系技术支持进一步定位。
     - 如果非首次运行应用，则可将历史成功的版本与当前失败的版本对比，查看哪个业务进程申请的内存与历史成功版本差距大，可重点分析。
 
-        历史成功版本的内存统计信息示例（AI CPU进程申请约72M内存）：
+        历史成功版本的内存统计信息示例（AI CPU进程申请约72MB内存）：
 
         ```bash
         [INFO] DRV(4052516,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052516, 4052516][drv][devmm][svm_mem_stats_show_device_proc_mem 358]DEV_PROC_MEM dev0 Mem stats (Bytes). (module_name=AICPU; module_id=36; total_size=75505664)
         [INFO] DRV(4052516,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052516, 4052516][drv][devmm][svm_mem_stats_show_device_proc_mem 358]DEV_PROC_MEM dev0 Mem stats (Bytes). (module_name=CUSTOM; module_id=76; total_size=75505664)
         ```
 
-        当前问题版本的内存统计信息示例（AI CPU进程申请约150M内存）：
+        当前问题版本的内存统计信息示例（AI CPU进程申请约150MB内存）：
 
         ```bash
         [INFO] DRV(4052533,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052533, 4052533][drv][devmm][svm_mem_stats_show_device_proc_mem 358]DEV_PROC_MEM dev0 Mem stats (Bytes). (module_name=AICPU; module_id=36; total_size=157286400)

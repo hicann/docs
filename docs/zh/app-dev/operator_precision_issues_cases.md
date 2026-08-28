@@ -24,7 +24,7 @@ FastRCNN网络，模型转换时，保持默认高性能模式、force\_fp16精�
 
     在将numpy格式文件转换为txt格式文件的过程中，可以获取AddN算子第0个输出的最大值、最小值，命令示例如下（**\*\*\*\*_.npy_**表示numpy格式文件的路径）：
 
-    ```bash
+    ```python
     $ python3
     Python 3 (default, Mar  5 2020, 16:07:54)[GCC 5.4.0 20160609] on linuxType ....
     >>> import numpy as np

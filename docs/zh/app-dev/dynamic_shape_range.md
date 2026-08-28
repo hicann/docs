@@ -4,7 +4,7 @@
 
 ## 接口调用流程
 
-如果模型输入Shape是动态的，在模型执行之前调aclmdlSetDatasetTensorDesc设置该输入的tensor描述信息（主要是设置Shape信息），在模型执行之后，调用aclmdlGetDatasetTensorDesc接口获取模型动态输出的Tensor描述信息，再进一步调用aclTensorDesc下的操作接口获取输出Tensor数据占用的内存大小、Tensor的Format信息、Tensor的维度信息等。
+如果模型输入Shape是动态的，在模型执行之前调用aclmdlSetDatasetTensorDesc设置该输入的tensor描述信息（主要是设置Shape信息），在模型执行之后，调用aclmdlGetDatasetTensorDesc接口获取模型动态输出的Tensor描述信息，再进一步调用aclTensorDesc下的操作接口获取输出Tensor数据占用的内存大小、Tensor的Format信息、Tensor的维度信息等。
 
 关键原理说明如下：
 

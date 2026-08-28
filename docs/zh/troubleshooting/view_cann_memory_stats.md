@@ -25,18 +25,18 @@
 
     - 如果用户是第一次运行应用，则通过日志中的内存统计信息分析各组件占用的内存是否符合预期或超出硬件物理内存，若不符合预期或超出硬件物理内存，则需要调整代码逻辑或重新规划内存使用。
 
-        例如，以参数量13B大模型为例，其中，B是Billion，代表十亿参数，13B就是130亿参数，每个参数全精度是float32，占用32位bit，也就是4Byte字节，1GB=1024<sup>3</sup>Byte，那么13B模型占用13 \* 10<sup>9</sup>  \* 4Byte ÷ 1024<sup>3</sup>  ≈ 48.4GB，如果说当前硬件内存只有50G左右，那运行模型时大概率会超出硬件物理内存，而导致OOM。
+        例如，以参数量13B大模型为例，其中，B是Billion，代表十亿参数，13B就是130亿参数，每个参数全精度是float32，占用32位bit，也就是4Byte字节，1GB=1024<sup>3</sup>Byte，那么13B模型占用13 \* 10<sup>9</sup>  \* 4Byte ÷ 1024<sup>3</sup>  ≈ 48.4GB，如果说当前硬件内存只有50GB左右，那运行模型时大概率会超出硬件物理内存，而导致OOM。
 
     - 如果非首次运行应用，则可将历史成功的版本与当前失败的版本对比，查看对应内存属性（大多数问题都是申请dev内存不足，查看DEV\_MEM属性的打印），各模块的alloced\_peak\_size峰值内存，找到峰值增加的组件，哪个组件申请的内存与历史成功版本差距大，可重点分析。
 
-        历史成功版本的内存统计信息示例（APP申请约2G内存）：
+        历史成功版本的内存统计信息示例（APP申请约2GB内存）：
 
         ```bash
         [INFO] DRV(4052516,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052516, 4052516][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=RUNTIME; module_id=7; current_alloced_size=44138496; alloced_peak_size=44138496; alloc_cnt=18; free_cnt=0)
         [INFO] DRV(4052516,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052516, 4052516][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=APP; module_id=33; current_alloced_size=2078195712; alloced_peak_size=2078195712; alloc_cnt=996; free_cnt=0)
         ```
 
-        当前问题版本的内存统计信息示例（APP申请约20G内存）：
+        当前问题版本的内存统计信息示例（APP申请约20GB内存）：
 
         ```bash
         [INFO] DRV(4052522,main_aarch64):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu [ascend][curpid: 4052522, 4052522][drv][devmm][_svm_mem_stats_show 148]DEV_MEM dev0 Mem stats (Bytes). (module_name=RUNTIME; module_id=7; current_alloced_size=44138496; alloced_peak_size=44138496; alloc_cnt=18; free_cnt=0)
@@ -48,14 +48,14 @@
     - 若统计信息处module\_name为APP的组件占用内存多，表示用户的应用进程占用内存多，用户需分析已申请内存和预估值的差距，若差距较大，用户需分析原因、排查并优化应用代码中内存申请的逻辑。
     - 若module\_name为GE、RUNTIME、HCCL等组件，表示CANN组件占用的内存，在分析CANN各组件内存是否占用过多时，可参考如下内存占用值：
         - **训练场景下，针对不同框架CANN各组件占用的内存不同，以PyTorch框架场景为例**，关键组件占用的内存参考值如下，供分析问题时参考，若CANN组件占用内存较大，则需联系技术支持分析：
-            - GE：约3M
-            - RUNTIME：约26M
+            - GE：约3MB
+            - RUNTIME：约26MB
             - HCCL：HCCL占用内存 = 通信链路占用内存 + 缓冲区内存，通信链路占用的内存与集群规模、通信链路有关，缓冲区占用的内存与通信域个数、单个通信域占用的缓冲区大小有关。
 
-                例如，集群中有1024个server，需建立10个通信链路，3个通信域，每个通信域占用“2 \* HCCL\_BUFFSIZE”大小的收发内存（HCCL\_BUFFSIZE是环境变量，由用户配置，默认值200M），**则**：单算子模式下通信链路占用的内存 = 通信链路个数 \* 4M =10 \* 4M = 40M，图模式下通信链路占用的内存 = 通信链路个数 \* 图里的算子个数 \* 0.3M = 10 \* 图里的算子个数 \* 0.3M = 图里的算子个数 \* 3M，缓冲区内存 = 通信域个数 \* 每个通信域占用的收发内存 =3 \* 2 \* 200M
+                例如，集群中有1024个server，需建立10个通信链路，3个通信域，每个通信域占用“2 \* HCCL\_BUFFSIZE”大小的收发内存（HCCL\_BUFFSIZE是环境变量，由用户配置，默认值200MB），**则**：单算子模式下通信链路占用的内存 = 通信链路个数 \* 4MB =10 \* 4MB = 40MB，图模式下通信链路占用的内存 = 通信链路个数 \* 图里的算子个数 \* 0.3MB = 10 \* 图里的算子个数 \* 0.3MB = 图里的算子个数 \* 3MB，缓冲区内存 = 通信域个数 \* 每个通信域占用的收发内存 =3 \* 2 \* 200MB
 
         - **推理场景下，以PyTorch模型为例，转换为适配AI处理器的离线模型进行推理时**，关键组件占用的内存参考值如下，供分析问题时参考，若CANN组件占用内存较大，则需联系技术支持分析：
-            - GE：约86M
-            - RUNTIME：约18M
+            - GE：约86MB
+            - RUNTIME：约18MB
 
     - 可使用[《算子开发工具》](https://hiascend.com/document/redirect/CannCommunityopdev)中的msSanitizer内存检测工具排查用户应用的内存问题，不过该工具当前仅支持Atlas A2训练系列产品、Atlas 推理系列产品。

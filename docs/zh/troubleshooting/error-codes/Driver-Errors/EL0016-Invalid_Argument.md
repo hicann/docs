@@ -11,7 +11,7 @@
 报错示例如下：
 
 ```text
-MemMap failed. Value 10 for parameter cmd is invalid. Reason: The input address does not meet the %s 4 KB alignment requirement.
+MemMap failed. Value 10 for parameter cmd is invalid. Reason: The input address does not meet the 4 KB alignment requirement.
 ```
 
 ## 解决方法

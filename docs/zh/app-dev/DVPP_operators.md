@@ -2,7 +2,7 @@
 
 ## 基本概念
 
-调用媒体数据处理算子通常采用“两段式接口”形式，具体如下，其中_“_acldvpp”表示算子接口前缀=；而_“Xxx”_表示对应的算子类型，如EncodeJpeg算子。
+调用媒体数据处理算子通常采用“两段式接口”形式，具体如下，其中_“_acldvpp”表示算子接口前缀；而_“Xxx”_表示对应的算子类型，如EncodeJpeg算子。
 
 ```text
 aclnnStatus acldvppXxxGetWorkspaceSize(const aclTensor *src, ..., aclTensor *out, ..., uint64_t *workspaceSize, aclOpExecutor **executor);
@@ -130,7 +130,7 @@ int32_t encode_jpeg(aclrtStream stream) {
     CreateAclTensor(inputPic, selfShape, &selfDeviceAddr, aclDataType::ACL_UINT8, &self, aclFormat::ACL_FORMAT_NCHW);
     ScopeGuard autoCloseInTensor([self, selfDeviceAddr] { aclrtFree(self);aclDestroyTensor((const aclTensor *)selfDeviceAddr);});
 
-    // 每次执行完输出Tensor Shape会修改，因此性能测试将输出Tensor构造放到循环内部，不然会第二次执行会被内部拦截
+    // 每次执行完，输出Tensor Shape会被修改，因此性能测试将输出Tensor构造放到循环内部，不然会第二次执行会被内部拦截
     // 放到内部时，最后执行完文件无法保留，因为内存提前释放了
     CreateAclTensor(outputPic, outShape, &outDeviceAddr, aclDataType::ACL_UINT8, &out, ACL_FORMAT_ND, false);
     ScopeGuard autoCloseOutTensor([out, outDeviceAddr] { aclrtFree(out);aclDestroyTensor((const aclTensor *)outDeviceAddr);});

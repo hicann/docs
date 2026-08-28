@@ -287,7 +287,7 @@ if(runMode == ACL_HOST){
     ReadPicFile(picName, cropInHostBuffer, cropInBufferSize);
     // 申请Device内存cropInDevBuffer_
     ret = acldvppMalloc(&cropInDevBuffer_, cropInBufferSize);
-    // 通过aclrtMemcpy接口图片数据传输到Device
+    // 通过aclrtMemcpy接口将图片数据传输到Device
     ret = aclrtMemcpy(cropInDevBuffer_, cropInBufferSize, cropInHostBuffer, cropInBufferSize, ACL_MEMCPY_HOST_TO_DEVICE);
     // 数据传输完成后，及时释放内存
     free(cropInHostBuffer);
@@ -329,7 +329,7 @@ ret = acldvppVpcCropResizeAsync(dvppChannelDesc_, cropInputDesc_,
         cropOutputDesc_, cropArea_, resizeConfig_, stream_);
 ret = aclrtSynchronizeStream(stream_);
 
-// 9. 抠图贴图结束后，释放资源，包括输入/输出图片的描述信息、输入/输出内存、通道描述信息、通道等
+// 9. 释放资源，包括输入/输出图片的描述信息、输入/输出内存、通道描述信息、通道等
 acldvppDestroyRoiConfig(cropArea_);
 acldvppDestroyResizeConfig(resizeConfig_);
 acldvppDestroyPicDesc(cropInputDesc_);
@@ -439,7 +439,7 @@ ret = acldvppVpcCropResizePasteAsync(dvppChannelDesc_, vpcInputDesc_,
         vpcOutputDesc_, cropArea_, pasteArea_, resizeConfig_, stream_);
 ret = aclrtSynchronizeStream(stream_);
 
-// 9. 抠图贴图结束后，释放资源，包括输入/输出图片的描述信息、输入/输出内存、通道描述信息、通道等
+// 9. 释放资源，包括输入/输出图片的描述信息、输入/输出内存、通道描述信息、通道等
 acldvppDestroyRoiConfig(cropArea_);
 acldvppDestroyRoiConfig(pasteArea_);
 acldvppDestroyResizeConfig(resizeConfig_);
@@ -554,12 +554,12 @@ for (uint32_t index=0; index<2; ++index){
 uint32_t totalNum = 0;
 std::unique_ptr<uint32_t[]> roiNums(new (std::nothrow) uint32_t[1]);
 roiNums[0]=2;
-// 11. 执行异步抠图贴图，再调用aclrtSynchronizeStream接口阻塞程序运行，直到指定Stream中的所有任务都完成
+// 9. 执行异步抠图贴图，再调用aclrtSynchronizeStream接口阻塞程序运行，直到指定Stream中的所有任务都完成
 ret = acldvppVpcBatchCropAndPasteAsync(dvppChannelDesc_, vpcInputBatchDesc_, roiNums.get(), 1,
         vpcOutputBatchDesc_, cropAreas_, pasteAreas_, stream_);
 ret = aclrtSynchronizeStream(stream_);
 
-// 9. 抠图贴图结束后，释放资源，包括输入/输出图片的描述信息、输入/输出内存、通道描述信息、通道等
+// 10. 抠图贴图结束后，释放资源，包括输入/输出图片的描述信息、输入/输出内存、通道描述信息、通道等
 acldvppDestroyRoiConfig(cropAreas_[0]);
 acldvppDestroyRoiConfig(cropAreas_[1]);
 acldvppDestroyRoiConfig(pasteAreas_[0]);

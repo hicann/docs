@@ -23,4 +23,4 @@ Host应用类日志（log/\[run|debug\]/plog/plog-_pid_\_\*.log）中存在如�
 
 ## 处理方法
 
-需排查训练脚本，对于使用除法的地方，例如使用了cpu\_tensor/npu\_tensor，由于cpu\_tensor是Host内存地址，而npu\_tensor又是Device内存地址，这会导致AI Core读取错误，应将两张都修改为Device内存地址。
+需排查训练脚本，对于使用除法的地方，例如使用了cpu\_tensor/npu\_tensor，由于cpu\_tensor是Host内存地址，而npu\_tensor又是Device内存地址，这会导致AI Core读取错误，应将两者都修改为Device内存地址。

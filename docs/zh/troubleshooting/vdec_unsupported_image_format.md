@@ -47,7 +47,7 @@ picOutputDesc = acldvppCreatePicDesc();
 ReadFileToDeviceMem(filePath.c_str(), inBufferDev, inBufferSize);
 while (restLen > 0) {
         // 等待前一个使用picOutputDesc解码帧结束，重新复用picOutputDesc,并针对这一帧重新设置Format、width、height、widthStride、heightStride参数值
-        ret = acldvppSetPicDescFormat(picOutputDesc, static_cast<acldvppPixelFormat>(1)); // 1：YUV420 semi-planner（nv12）
+        ret = acldvppSetPicDescFormat(picOutputDesc, static_cast<acldvppPixelFormat>(1)); // 1：YUV420 semi-planar（nv12）
         ret = acldvppSetPicDescWidth(picOutputDesc, 1920);
         ret = acldvppSetPicDescHeight(picOutputDesc, 1080);
         ret = acldvppSetPicDescWidthStride(picOutputDesc, 1920);
@@ -73,7 +73,7 @@ size_t dataSize = (INPUT_WIDTH * INPUT_HEIGHT * 3) / 2;
 
 // 申请一个picOutputDesc，每帧复用，且对Format、width、height、widthStride、heightStride参数值只设置了一次
 picOutputDesc = acldvppCreatePicDesc();
-ret = acldvppSetPicDescFormat(picOutputDesc, static_cast<acldvppPixelFormat>(1)); // 1：YUV420 semi-planner（nv12）
+ret = acldvppSetPicDescFormat(picOutputDesc, static_cast<acldvppPixelFormat>(1)); // 1：YUV420 semi-planar（nv12）
 ret = acldvppSetPicDescWidth(picOutputDesc, 1920);
 ret = acldvppSetPicDescHeight(picOutputDesc, 1080);
 ret = acldvppSetPicDescWidthStride(picOutputDesc, 1920);
