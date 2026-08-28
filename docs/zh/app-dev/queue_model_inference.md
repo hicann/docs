@@ -55,7 +55,7 @@ for (int n = 0; n < outputNum; n++) {
 
 // 1.3 加载模型
 uint32_t modelId;
-ret= aclmdlLoadFromFileWithQ(modelPath, &modelId, 
+ret= aclmdlLoadFromFileWithQ(omModelPath, &modelId, 
                              inputQueueList, inputNum, outputQueueList, outputNum);
 
 // 1.4 根据模型的ID，获取该模型的描述信息
@@ -95,7 +95,7 @@ for (size_t index = 0; index < sizeof(testFile) / sizeof(testFile[0]); ++index) 
          float *outData = NULL;
          outData = reinterpret_cast<float*>(data);
         
-         //屏显每张图片的top5置信度的类别编号
+         // 显示每张图片的top5置信度的类别编号
          map<float, int, greater<float> > resultMap;
          for (int j = 0; j < len / sizeof(float); ++j) {
             resultMap[*outData] = j;

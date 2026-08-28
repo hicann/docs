@@ -49,7 +49,7 @@
 
     ```bash
     #0 0x0000ffffa9b2b268 in do_futex_wait.constprop () from /lib/aarch64-linux-gnu/libpthread.so.0
-    #1 0x0000ffffa9b2b39c in   new_sem_waut_slow.constprop.0 () from /lib/aarch64-linux-gnu/libpthread.so.0
+    #1 0x0000ffffa9b2b39c in   new_sem_wait_slow.constprop.0 () from /lib/aarch64-linux-gnu/libpthread.so.0
     #2 0x0000ffffa9e96eb8 in PyThread_acquire_lock_timed () from /usr/local/lib/libpython3.8.so.1.0
     #3 0x0000ffffa9e865a8 in _PyThreadState_DeleteExcept () from /usr/local/lib/libpython3.8.so.1.0
     #4 0x0000ffffa9eb94ac in _PyOS_AfterFork_Child () from /usr/local/lib/libpython3.8.so.1.0

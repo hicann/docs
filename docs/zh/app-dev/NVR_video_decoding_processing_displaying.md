@@ -173,7 +173,7 @@ NVR视频解码智能分析业务资源释放接口调用流程说明如下：
     2. 调用hi\_mpi\_vpss\_stop\_grp接口停止VPSS组。
     3. 调用hi\_mpi\_vpss\_destroy\_grp接口销毁VPSS组。
 
-3. **销毁VDEC视频解码通**道。
+3. **销毁VDEC视频解码通道**。
     1. 调用hi\_mpi\_vdec\_stop\_recv\_stream接口通知解码器停止接收码流。
     2. 调用hi\_mpi\_vdec\_destroy\_chn接口销毁通道。
 

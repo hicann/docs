@@ -8,7 +8,7 @@
 - **添加特征到底库**：主要调用aclfvCreateFeatureInfo接口创建aclfvFeatureInfo类型数据来表示创建特征的描述信息，然后调用aclfvRepoAdd添加底库。
 - **底库搜索**：调用aclfvSearch接口来实现检索。
 - **精准修改或删除底库特征**：调用aclfvDel和aclfvModify接口来实现删除或修改底库中某个特征。下文的代码以删除底库特征为例。
-- **去初始化**：主要包括释放运行时资源、调用aclfvDestroyInitPara接口销毁aclfvInitPara类型的数据、调用aclfvRelease接口特征检索模块去初始化，释放内存空间。
+- **去初始化**：主要包括释放运行时资源、调用aclfvDestroyInitPara接口销毁aclfvInitPara类型的数据、调用aclfvRelease接口将特征检索模块去初始化，释放内存空间。
 
 ## 示例代码
 
@@ -68,7 +68,7 @@ aclfvDestroyFeatureInfo(featureInfo);
 // 2.2增加第二个特征，创建特征描述信息时，偏移值offset需要与库中已添加特征个数一致，并精确删除或修改底库中的某个特征
 offset += featureCount;
 
-// 增加特征到底库的步骤，参考4.1中的代码
+// 增加特征到底库的步骤，参考2.1中的代码
 // ....
 
 uint8_t featureData[36];

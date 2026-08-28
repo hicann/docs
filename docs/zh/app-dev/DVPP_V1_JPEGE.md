@@ -21,7 +21,7 @@ JPEGE（JPEG Encoder）负责完成图像编码功能，将YUV格式图片编码
 5. 调用acldvppCreateJpegeConfig接口**创建图片编码配置数据**。
 6. 实现JPEG图片编码功能前，若需要**申请Device上的内存**存放输入或输出数据，需调用acldvppMalloc申请内存。
 
-    在申请输出内存前，可调用acldvppJpegPredictEncSize接口根据输入图片描述信息、图片编码配置数据可预估图片编码后所需的输出内存的大小。
+    在申请输出内存前，可调用acldvppJpegPredictEncSize接口根据输入图片描述信息、图片编码配置数据预估图片编码后所需的输出内存的大小。
 
     实际输出内存大小可能与调用acldvppJpegPredictEncSize接口预估的内存大小存在差异，如果用户需要获取编码后的实际输出内存大小，可通过acldvppJpegEncodeAsync接口的出参size获取。
 
@@ -89,7 +89,7 @@ acldvppSetPicDescHeightStride(encodeInputDesc_, encodeInHeightStride);
 acldvppSetPicDescSize(encodeInputDesc_, inDevBufferSizeE_);
 
 // 5. 创建图片编码配置数据，设置编码质量
-// 编码质量范围[0, 100]，其中level 0编码质量与level 100差不多，而在[1, 100]内数值越小输出图片质量越差。
+// 编码质量范围[0, 100]，其中level 0编码质量与level 100相近，而在[1, 100]内数值越小输出图片质量越差。
 jpegeConfig_ = acldvppCreateJpegeConfig();
 acldvppSetJpegeConfigLevel(jpegeConfig_, 100);
 

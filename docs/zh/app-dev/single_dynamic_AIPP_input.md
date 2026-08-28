@@ -82,9 +82,9 @@ int  ModelSetDynamicAIPP()
 int ModelExecute(int index)
 {
         aclError ret;
-        // 6.1 调用自定义函数，设置动态AIPP参数值
+        // 4.1 调用自定义函数，设置动态AIPP参数值
     ret = ModelSetDynamicAIPP();
-        // 6.2 执行模型，modelId_表示加载成功的模型的ID，input_和output_分别表示模型的输入和输出
+        // 4.2 执行模型，modelId_表示加载成功的模型的ID，input_和output_分别表示模型的输入和输出
         ret = aclmdlExecute(modelId_, input_, output_);
         // ......
 }

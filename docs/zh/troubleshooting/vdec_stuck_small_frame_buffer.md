@@ -20,4 +20,4 @@ pid 0 usr chn 0 device 0 chn 0, user set frame buffer size(1000 Byte) and ref fr
 
 ## 解决方法
 
-在调用hi\_mpi\_vdec\_create\_chn接口创建解码通道时，调整传入的帧存大小和帧存个数的值，即attr-\>frame\_buf\_size、attr-\>frame\_buf\_cnt参数，或者直接这两个参数设置为0，由解码器内部自适应。
+在调用hi\_mpi\_vdec\_create\_chn接口创建解码通道时，调整传入的帧存大小和帧存个数的值，即attr-\>frame\_buf\_size、attr-\>frame\_buf\_cnt参数，或者直接将这两个参数设置为0，由解码器内部自适应。

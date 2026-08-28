@@ -39,4 +39,4 @@
 
 ## 处理步骤
 
-根据[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)中的内容检查VDEC功能约束，使用第三方工具（如：eseye u等）对输入码流进行检查，查看码流类型、码流宽高等信息是否符合要求。如果码流不满足要求，请替换符合要求的码流。
+根据[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)中的内容检查VDEC功能约束，使用第三方工具（如：eseye_u等）对输入码流进行检查，查看码流类型、码流宽高等信息是否符合要求。如果码流不满足要求，请替换符合要求的码流。

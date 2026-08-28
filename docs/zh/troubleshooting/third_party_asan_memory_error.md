@@ -22,7 +22,7 @@ asan是一款面向C/C++语言的第三方内存错误问题检查工具，可�
 
 3. 应用程序执行时，若asan检查出了内存问题，用户可参考asan打印日志分析代码问题。
 
-    asan检测出内存泄漏的报错日志示例如下，表示使用malloc接口申请10M内存，但没有使用free接口释放：
+    asan检测出内存泄漏的报错日志示例如下，表示使用malloc接口申请10MB内存，但没有使用free接口释放：
 
     ```bash
     ERROR: LeakSanitizer: detected memory leaks

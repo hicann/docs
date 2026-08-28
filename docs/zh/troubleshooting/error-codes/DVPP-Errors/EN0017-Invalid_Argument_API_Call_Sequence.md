@@ -2,7 +2,7 @@
 
 ## 错误信息
 
-报错格式如下，占位符%s分别表示文件名、报错原因：
+报错格式如下，占位符%s分别表示API名、API名：
 
 ```text
 Call the following APIs in order: %s and %s.
