@@ -178,27 +178,27 @@
 
 #### 翻译标准核心要点（必须遵守）
 
-**一、语态规范**
+##### 语态规范
 
 | 规范 | 要求 | 示例 |
-|------|------|------|
+| ------ | ------ | ------ |
 | 主动语态优先 | 面向用户的资料以主动语态为主 | ❌ "Designed for..." → ✅ "This guide provides..." |
 | 操作类用祈使句 | 操作步骤省去you，直接使用动词开头 | ❌ "You can enter the password" → ✅ "Enter the password" |
 | 被动语态例外 | 动作执行者未知/无关、错误提示中避免责备用户时可用被动 | "The dialog box is displayed" |
 
-**二、时态规范**
+##### 时态规范
 
 | 场景 | 使用时态 | 示例 |
-|------|---------|------|
+| ------ | --------- | ------ |
 | 陈述规律/原理/机制 | 一般现在时 | "A ping command sends packets to test connectivity." |
 | 操作后的瞬时结果 | 一般现在时 | ❌ "The dialog box will appear" → ✅ "The dialog box appears" |
 | 需间隔较长时间的结果 | 将来时 | "The system will restart after installation." |
 | 已完成的动作 | 现在完成时 | "You have successfully logged in." |
 
-**三、词汇规范**
+##### 词汇规范
 
 | 禁止使用 | 正确用法 |
-|---------|---------|
+| --------- | --------- |
 | etc. | and so on（需限定范围） |
 | e.g. | for example |
 | i.e. | that is |
@@ -207,16 +207,16 @@
 | you're, they're | you are, they are |
 | won't, shouldn't | will not, should not |
 
-**四、句子和段落规范**
+##### 句子和段落规范
 
 | 规范 | 要求 |
-|------|------|
+| ------ | ------ |
 | 重要信息置前 | 将关键信息放在句首或段落开头 |
 | 避免超长句子 | 每句不超过25个单词 |
 | 使用并行结构 | 相似描述使用统一句式 |
 | 避免双重否定 | 使用直接陈述 |
 
-**五、好的英文风格必须满足**
+##### 好的英文风格必须满足
 
 - 使用前后一致的术语
 - 使用简单词汇
@@ -227,7 +227,7 @@
 - 使用第二人称（操作类用祈使句）
 - 清晰、正确地组织信息
 
-**六、好的英文风格必须避免**
+##### 好的英文风格必须避免
 
 - 虚悬前置词
 - 无谓重复或累赘
@@ -237,7 +237,7 @@
 - 词汇简缩（char、config）
 - 缩略词（can't、it's）
 
-**七、语法完整性检查（新增，重要）**
+##### 语法完整性检查（新增，重要）
 
 > ⚠️ 警告：中文省略主语常见，但英文必须有明确主语和动词！忽略此规则会导致严重语法错误！
 
@@ -254,7 +254,7 @@
   - 使用"For + 动名词"结构引导长句
   - 避免"名词 + please refer to"的错误结构
 
-**八、句子结构重构规则（新增）**
+##### 句子结构重构规则（新增）
 
 中文长句的英文处理策略：
 
@@ -278,12 +278,12 @@
   - 使用分号连接相关句子
   - 或拆分为独立句子
 
-**九、语态选择规则（补充）**
+##### 语态选择规则
 
 原则：主动语态优先，但需区分场景。
 
 | 场景 | 推荐语态 | 示例 |
-|------|---------|------|
+| ------ | --------- | ------ |
 | 用户操作指引 | 祈使句（主动） | "Select a software installation method..." ✓ vs "Software installation method selection..." ❌ |
 | 功能描述 | 主动语态 | "WebIDE provides..." ✓ vs "WebIDE can provide..." ❌ |
 | 状态描述 | 可用被动 | "The necessary software packages are already installed" ✓ |
@@ -292,18 +292,18 @@
 **对比示例：**
 
 | 中文原文 | ❌ 错误翻译 | ✓ 正确翻译 | 分析 |
-|---------|-----------|-----------|------|
+| --------- | ----------- | ----------- | ------ |
 | WebIDE可提供... | "WebIDE can provide..." | "WebIDE provides..." | 主动语态更直接 |
 | 该平台为您提供... | "provides...for you" | "provides you with..." | "provide you with"更地道 |
 
-**十、冠词使用规范（新增）**
+##### 冠词使用规范（新增）
 
 必须检查冠词：
 
 - **单数可数名词前必须有冠词**
 
    | 错误 | 正确 |
-   |-----|------|
+   | ----- | ------ |
    | "WebIDE development platform" | "the WebIDE development platform" |
    | "Ascend environment" | "an Ascend environment" |
    | "Docker engine" | "the Docker engine" |
@@ -317,12 +317,12 @@
   - "an Ascend environment"（泛指一个环境）
   - "a compilation environment"（泛指编译环境）
 
-**十一、表格字段翻译标准（新增）**
+##### 表格字段翻译标准（新增）
 
 **常用字段标准翻译：**
 
 | 中文 | ✓ 标准翻译 | 说明 |
-|------|-----------|------|
+| ------ | ----------- | ------ |
 | 注意事项 | "Precautions" | 比"Note"更专业 |
 | 说明 | "Description" | 标准用法 |
 | 必选 | "Required" | 标准用法 |
@@ -334,12 +334,12 @@
 - 每个单元格必须是完整句子或短语
 - 不可出现语法错误的片段
 
-**十二、术语一致性表（新增）**
+##### 术语一致性表（新增）
 
   **必须保持一致的术语：**
 
 | 中文术语 | 标准英文翻译 | 备注 |
-|---------|------------|------|
+| --------- | ------------ | ------ |
 | 样例 | sample | 不使用example（不规范） |
 | 环境 | environment | - |
 | 部署 | deployment | - |
@@ -352,6 +352,24 @@
 | 算子 | operator | - |
 | 固件 | firmware | - |
 | 驱动 | driver | - |
+| 通信域 | communicator | - |
+
+##### 产品名称对照表（新增）
+
+| 中文名 | 英文名 |
+| --- | --- |
+| Ascend 950PR / Ascend 950DT | Ascend 950PR / Ascend 950DT |
+| Atlas A3 训练系列产品 / Atlas A3 推理系列产品 | Atlas A3 training products / Atlas A3 inference products |
+| Atlas A3 训练系列产品 | Atlas A3 training products |
+| Atlas A2 训练系列产品 / Atlas A2 推理系列产品 | Atlas A2 training products / Atlas A2 inference products |
+| Atlas A2 训练系列产品 | Atlas A2 training products |
+| Atlas 200I/500 A2 推理产品 | Atlas 200I/500 A2 inference products |
+| Atlas 训练系列产品 | Atlas training products |
+| Atlas 推理系列产品 | Atlas inference products |
+
+##### 连字符处理
+
+英文翻译中，将非断行连字符（U+2011）统一替换为 ASCII 连字符（U+002D，即普通减号 `-`）。
 
 ### 8. 执行翻译
 
@@ -496,7 +514,7 @@
 
 - 并行读取多个相关文件（中文原文、英文版本、风格指南等）
 - 并行执行多个bash命令获取不同信息
-- 如果每次翻译的文件数量较多，则可以hi每20个文件分批处理；如果一个文件中行数超过300行，则可以每200行分批翻译
+- 若待翻译文件超过50个，建议每30个分批处理；若单文件超过500行，建议每200行分批翻译。
 
 ## 注意事项
 
@@ -610,7 +628,7 @@
 **检查示例对比：**
 
 | 问题类型 | ❌ 错误示例 | ✓ 正确示例 | 检查项 |
-|---------|-----------|-----------|--------|
+| --------- | ----------- | ----------- | -------- |
 | 缺少主语 | "can directly use..." | "you can directly use..." | 语法完整性-主语 |
 | 缺少动词 | "Software installation method selection..." | "Select a software installation method..." | 语法完整性-动词 |
 | 条件句不完整 | "If need to run samples..." | "If you need to run samples..." | 语法完整性-条件句 |
@@ -682,7 +700,7 @@ cat ${current_path}\exclude_docs.json
 **示例场景：**
 
 | 本地仓库远程地址 | 提取仓库名 | 配置中repoName匹配 | docs路径 | excludeDocsPaths | 是否翻译 |
-|-----------------|-----------|------------------|---------|-----------------|---------|
+| ----------------- | ----------- | ------------------ | --------- | ----------------- | --------- |
 | `https://gitcode.com/sophia1213/ge.git` | ge | 匹配 | `docs/dflow_api/guide.md` | `["docs/dflow_api", "docs/graph_engine_api"]` | 跳过（在排除路径） |
 | `https://gitcode.com/sophia1213/ge.git` | ge | 匹配 | `docs/architecture/feature.md` | `["docs/dflow_api", "docs/graph_engine_api"]` | 翻译（不在排除路径） |
 | `https://gitcode.com/user/pypto.git` | pypto | 匹配 | `docs/api/guide.md` | `["docs"]` | 跳过（整个docs目录排除） |
@@ -783,7 +801,7 @@ cat ${current_path}\exclude_docs.json
    **匹配示例：**
 
    | 本地仓库名 | 配置repoName | excludeDocsPaths | docs文档路径 | 是否跳过 |
-   |-----------|-------------|-----------------|------------|---------|
+   | ----------- | ------------- | ----------------- | ------------ | --------- |
    | ge | ge | `["docs/dflow_api"]` | `docs/dflow_api/cpp/AddInvokedClosure.md` | 跳过 |
    | ge | ge | `["docs/dflow_api"]` | `docs/architecture/architecture.md` | 翻译 |
    | pypto | pypto | `["docs"]` | `docs/any/path.md` | 跳过（整个docs排除） |
