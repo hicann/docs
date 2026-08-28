@@ -30,6 +30,14 @@ reduction: An optional "string", Specifies the reduction to apply to the output;
 Reduction supports the modes of "sum" and "mean", default value is "mean". 
 log_target: An optional bool, a flag indicating whether target is passed in the log space. Default value is false. 
 
+## Data Types
+
+Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x: bfloat16,float16,float32
+- input1 target: bfloat16,float16,float32
+- output0 y: bfloat16,float16,float32
+
 ## Third-party framework compatibility
 
 Compatible with the PyTorch operator kl_div_v2.

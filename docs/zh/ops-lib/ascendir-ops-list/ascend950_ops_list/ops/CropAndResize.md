@@ -46,6 +46,12 @@ NearestNeighbor .
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x: float16,float32
+- input1 boxes: float16,float32
+- input2 box_index: int32
+- input3 crop_size: int32
+- output0 y: float16,float32
 ### AI CPU
 - input0 x: double,float16,float32,int8,int16,int32,int64,uint8,uint16
 - input1 boxes: float32

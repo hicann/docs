@@ -47,6 +47,10 @@ with an extra last dimension for the real and imaginary components. Default: Tru
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x: complex64,double,float32
+- input2 window: complex64,double,float32
+- output0 y: complex64,double,float32
 ### AI CPU
 - input0 x: complex64,complex128,double,float32
 - input1 window: complex64,complex128,double,float32

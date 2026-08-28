@@ -11,19 +11,18 @@ REG_OP(SigmoidCrossEntropyWithLogitsGrad)
 
 ## Brief
 
-Computes gradients of sigmoid_cross_entropy_with_logits.
+Computes the sigmoid cross entropy loss of "predict" and "target" .
 
 ## Inputs
 
-- predict: An ND tensor of type float16, float32, bfloat16, specifying the predictive value.
-- target: An ND tensor of type float16, float32, bfloat16, specifying the target value.
-    Shape must be the same as predict.
-- dout: An ND tensor of type float16, float32, bfloat16, specifying the dout value.
-    Shape needs to satisfy the broadcast relationship with predict. 
+Three inputs, including:
+- predict: A multi-dimensional Tensor of type float16 or float32 or bfloat16, specifying the predictive value.
+- target: A multi-dimensional Tensor of type float16 or float32 or bfloat16, specifying the target value .
+- dout:A multi-dimensional Tensor of float16 or float32 or bfloat16,specifying the gradient transferred from the upper layer.
 
 ## Outputs
 
-gradient: An ND tensor with the same shape and type as "predict". 
+gradient: Sigmoid cross entropy between the predictive value and target value. Has the same dimensions as "predict" . 
 
 ## Data Types
 
@@ -36,7 +35,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Pytorch operator SigmoidCrossEntropyWithLogitsGrad.
+Compatible with the scenario where "reduction" is set to "none"of PyTorch operator SigmoidCrossEntropyWithLogitsGrad.
 
 
 ---

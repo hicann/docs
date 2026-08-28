@@ -35,8 +35,8 @@ y: A Tensor with the same type and shape of x.
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 x: bfloat16,float16,float32,int8,int32,int64,uint8,uint32
-- output0 y: bfloat16,float16,float32,int8,int32,int64,uint8,uint32
+- input0 x: bfloat16,complex64,float16,float32,int8,int32,int64,uint8,uint32
+- output0 y: bfloat16,complex64,float16,float32,int8,int32,int64,uint8,uint32
 
 ## Third-party framework compatibility
 

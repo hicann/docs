@@ -27,9 +27,9 @@ Two inputs:
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 x1: bfloat16,float16,float32,int32
-- input1 x2: bfloat16,float16,float32,int32
-- output0 y: bfloat16,float16,float32,int32
+- input0 x1: bfloat16,float16,float32,int8,int16,int32,uint8
+- input1 x2: bfloat16,float16,float32,int8,int16,int32,uint8
+- output0 y: bfloat16,float16,float32,int8,int16,int32,uint8
 
 
 ---

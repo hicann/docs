@@ -12,21 +12,23 @@ REG_OP(SliceLastDim)
 
 ## Brief
 
-Slices the last dimension of a tensor from start to end with stride. 
+Slice a tensor at its last dim, e.x. a[..., begin:end:stride].
 
 ## Inputs
 
-x: A tensor of type float16, float32, double, int8, int16, int32, int64. 
+One input, including:
+x: A ND Tensor, Support 1D ~ 8D.
+Type must be one of the following types: float16, float32, double, int8, int16, int32, int64.
 
 ## Outputs
 
-y: A tensor with the same type as x. 
+y: A Tensor. Has the same type as "x". 
 
 ## Attributes
 
-- start: Required. Start index of the last dimension.
-- end: Required. End index of the last dimension.
-- stride: Optional. Stride of slicing. Defaults to 1.
+- start: An attribute of type Int, start index of last dim.
+- end: An attribute of type Int, end index of last dim.
+- stride: An attribute of type Int, stride of slice, default to 1.
 
 ## Data Types
 

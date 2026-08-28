@@ -30,18 +30,17 @@ It represents the sum of the input tensor "x" on the C axis. Has the same format
 - square_sum: A 1D tensor of type float32, the shape is same as dim C of input "x", for the output of operator
 BNTrainingReduce.
 It represents the sum of squares of the input tensor "x" on the C axis. Has the same format as "x".
-- scale: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling factor. Has the
-same format as "x".
-- offset: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling offset. Has the
-same format as "x". 
+- scale: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling factor. Has the same
+format as "x".
+- offset: A 1D tensor of type float32, the shape is same as dim C of input "x", for the scaling offset. Has the same
+format as "x". 
 
 ## Outputs
 
 Three outputs, including:
 - y: A 4D tensor of type float16 or float32 or bfloat16, for normalized "x". Empty tensors are not supported.
 Has the same dype, format and shape as "x".
-- batch_mean: A 1D tensor of type float32, for the mean of "x". shape must be C channel. Has the same format as
-"x".
+- batch_mean: A 1D tensor of type float32, for the mean of "x". shape must be C channel. Has the same format as "x".
 - batch_variance: A 1D tensor of type float32, for the variance of "x" . shape must be C channel. Has the same
 format as "x". 
 

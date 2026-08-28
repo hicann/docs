@@ -33,11 +33,11 @@ output:A ND(Support 1D) Tensor. Has the same type as grad .
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 grad: bfloat16,double,float16,float32
-- input1 indices: int32,int64
-- input2 segment_ids: int32,int64
+- input0 grad: float16,float32
+- input1 indices: int32
+- input2 segment_ids: int32
 - input3 output_dim0: int32
-- output0 output: bfloat16,double,float16,float32
+- output0 output: float16,float32
 
 ## Third-party framework compatibility
 

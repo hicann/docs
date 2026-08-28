@@ -31,6 +31,10 @@ y: A tensor. Has the same dtype as "x1".
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x1: bfloat16,complex64,float16,float32,int8,int16,int32,int64,uint8
+- input1 x2: bfloat16,complex64,float16,float32,int8,int16,int32,int64,uint8
+- output0 y: bfloat16,complex64,float16,float32,int8,int16,int32,int64,uint8
 ### AI CPU
 - input0 x1: complex64,complex128,double,float16,float32,int8,int16,int32,int64,uint8
 - input1 x2: complex64,complex128,double,float16,float32,int8,int16,int32,int64,uint8

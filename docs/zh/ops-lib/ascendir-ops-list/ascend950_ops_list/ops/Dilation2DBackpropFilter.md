@@ -44,6 +44,11 @@ y: The output tensor. Has the same type and format as input "filter" .
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x: float32
+- input1 filter: float32
+- input2 out_backprop: float32
+- output0 y: float32
 ### AI CPU
 - input0 x: double,float16,float32,int8,int16,int32,int64,uint8,uint16
 - input1 filter: double,float16,float32,int8,int16,int32,int64,uint8,uint16

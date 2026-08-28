@@ -12,20 +12,18 @@ REG_OP(AdaCast)
 
 ## Brief
 
-AdaCast: uint16 → float16 cast with pixel normalization for HDRnet.
-  y = Cast_FP16(Cast_FP32(int32(uint32(x))) × (1/pixel))
+data conversion operator
+Convert uint16 to uint32, convert to int32, convert to float32,
+multiply by the reciprocal of pixel, convert to float16 . 
 
 ## Inputs
 
-- x: A ND Tensor of type uint16, rank 1~4. HDR image data.
+one inputs, including:
+- x: A Tensor. Must be one of the following types: uint16.
 
 ## Outputs
 
-- y: A ND Tensor of type float16, shape identical to x. Normalized result.
-
-## Attributes
-
-- pixel: Int, default 65535. White level normalization base (positive integer).
+y: A Tensor. Must be one of the following types: float16. 
 
 ## Data Types
 
@@ -33,6 +31,10 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 ### AI Core
 - input0 x: uint16
 - output0 y: float16
+
+## Third-party framework compatibility
+
+only for use by corresponding operators in HDRnet networks
 
 
 ---

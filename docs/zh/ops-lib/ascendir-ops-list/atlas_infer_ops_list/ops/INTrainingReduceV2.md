@@ -2,7 +2,7 @@
 
 ```c
 REG_OP(INTrainingReduceV2)
-    .INPUT(x, TensorType({DT_FLOAT16, DT_FLOAT}))
+    .INPUT(x, TensorType({DT_FLOAT16,DT_FLOAT}))
     .OUTPUT(sum, TensorType({DT_FLOAT}))
     .OUTPUT(square_sum, TensorType({DT_FLOAT}))
     .OP_END_FACTORY_REG(INTrainingReduceV2)

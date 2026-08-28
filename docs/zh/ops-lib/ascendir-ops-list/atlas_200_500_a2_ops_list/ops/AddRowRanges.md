@@ -2,31 +2,30 @@
 
 ```c
 REG_OP(AddRowRanges)
-    .INPUT(x, TensorType({DT_FLOAT, DT_FLOAT16}))
-    .INPUT(src, TensorType({DT_FLOAT, DT_FLOAT16}))
+    .INPUT(x, TensorType({DT_FLOAT}))
+    .INPUT(src, TensorType({DT_FLOAT}))
     .INPUT(indices, TensorType({DT_INT32}))
-    .OUTPUT(x, TensorType({DT_FLOAT, DT_FLOAT16}))
+    .OUTPUT(x, TensorType({DT_FLOAT}))
     .OP_END_FACTORY_REG(AddRowRanges)
 ```
 
 ## Brief
 
-For each row r of x, sum src rows in range [indices[r,0], indices[r,1])
-      and add the sum to x(r, :).
+For each row r of this and for each column c, do (* this)(r, c) += src(j, c), 
+  where j ranges from indexes[r].first through indexes[r].second - 1. 
+  In general indexes must be >= 0 and < src.NumRows(); 
+  but to represent an empty range you may use the pair (-1, -1) or any pair of numbers (i, j) such that i >= j. 
 
 ## Inputs
 
 Three inputs, including:
-- x: A 2D ND Tensor. Must be one of the following types: float32, float16.
-- src: A 2D ND Tensor. Must be one of the following types: float32, float16.
-       src.shape[1] must equal x.shape[1].
-- indices: A 2D ND Tensor of shape (M, 2). Must be of type int32.
-       indices[r, 0] is start row, indices[r, 1] is end row (exclusive).
-       (-1, -1) or start >= end means empty range (skip). 
+- x: A Tensor, type should be float32.
+- indices: A Tensor of the indices, type should be int32.
+- src: A Tensor of the same type as "x".
 
 ## Outputs
 
-x: A 2D ND Tensor. Same shape and dtype as input x.
+x: A Tensor with the same type and shape of input "x".
 
 ## Data Types
 
@@ -39,7 +38,7 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 ## Third-party framework compatibility
 
-Compatible with the Kaldi operator AddRowRanges.
+Compatible with the kaldi operator AddRowRanges.
 
 
 ---

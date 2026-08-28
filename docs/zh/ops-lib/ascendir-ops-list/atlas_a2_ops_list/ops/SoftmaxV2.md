@@ -42,8 +42,8 @@ Defaults to "false".
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 x: bfloat16,float16,float32
-- output0 y: bfloat16,float16,float32
+- input0 x: float16,float32
+- output0 y: float16,float32
 ### AI CPU
 - input0 x: double,float16,float32
 - output0 y: double,float16,float32

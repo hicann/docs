@@ -30,6 +30,11 @@ y: A Tensor. Has the same type as "x", Format is ND.
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 x: bfloat16,complex32,complex64,float16,float32,int8,int16,int32,int64,uint8,uint16,uint32,uint64
+- input1 indices: int32
+- input2 v: bfloat16,complex32,complex64,float16,float32,int8,int16,int32,int64,uint8,uint16,uint32,uint64
+- output0 y: bfloat16,complex32,complex64,float16,float32,int8,int16,int32,int64,uint8,uint16,uint32,uint64
 ### AI CPU
 - input0 x: complex64,complex128,double,float16,float32,int8,int16,int32,int64,qint8,qint16,qint32,quint8,quint16,uint8,uint16,uint32,uint64
 - input1 indices: int32

@@ -33,7 +33,10 @@ GroupedMatmulSwigluQuantV2 operator interface implementation.
 - group_list: A tensor. Indicates the matmul size distribution along separated dimension.
 The format supports ND. The type supports int64. The first dimension of group_list should not be greater than 1024, meaning it supports up to 1024 groups.
 - weight: A tensor List. The format supports ND/NZ. The type supports int8, float8_e5m2, float8_e4m3fn, float4_e2m1, hifloat8, float4_e1m2(only weight nz supported).
+In MXFP4 and MXFP8 scenarios, weight supports either one tensor or multiple tensors. In the multi-tensor
+weight-NZ scenario, the tensor list length must equal the number of groups.
 - weight_scale: A tensor List. Format supports ND. The type supports float32, float8_e8m0, bfloat16, float16.
+In the multi-tensor weight-NZ scenario, its tensor list length must equal that of weight.
 - weight_assist_matrix: A tensor List. The format supports ND. The type supports float32.
 - bias: A tensor. The format supports ND. The type supports float32.
 - smooth_scale: A tensor. The format supports ND. The type supports float32.
@@ -69,6 +72,8 @@ Note: The preceding prototypes are applicable to all chips, but the Data Types l
 
 - In the MX quantization scenario with weight format ND, when the input dtype is float8, N must be 2 aligned; when the input dtype is float4, N must be 4 aligned. This constraint applies only to Ascend950PR/Ascend950DT.
 - In the MX quantization scenario with weight format NZ, when the input dtype is float8, N must be 64 aligned; when the input dtype is float4, N must be 128 aligned. This constraint applies only to Ascend950PR/Ascend950DT.
+- In MXFP4 and MXFP8 multi-tensor weight-NZ scenarios, weight and weight_scale must have the same tensor
+list length, and the length must equal the length of group_list. All tensors in each list must have consistent shapes.
 - When group_list_type is 0, group_list must be a non-negative monotone non-decreasing array. The last value in group_list must be no greater than the first dimension of tensor x1;
 When group_list_type is 1, it must be a non-negative array. Sum of values in group_list must be no greater than the first dimension of tensor x1. 
 
@@ -93,14 +98,19 @@ When group_list_type is 1, it must be a non-negative array. Sum of values in gro
 | Format2   | ND                        | ND                  | ND         | FRACTAL_NZ                                        | ND                                              | ND                                                   | ND                       |
 | Dtype     | float8_e4m3fn             | float8_e8m0         | int64      | float8_e4m3fn                                     | float8_e8m0                                     | float8_e4m3fn                                        | float8_e8m0              |
 | Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(B,N/32,K/16,16,32)]/[(B,K/32,N/16,16,32)]       | [(B,ceil(K/64),N,2)]/[(B,N,ceil(K/64),2)]       | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
+| Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(N,K),(N,K),...]/[(K,N),(K,N),...]               | [(N,ceil(K/64),2),...]/[(ceil(K/64),N,2),...]   | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
 | Dtype     | float4_e2m1               | float8_e8m0         | int64      | float4_e2m1                                       | float8_e8m0                                     | float4_e2m1                                          | float8_e8m0              |
 | Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(B,N/64,K/16,16,64)]/[(B,K/64,N/16,16,64)]       | [(B,ceil(K/64),N,2)]/[(B,N,ceil(K/64),2)]       | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
+| Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(N,K),(N,K),...]/[(K,N),(K,N),...]               | [(N,ceil(K/64),2),...]/[(ceil(K/64),N,2),...]   | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
 | Dtype     | float4_e1m2               | float8_e8m0         | int64      | float4_e2m1                                       | float8_e8m0                                     | float4_e2m1                                          | float8_e8m0              |
 | Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(B,N/64,K/16,16,64)]/[(B,K/64,N/16,16,64)]       | [(B,ceil(K/64),N,2)]/[(B,N,ceil(K/64),2)]       | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
+| Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(N,K),(N,K),...]/[(K,N),(K,N),...]               | [(N,ceil(K/64),2),...]/[(ceil(K/64),N,2),...]   | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
 | Dtype     | float4_e2m1               | float8_e8m0         | int64      | float4_e1m2                                       | float8_e8m0                                     | float4_e2m1                                          | float8_e8m0              |
 | Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(B,N/64,K/16,16,64)]/[(B,K/64,N/16,16,64)]       | [(B,ceil(K/64),N,2)]/[(B,N,ceil(K/64),2)]       | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
+| Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(N,K),(N,K),...]/[(K,N),(K,N),...]               | [(N,ceil(K/64),2),...]/[(ceil(K/64),N,2),...]   | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
 | Dtype     | float4_e1m2               | float8_e8m0         | int64      | float4_e1m2                                       | float8_e8m0                                     | float4_e2m1                                          | float8_e8m0              |
 | Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(B,N/64,K/16,16,64)]/[(B,K/64,N/16,16,64)]       | [(B,ceil(K/64),N,2)]/[(B,N,ceil(K/64),2)]       | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
+| Shape     | (M,K)                     | (M,ceil(K/64),2)    | (B,)       | [(N,K),(N,K),...]/[(K,N),(K,N),...]               | [(N,ceil(K/64),2),...]/[(ceil(K/64),N,2),...]   | (M,N/2)                                              | (M,ceil((N/2)/64),2)     |
 
 
 ---

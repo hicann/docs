@@ -104,16 +104,16 @@ The type support float16, bfloat16, int8, float32, int32.
 |           | int8                      | int4                                    | float32                | float32          | float32 | float16     | float16 | float32     | float16/bfloat16         |
 |           | float16                   | float4_e2m1/float32                     | float16                | uint64           | float32 | float8_e8m0 | float16 |      -      | float16                  |
 |           | bfloat16                  | float4_e2m1/float32                     | bfloat16/float32       | uint64           | float32 | float8_e8m0 | bfloat16|      -      | bfloat16                 |
-|           | float8_e4m3fn             | float4_e2m1/float32                     | float16                | uint64           | float32 | float8_e8m0 | float16 | float8_e8m0 | float16                  |
-|           | float8_e4m3fn             | float4_e2m1/float32                     | bfloat16               | uint64           | float32 | float8_e8m0 | bfloat16| float8_e8m0 | bfloat16                 |
+|           | float8_e4m3fn             | float4_e2m1/float4_e1m2/float32         | float16                | uint64           | float32 | float8_e8m0 | float16 | float8_e8m0 | float16                  |
+|           | float8_e4m3fn             | float4_e2m1/float4_e1m2/float32         | bfloat16               | uint64           | float32 | float8_e8m0 | bfloat16| float8_e8m0 | bfloat16                 |
 |           | float8_e4m3fn             | float8_e4m3fn                           | -                      | float8_e8m0      | -       | -           | -       | float8_e8m0 | float16/bfloat16/float32 |
 |           | float4_e2m1/float4_e1m2   | float4_e2m1/float4_e1m2                 | float32                | float8_e8m0      | float32 | float8_e8m0 | float16 | float8_e8m0 | float16/bfloat16/float32 |
 | Format3   | ND                        | FRACTAL_NZ_C0_16                        | ND                     | ND               | ND      | ND          | ND      | ND          | ND                       |
 | Data Type | float16                   | float4_e2m1                             | float16                | uint64           | float32 | float8_e8m0 | float16 |      -      | float16                  |
 |           | bfloat16                  | float4_e2m1                             | bfloat16/float32       | uint64           | float32 | float8_e8m0 | float16 |      -      | bfloat16                 |
 | Format4   | ND                        | FRACTAL_NZ_C0_32                        | ND                     | ND               | ND      | ND          | ND      | ND          | ND                       |
-| Data Type | float8_e4m3fn             | float4_e2m1                             | float16                | uint64           | float32 | float8_e8m0 | float16 | float8_e8m0 | float16                  |
-|           | float8_e4m3fn             | float4_e2m1                             | bfloat16               | uint64           | float32 | float8_e8m0 | bfloat16| float8_e8m0 | bfloat16                 |
+| Data Type | float8_e4m3fn             | float4_e2m1/float4_e1m2                 | float16                | uint64           | float32 | float8_e8m0 | float16 | float8_e8m0 | float16                  |
+|           | float8_e4m3fn             | float4_e2m1/float4_e1m2                 | bfloat16               | uint64           | float32 | float8_e8m0 | bfloat16| float8_e8m0 | bfloat16                 |
 |           | int8                      | int32                                   | float32                | float32          | float32 | float16     | float16 | float32     | bfloat16/float16                |
 - The following are the supported data types and no quantization modes(for Ascend950PR/Ascend950DT):
 | x                         | weight                    | bias                   |   y                      | group_type |
@@ -164,7 +164,11 @@ mx fake-quant(group_size_k = 32)：
 | ------------------------- | ------------------------------- | -------------------- | --------------------- | -------------------- | ---------- |
 | float16                   | float4_e2m1/float32             | float8_e8m0          | float16               |           -          | 0          |
 | bfloat16                  | float4_e2m1/float32             | float8_e8m0          | bfloat16              |           -          | 0          |
-| float8_e4m3fn             | float4_e2m1/float32             | float8_e8m0          | float16/bfloat16      | float8_e8m0          | 0          |
+| float8_e4m3fn             | float4_e2m1/float4_e1m2/float32 | float8_e8m0          | float16/bfloat16      | float8_e8m0          | 0          |
+When x is float8_e4m3fn and weight is float4_e2m1, float4_e1m2, or float32, group_size_k must be 32,
+x must not be transposed, and weight must be transposed. When weight is float4_e2m1 or float4_e1m2
+with shape (N,K), the SMS scenario is supported; the tensor list lengths of antiquant_scale,
+antiquant_offset, and bias must be the same as that of weight.
 - The following are the supported quantization modes, data types and shapes(for Ascend950PR/Ascend950DT):
 | quantization         | group_type | x type                             | scale type                      | x shape   | weight shape        | y shape   | scale shape                               | per_token_scale shape | bias shape |
 |----------------------|------------|------------------------------------|-------------------------------  |-----------|---------------------|-----------|-------------------------------------------|-----------------------|------------|
@@ -206,8 +210,8 @@ mx fake-quant(group_size_k = 32)：
 | mx                                | 0          | bfloat16      | float4_e2m1                        | -                    | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(N/16),ceil(K/16),16,16)] | [(M,N)] | -                     | [(0)]       | [(B,ceil(K/32),N,)]         | [(0)]                  |
 | mx                                | 0          | float16       | float32                            | -                    | uint64     | float8_e8m0          | float16               | [(M,K)] | [(B,ceil(N/16),ceil(K/16),16,2)]  | [(M,N)] | -                     | [(0)]       | [(B,ceil(K/32),N,)]         | [(0)]                  |
 | mx                                | 0          | bfloat16      | float32                            | -                    | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(N/16),ceil(K/16),16,2)]  | [(M,N)] | -                     | [(0)]       | [(B,ceil(K/32),N,)]         | [(0)]                  |
-| mx                                | 0          | float8_e4m3fn | float4_e2m1                        | float8_e8m0          | uint64     | float8_e8m0          | float16               | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,32)] | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
-| mx                                | 0          | float8_e4m3fn | float4_e2m1                        | float8_e8m0          | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,32)] | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
+| mx                                | 0          | float8_e4m3fn | float4_e2m1/float4_e1m2            | float8_e8m0          | uint64     | float8_e8m0          | float16               | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,32)] | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
+| mx                                | 0          | float8_e4m3fn | float4_e2m1/float4_e1m2            | float8_e8m0          | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,32)] | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
 | mx                                | 0          | float8_e4m3fn | float32                            | float8_e8m0          | uint64     | float8_e8m0          | float16               | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,4)]  | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
 | mx                                | 0          | float8_e4m3fn | float32                            | float8_e8m0          | uint64     | float8_e8m0          | bfloat16              | [(M,K)] | [(B,ceil(K/32),ceil(N/16),16,4)]  | [(M,N)] | (M,ceil(K/64)*2)      | [(0)]       | [(B,N,ceil(K/64)*2,)]       | [(0)]                  |
 
@@ -274,7 +278,7 @@ The following are the supported shapes and constrains for different scenarios(fo
 | 2          |        SSS         | [(K,M)] | [(K,N)] | [(B,M,N)] | See the constrains below | (B) | See the constrains below |1) B <= 1024.|
 The constrains of inputs' shape in quantization(for Ascend950PR/Ascend950DT) can be found in the table "The following are the supported quantization modes, data types and shapes(for Ascend950PR/Ascend950DT)" above.
 - Shape of offset and not needed optional-dynamic inputs is [(0)].
-- Shape of weight indicated in above table corresponds to data format ND. Currently, only single-tensor x, single-tensor weight, single-tensor y with group_type 0 case supports weight with format NZ.
+- Shape of weight indicated in above table corresponds to data format ND. Weight with format NZ supports the single-tensor x, single-tensor weight, single-tensor y case and, in MX quantization, the single-tensor x, multi-tensor weight, single-tensor y case.
 - When weight has format NZ, N axis should align to 32 bytes, i.e. if weight has data type int8 , N axis align to 32; if weight has data type float16 , N axis align to 16.
 - In the MXFP4 scenario, the constraint that k must be even and not equal 2. Under non-transposed weight, n must also be even.
 - The following are the supported group_type and constrains for different scenarios:

@@ -58,6 +58,17 @@ coordinates as it is. If not specified, defaults to true .
 ## Data Types
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
+### AI Core
+- input0 boxes: float32
+- input1 scores: float32
+- input2 max_output_size_per_class: int32
+- input3 max_total_size: int32
+- input4 iou_threshold: float32
+- input5 score_threshold: float32
+- output0 nmsed_boxes: float32
+- output1 nmsed_scores: float32
+- output2 nmsed_classes: float32
+- output3 valid_detections: int32
 ### AI CPU
 - input0 boxes: float32
 - input1 scores: float32

@@ -24,8 +24,8 @@ y: A ND tensor of type float16, float32.
 
 Note: The preceding prototypes are applicable to all chips, but the Data Types listed below are applicable only to the current chip.
 ### AI Core
-- input0 x: bool,complex64,float16,float32,int8,int16,int32,int64,uint8
-- output0 y: float16,float32
+- input0 x: bfloat16,bool,complex64,float16,float32,int8,int16,int32,int64,uint8
+- output0 y: bfloat16,float16,float32
 
 ## Third-party framework compatibility
 

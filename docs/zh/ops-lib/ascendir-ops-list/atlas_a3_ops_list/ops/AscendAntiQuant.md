@@ -14,8 +14,8 @@ REG_OP(AscendAntiQuant)
 ## Brief
 
 Per-tensor anti-quantization with scalar scale / offset attributes.
-  y = cast\<TOut>((x + offset) * scale)              when sqrt_mode == false
-  y = cast\<TOut>((x + offset) * scale * scale)      when sqrt_mode == true
+  y = cast<TOut>((x + offset) * scale)              when sqrt_mode == false
+  y = cast<TOut>((x + offset) * scale * scale)      when sqrt_mode == true
 
 ## Inputs
 
