@@ -158,6 +158,7 @@
 
 - [错误码参考](error_code_ref.md)
 
+  - [使用说明](error_code_desc)
   - [GE Errors<a name="sub_menu"></a>](https://gitcode.com/cann/ge/blob/9.2.0-beta.2/docs/zh/user_guides/error_codes/README.md)
   - [FE Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/9.2.0-beta.2/docs/zh/error_code_ref/FE-Errors/FE-Errors.md)
   - [AI CPU Errors<a name="sub_menu"></a>](error-codes/AI-CPU-Errors/AI-CPU-Errors.md)
