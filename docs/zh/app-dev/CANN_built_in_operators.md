@@ -44,7 +44,7 @@ CANN算子主要包含如下几类：
 **图 1**  单算子API调用流程  
 ![](figures/aclnn_API_call_process.png "单算子API调用流程")
 
-关键接口说明如下，过程中使用的acl前缀接口详细介绍可参考《Runtime运行时 API》。
+关键接口说明如下，过程中使用的acl前缀接口详细介绍可参考《Runtime运行时API》。
 
 1. **初始化：**调用aclInit接口实现初始化。
 

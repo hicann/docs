@@ -24,7 +24,7 @@
 | 场景 | 是否复跑 |
 | --- | --- |
 | 依赖PyTorch/MindSpore/TensorFlow框架的业务，例如训练、在线推理等 | 无需复跑业务<br>系统默认记录定位AI Core Error问题的信息。 |
-| 不依赖或不使用PyTorch/MindSpore/TensorFlow框架的业务，例如离线推理、单算子调用、构图等。 | 需复跑业务<br>用户手动收集部分信息时，需要先设置环境变量、再跑业务，才能收集。例如收集算子exception dump文件时，需要先设置NPU_COLLECT_PATH环境变量。关于NPU_COLLECT_PATH的详细描述请参见[《环境变量参考》](https://hiascend.com/document/redirect/CannCommunityEnvRef)中的“故障信息收集 > NPU_COLLECT_PATH”。关于手动收集信息的详细描述请参见[用户手动收集步骤](#section420651516422)。<br>若设置了环境变量NPU_COLLECT_PATH，会导致业务变慢，影响性能，不建议长期开启，定位问题之后建议及时关闭。<br> 说明： 性能敏感、但磁盘资源充足的情况下，后续希望在不复跑业务的情况下自动生成exception dump文件分析AI Core Error问题，可调用aclInit接口开启异常算子Dump配置（即在json文件中配置dump_scene参数）。该方式下，大部分网络，性能影响在1%以下，但开启后，多次AI Core Error问题生成的dump文件会消耗磁盘空间，用户需自行清理历史dump数据。详细接口说明请参见[《Runtime运行时 API》](https://hiascend.com/document/redirect/CannCommunityRuntimeApi)中的“初始化和去初始化 > aclInit”章节。 |
+| 不依赖或不使用PyTorch/MindSpore/TensorFlow框架的业务，例如离线推理、单算子调用、构图等。 | 需复跑业务<br>用户手动收集部分信息时，需要先设置环境变量、再跑业务，才能收集。例如收集算子exception dump文件时，需要先设置NPU_COLLECT_PATH环境变量。关于NPU_COLLECT_PATH的详细描述请参见[《环境变量参考》](https://hiascend.com/document/redirect/CannCommunityEnvRef)中的“故障信息收集 > NPU_COLLECT_PATH”。关于手动收集信息的详细描述请参见[用户手动收集步骤](#section420651516422)。<br>若设置了环境变量NPU_COLLECT_PATH，会导致业务变慢，影响性能，不建议长期开启，定位问题之后建议及时关闭。<br> 说明： 性能敏感、但磁盘资源充足的情况下，后续希望在不复跑业务的情况下自动生成exception dump文件分析AI Core Error问题，可调用aclInit接口开启异常算子Dump配置（即在json文件中配置dump_scene参数）。该方式下，大部分网络，性能影响在1%以下，但开启后，多次AI Core Error问题生成的dump文件会消耗磁盘空间，用户需自行清理历史dump数据。详细接口说明请参见[《Runtime运行时API》](https://hiascend.com/document/redirect/CannCommunityRuntimeApi)中的“初始化和去初始化 > aclInit”章节。 |
 
 ## 收集信息方式介绍
 
