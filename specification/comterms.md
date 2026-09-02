@@ -45,7 +45,7 @@
 - 《[故障处理](https://gitcode.com/cann/docs/blob/master/docs/zh/troubleshooting/00_troubleshooting.md)》
 - 《[日志参考](https://gitcode.com/cann/runtime/blob/master/docs/zh/log_ref/README.md)》
 - 《[环境变量参考](https://gitcode.com/cann/docs/blob/master/docs/zh/env-vars/README.md)》
-- 《[图融合和UB融合规则参考](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/maintenref/graphubfusionref/atlasrr_30_0003.html)》
+- 《[图融合和UB融合规则参考](https://gitcode.com/cann/docs/blob/master/docs/zh/fusion-patterns/README.md)》
 - 《[基础数据结构和接口](https://gitcode.com/cann/metadef/blob/master/docs/api/README.md)》
 
 ## 其他

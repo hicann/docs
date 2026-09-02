@@ -17,6 +17,7 @@ docs/
 ├── docs/                       # 文档
 │   ├── app-dev                 # 应用开发
 │   ├── env-vars                # 环境变量参考
+│   ├── fusion-patterns         # 图融合和UB融合规则参考
 │   ├── ops-lib                 # 算子库公共
 │   └── troubleshooting         # 故障处理
 └── README.md                   # 本文件
@@ -59,6 +60,7 @@ docs/
 - [故障处理](https://gitcode.com/cann/docs/blob/master/docs/zh/troubleshooting/00_troubleshooting.md)
 - [日志参考](https://gitcode.com/cann/runtime/blob/master/docs/zh/log_ref/README.md)
 - [环境变量参考](https://gitcode.com/cann/docs/blob/master/docs/zh/env-vars/README.md)
+- [图融合和UB融合规则参考](https://gitcode.com/cann/docs/blob/master/docs/zh/fusion-patterns/README.md)
 - [基础数据结构和接口](https://gitcode.com/cann/metadef/blob/master/docs/api/README.md)
 
 ### 其他
