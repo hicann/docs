@@ -26,14 +26,14 @@
 
     如图1所示，conv2D和Batchnorm算子进行融合，经过数学公式的推导，将Batchnorm作用到conv2D上，融合成了conv2D算子。
 
-    **图 1**  原图融合示例  
+    **图 1**  原图融合示例
     ![](figures/Introduction_1.png)
 
 - 拆分融合：将一个算子拆分成多个算子，并将拆分后的多个算子分别和其他算子进行融合。
 
     如图2所示，算子X被拆分成X1和X2两个算子，X1和A进行融合，融合成A1，X2和B、C进行融合，融合成BC1。
 
-    **图 2**  拆分融合  
+    **图 2**  拆分融合
     ![](figures/Introduction_2.png)
 
 ## UB融合
@@ -107,9 +107,9 @@ UB即AI处理器上的Unified Buffer，UB融合是对图上算子进行硬件UB�
 
 需要注意的是：
 
-1.  以上关闭融合规则仅是关闭系统部分融合规则，而不是全部融合规则，原因是关闭某些融合规则可能会导致功能问题。
-2.  文档中的融合规则默认状态为开启，因此一键式配置"ALL":"on"是无效操作。
-3.  一键式关闭融合规则的同时，可以开启部分融合规则（即配置文件中针对单个融合规则的配置优先级高于"ALL"）。
+1. 以上关闭融合规则仅是关闭系统部分融合规则，而不是全部融合规则，原因是关闭某些融合规则可能会导致功能问题。
+2. 文档中的融合规则默认状态为开启，因此一键式配置"ALL":"on"是无效操作。
+3. 一键式关闭融合规则的同时，可以开启部分融合规则（即配置文件中针对单个融合规则的配置优先级高于"ALL"）。
 
     ```json
     {
@@ -130,13 +130,13 @@ UB即AI处理器上的Unified Buffer，UB融合是对图上算子进行硬件UB�
 
 模型运行完成后，用户可以通过日志查看融合规则执行顺序。步骤如下。
 
-1.  进入日志落盘路径。
+1. 进入日志落盘路径。
 
     默认设置为 $HOME/ascend/log/debug/plog/。该路径可以通过ASCEND\_PROCESS\_LOG\_PATH指定，详细信息请参考《[日志参考](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/maintenref/logreference/docs/zh/log_ref/log_overview.md)》。
 
     **cd $HOME/ascend/log/debug/plog/**
 
-2.  查看已生效的图融合规则。
+2. 查看已生效的图融合规则。
 
     **cat \* | grep "GraphId" | grep -v "effected\_times=0" | grep "effected\_times="**
 
@@ -160,7 +160,7 @@ UB即AI处理器上的Unified Buffer，UB融合是对图上算子进行硬件UB�
     >- 日志中打印的融合规则顺序即为它们的实际执行顺序。
     >- 也可以通过**cat \* | grep "GraphId" | grep "effected\_times="**查看所有匹配过的图融合规则。
 
-3.  查看UB融合规则的执行顺序。
+3. 查看UB融合规则的执行顺序。
 
     **cat \* |grep "Run buffer fusion pass successfully, pass name"**
 
