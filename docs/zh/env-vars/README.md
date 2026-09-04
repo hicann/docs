@@ -29,6 +29,9 @@
 <!-- npu="950,A3,910b,910,310p" id6 -->
 - [算子执行](./_dump_opexe.md)
   - [ACLNN_CACHE_LIMIT](./ACLNN_CACHE_LIMIT.md)
+  <!-- npu="950" id10 -->
+  - [OP_PCIE_THROUGH_ACCESS_HOST_MEM_CHECK_ENABLE](./OP_PCIE_THROUGH_ACCESS_HOST_MEM_CHECK_ENABLE.md)
+  <!-- end id10 -->
 <!-- end id6 -->
 <!-- npu="950,A3,910b,910,310p" id7 -->
 - [性能数据采集](./_dump_profile.md)
