@@ -43,3 +43,8 @@
 - [EL0021 Not\_Supported](EL0021-Not_Supported.md)
 
 - [EL0022 Resource\_Error\_Insufficient\_SQCQ](EL0022-Resource_Error_Insufficient_SQCQ.md)
+
+- [EL0023 Resource\_Error](EL0023-Resource_Error.md)
+
+- [EL0024 Resource\_Busy\_Memory\_In\_Use](EL0024-Resource_Busy_Memory_In_Use.md)
+
