@@ -25,6 +25,8 @@ export OP_PCIE_THROUGH_ACCESS_HOST_MEM_CHECK_ENABLE=1
 
 性能提示：开启地址检测会引入额外的内存校验开销，可能增加Host侧的性能负担，按需使用即可。
 
+功能提示：DataDump功能暂未支持PCIe through场景，因此使能PCIe through后暂不支持DataDump。
+
 ## 支持的型号
 
 <!-- npu="950" id1 -->
