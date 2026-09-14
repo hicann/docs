@@ -10,7 +10,7 @@
 ## 编程指南
 
 - 《[Ascend C算子开发](https://gitcode.com/cann/asc-devkit/blob/master/docs/zh/guide/index.md)》
-- 《[PyPTO算子开发](https://gitcode.com/cann/pypto/blob/master/docs/zh/tutorials/index_hiascend.md)》
+- 《[PyPTO算子开发](https://gitcode.com/cann/pypto/blob/master/docs/zh/guide/index_hiascend.md)》
 - 《[通信算子开发](https://gitcode.com/cann/hcomm/blob/master/docs/zh/comm_op_dev_guide/README.md)》
 - 《[应用开发](https://gitcode.com/cann/docs/blob/master/docs/zh/app-dev/00_acl_cpp_dev.md)》
 - 《[图开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/graph_dev/README.md)》
