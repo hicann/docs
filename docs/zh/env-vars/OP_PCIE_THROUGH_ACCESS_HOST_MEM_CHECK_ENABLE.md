@@ -30,5 +30,5 @@ export OP_PCIE_THROUGH_ACCESS_HOST_MEM_CHECK_ENABLE=1
 ## 支持的型号
 
 <!-- npu="950" id1 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT 系列产品
 <!-- end id1 -->

@@ -19,5 +19,5 @@ export RESOURCE_CONFIG_PATH=/home/test/numa_config.json
 <!-- npu="910b" id1 -->
 ## 支持的型号
 
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2 系列产品
 <!-- end id1 -->
