@@ -72,7 +72,7 @@ source ${HOME}/Ascend/nnal/asdsip/set_env.sh
   - LCCL_PARALLEL：该功能和确定性计算无法同时开启，“LCCL_DETERMINISTIC”需要为0或者false。
     - 多通信域并行功能使用结束后，LCCL_PARALLEL需要设置回false，否则会导致基础场景性能下降。不支持在运行过程中修改。
     <!-- npu="910b" id2 -->
-    - 该环境变量只支持AllReduce多线程并发场景使用，仅支持<trem>Atlas A2 训练系列产品</term>/<trem>Atlas A2 推理系列产品</term>8卡且数据量小于100MB。
+    - 该环境变量只支持AllReduce多线程并发场景使用，仅支持Atlas A2 系列产品，8卡且数据量小于100MB的场景。
     <!-- end id2 -->
 
 - **神经网络加速库（NNAL）中SiP加速库**

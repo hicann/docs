@@ -6,8 +6,8 @@
 
 支持的自定义算子编译方式及路径配置：
 
--   **自定义算子包**：编译成自定义算子包，且算子包通过`--install-path=<path>`安装到指定路径时，在调用算子前需要执行：`source <path>/vendors/<vendor_name>/bin/set_env.bash`。该脚本会将算子包目录`<path>/vendors/<vendor_name>`添加到ASCEND_CUSTOM_OPP_PATH环境变量的首部，供框架在运行时查找自定义算子包。
--   **动态库**：编译成动态库时，需配置动态库的安装路径。此时也可以通过动态库链接的方式使用动态库，动态库链接优先级高于环境变量配置的方式。
+- **自定义算子包**：编译成自定义算子包，且算子包通过`--install-path=<path>`安装到指定路径时，在调用算子前需要执行：`source <path>/vendors/<vendor_name>/bin/set_env.bash`。该脚本会将算子包目录`<path>/vendors/<vendor_name>`添加到ASCEND_CUSTOM_OPP_PATH环境变量的首部，供框架在运行时查找自定义算子包。
+- **动态库**：编译成动态库时，需配置动态库的安装路径。此时也可以通过动态库链接的方式使用动态库，动态库链接优先级高于环境变量配置的方式。
 
 动态库编译和自定义算子包编译功能同时使用时，前者生成的动态库优先级更高。
 
@@ -32,4 +32,3 @@ export ASCEND_CUSTOM_OPP_PATH=<path1>/vendors/vendor_name1:<path2>/op_api/lib/:<
 ## 支持的型号
 
 全量芯片支持
-
