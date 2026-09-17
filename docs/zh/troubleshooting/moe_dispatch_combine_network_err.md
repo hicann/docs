@@ -2,7 +2,7 @@
 
 ## 问题现象
 
-Atlas A3 训练系列产品/Atlas A3 推理系列产品场景下，Host侧Runtime执行报错，在应用程序运行日志中Runtime打印了fault kernel\_name和func\_name的关键信息，其中fault kernel\_name为MoeDistributeDispatchV2、MoeDistributeCombineV2算子，报错Error为“ errcode:\(0x800000, 0, 0\) errorStr: The DDR address of the MTE instruction is out of range”。
+Atlas A3系列产品场景下，Host侧Runtime执行报错，在应用程序运行日志中Runtime打印了fault kernel\_name和func\_name的关键信息，其中fault kernel\_name为MoeDistributeDispatchV2、MoeDistributeCombineV2算子，报错Error为“ errcode:\(0x800000, 0, 0\) errorStr: The DDR address of the MTE instruction is out of range”。
 
 Ascend EP形态，应用程序运行日志默认在$HOME/ascend/log/\[run|debug\]/plog路径下，日志文件为plog-_pid\_\*_.log。
 
@@ -96,8 +96,8 @@ Ascend EP形态，应用程序运行日志默认在$HOME/ascend/log/\[run|debug\
 
     ![](figures/image_0000002538136543.png)
 
-    >**说明：** 
-    >Atlas A3 训练系列产品/Atlas A3 推理系列产品：该产品为双die架构，两个die共用os，dev-os-0内包含了device-0和device-1。
+    >**说明：**
+    >Atlas A3系列产品：该产品为双die架构，两个die共用os，dev-os-0内包含了device-0和device-1。
 
 4. 分析device-1进程退出前有无报错以及报错的直接原因。
 

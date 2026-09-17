@@ -2,16 +2,16 @@
 
 ## 错误信息
 
-报错格式如下，占位符%s的含义依次为内存大小、模块名称：
+报错格式如下，占位符%s的含义依次为接口名、内存大小、模块名称：
 
 ```text
-Failed to allocate %s device memory requested by the %s module.
+%s failed. Failed to allocate %s device memory requested by the %s module.
 ```
 
 报错示例如下：
 
 ```text
-Failed to allocate 1024 bytes host memory requested by DRV(hdc) module.
+halMemCreate failed. Failed to allocate 1024 bytes host memory requested by DRV(hdc) module.
 ```
 
 ## 可能原因

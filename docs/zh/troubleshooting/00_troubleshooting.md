@@ -171,5 +171,8 @@
   - [DVPP Errors<a name="sub_menu"></a>](error-codes/DVPP-Errors/DVPP-Errors.md)
   - [AMCT Errors<a name="sub_menu"></a>](error-codes/AMCT-Errors/AMCT-Errors.md)
   - [DUMP Errors<a name="sub_menu"></a>](https://gitcode.com/cann/runtime/blob/master/docs/zh/error_code_ref/Dump-Errors/DUMP-Errors.md)
+  - [Operator Errors<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/en/error_code/Operator-Errors/Operator-Errors.md)
+  - [Nnopbase-Errors<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/en/error_code/Nnopbase-Errors/Nnopbase-Errors.md)
   - [AOE相关错误码](error-codes/AOE-Error.md)
   - [E*9*** Internal error](error-codes/E-9-Inner-Error.md)
+  

@@ -15,6 +15,9 @@
   <!-- npu="A3,910b,310p" id3 -->
   - [AUTO_USE_UC_MEMORY](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/AUTO_USE_UC_MEMORY.md)
   <!-- end id3 -->
+  <!-- npu="950,A3,910b" id11 -->
+  - [ASCEND_RT_LAUNCH_BLOCKING](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_RT_LAUNCH_BLOCKING.md)
+  <!-- end id11 -->
   <!-- npu="910b" id2 -->
   - [RESOURCE_CONFIG_PATH](./RESOURCE_CONFIG_PATH.md)
   <!-- end id2 -->

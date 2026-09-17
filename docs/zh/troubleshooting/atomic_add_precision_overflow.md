@@ -17,7 +17,7 @@ Atomic add has a precision overflow. Check the operator precision.Note that if t
 ```
 
 <!-- npu="910b" id1 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品上，由于硬件优化，不会出现atomic add精度溢出问题。
+Atlas A2系列产品上，由于硬件优化，不会出现atomic add精度溢出问题。
 <!-- end id1 -->
 
 ## 故障根因
