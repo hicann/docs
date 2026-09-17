@@ -10,7 +10,7 @@
 
 - **模型构建时**，需配置动态AIPP相关参数：
 
-    **构建模型时**，需通过ATC工具的insert\_op\_conf参数配置动态AIPP模式。ATC工具的参数说明请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)中的“参数说明 \> 高级功能参数 \> 功能配置选项 \> --insert\_op\_conf”。
+    **构建模型时**，需通过ATC工具的insert\_op\_conf参数配置动态AIPP模式。ATC工具的参数说明请参见[《ATC离线模型编译工具》](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/atc_tools/README.md)中的“参数说明 \> 高级功能参数 \> 功能配置选项 \> --insert\_op\_conf”。
 
     **构建模型成功后**，在生成的om模型中，会新增相应的输入（下文简称动态AIPP输入），在模型推理时通过该新增的输入提供具体的AIPP配置值。
 

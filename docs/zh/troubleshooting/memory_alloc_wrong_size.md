@@ -29,5 +29,5 @@
 
 ## 解决方法
 
-1. 检查代码，根据[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)中的“媒体数据处理V1 API \> VPC图像处理功能”或“媒体数据处理V2 API \> VPC图像处理功能”，检查对应格式的内存大小要求;
+1. 检查代码，根据[《DVPP媒体加速库》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html)中的“媒体数据处理V1 API \> VPC图像处理功能”或“媒体数据处理V2 API \> VPC图像处理功能”，检查对应格式的内存大小要求;
 2. 在代码中增加打印内存长度的日志，检查VPC任务接口传入的buffer size是否与实际申请的内存长度一致。

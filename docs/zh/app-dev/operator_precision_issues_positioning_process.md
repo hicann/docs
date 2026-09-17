@@ -18,7 +18,7 @@
     <a id="li108141712131710"></a>
     2. 使用精度比对工具比对高精度模式下的Dump数据与[1](#li1678610773511)获取的Dump数据。
 
-        工具的使用请参见[《精度调试工具》](https://hiascend.com/document/redirect/CannCommunityToolAccucacy)。
+        工具的使用请参见[《精度调试工具》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/ModelAccuracyAnalyzer/atlasaccuracy_16_0001.html)。
 
     3. 根据上一步中的比对结果识别计算有差异的算子。
 
@@ -39,7 +39,7 @@
     <a id="li168541437153611"></a>
     2. 使用精度比对工具比对关闭数据缓存优化功能后的Dump数据与[1](#li1678610773511)获取的Dump数据。
 
-        工具的使用请参见[《精度调试工具》](https://hiascend.com/document/redirect/CannCommunityToolAccucacy)。
+        工具的使用请参见[《精度调试工具》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/ModelAccuracyAnalyzer/atlasaccuracy_16_0001.html)。
 
     3. 根据上一步中的比对结果识别计算有差异的算子。
     4. 联系技术支持，提供有差异的算子，进一步分析。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
@@ -53,7 +53,7 @@
     <a id="li1649922517388"></a>
     2. 使用精度比对工具比对关闭融合规则后的Dump数据与[1](#li1678610773511)获取的Dump数据。
 
-        工具的使用请参见[《精度调试工具》](https://hiascend.com/document/redirect/CannCommunityToolAccucacy)。
+        工具的使用请参见[《精度调试工具》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/ModelAccuracyAnalyzer/atlasaccuracy_16_0001.html)。
 
     3. 根据上一步中的比对结果识别计算有差异的算子。
     4. 联系技术支持，提供有差异的算子，进一步分析。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。
@@ -67,7 +67,7 @@
 6. 与标杆计算数据比对。
     1. 使用精度比对工具将模型的Dump数据与标杆网络的Dump数据进行对比。
 
-        工具的使用请参见[《精度调试工具》](https://hiascend.com/document/redirect/CannCommunityToolAccucacy)。
+        工具的使用请参见[《精度调试工具》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/ModelAccuracyAnalyzer/atlasaccuracy_16_0001.html)。
 
     2. 根据前一步中的比对结果识别计算有差异的算子。
     3. 联系技术支持，提供有差异的算子，进一步分析。您可以获取日志后单击[Link](https://www.hiascend.com/support)联系技术支持。

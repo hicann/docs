@@ -23,7 +23,7 @@ Device内存不足，AI CPU无法处理VDEC解码任务，导致任务超时。
 
 ## 处理步骤
 
-1. 在使用媒体数据处理V1版本的VDEC视频解码功能前，可查看[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)手册中的VDEC功能约束，参考“每路VDEC解码的内存消耗计算公式”，预估需使用的Device内存，并合理规划Device上的内存。
+1. 在使用媒体数据处理V1版本的VDEC视频解码功能前，可查看[《DVPP媒体加速库》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html)手册中的VDEC功能约束，参考“每路VDEC解码的内存消耗计算公式”，预估需使用的Device内存，并合理规划Device上的内存。
 2. 优化应用程序的代码逻辑，增加异常处理机制，获取VDEC解码异常信息，强制退出进程。
 
     在调用aclinit接口之后，定义异常回调函数，并调用aclrtSetExceptionInfoCallback接口设置异常回调函数，用于获取任务异常信息，以便在异常分支中根据任务异常信息来判断是否退出应用进程。

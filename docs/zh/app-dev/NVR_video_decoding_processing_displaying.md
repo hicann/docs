@@ -237,7 +237,7 @@ HIFB用于管理叠加图形层，它不仅提供Linux Framebuffer的基本功�
 
 1. 通过系统调用open**打开fb设备**。设备文件fb0\~fb4对应图层G0\~G4。其中，G0和G1为高清图层、G2为鼠标图层、G3和G4为标清图层。
 
-    各图层对应的fb设备、VO设备、支持的颜色格式、分辨率等说明，请参见[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)中HIFB叠加图形层管理功能的说明。
+    各图层对应的fb设备、VO设备、支持的颜色格式、分辨率等说明，请参见[《DVPP媒体加速库》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html)中HIFB叠加图形层管理功能的说明。
 
 2. 通过系统调用ioctl，传入命令码FBIOGET\_VSCREENINFO**获取屏幕基本属性**。
 3. 通过系统调用ioctl，传入命令码FBIOPUT\_VSCREENINFO**设置屏幕基本属性**。

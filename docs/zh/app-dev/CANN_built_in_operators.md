@@ -27,7 +27,7 @@ CANN算子主要包含如下几类：
 
     对于集合通信和MatMul计算融合、并行的算子，统称为通算融合算子（简称MC2算子），如AllGatherMatmul、AlltoAllAllGatherBatchMatMul、BatchMatMulReduceScatterAlltoAll、MatMulAllReduce、MatMulAllReduceAddRmsNorm、MatMulReduceScatter等。
 
-关于算子IR（Intermediate Representation）规格介绍，请参见[《算子库》](https://hiascend.com/document/redirect/CannCommunityOplist)中“Ascend IR算子规格说明”；关于算子对应的API文档介绍，请参见[《算子库》](https://hiascend.com/document/redirect/CannCommunityOplist)中“算子接口（aclnn）”。
+关于算子IR（Intermediate Representation）规格介绍，请参见[《算子库》](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/ops-lib/0_README.md)中“Ascend IR算子规格说明”；关于算子对应的API文档介绍，请参见[《算子库》](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/ops-lib/0_README.md)中“算子接口（aclnn）”。
 
 调用算子API时，请include依赖必要的头文件和库文件，其中$\{INSTALL\_DIR\}请替换为CANN软件安装后文件存储路径。以root用户安装为例，安装后文件默认存储路径为：/usr/local/Ascend/cann。
 
@@ -53,7 +53,7 @@ CANN算子主要包含如下几类：
 3. **数据内存申请和传输。**
 
     1. 调用aclrtMalloc接口申请Device上的内存，存放待执行算子的输入、输出数据。
-    2. 调用aclCreateTensor、aclCreateIntArray等构造算子输入、输出参数，相关接口详见[《算子库》](https://hiascend.com/document/redirect/CannCommunityOplist)中“公共接口”。
+    2. 调用aclCreateTensor、aclCreateIntArray等构造算子输入、输出参数，相关接口详见[《算子库》](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/ops-lib/0_README.md)中“公共接口”。
 
     如果需要将Host上数据传输到Device，则需要调用aclrtMemcpy接口（同步接口）或aclrtMemcpyAsync接口（异步接口）通过内存复制的方式实现数据传输。
 
@@ -68,7 +68,7 @@ CANN算子主要包含如下几类：
     如果需要将Device上的算子执行结果数据传输到Host，则需要调用aclrtMemcpy接口（同步接口）或aclrtMemcpyAsync接口（异步接口）通过内存复制的方式实现数据传输，然后再释放内存。
 
 7. **运行时资源释放**。
-    1. 调用aclDestroyTensor、aclDestroyIntArray等接口释放算子输入、输出参数，相关接口详见[《算子库》](https://hiascend.com/document/redirect/CannCommunityOplist)中“公共接口”。
+    1. 调用aclDestroyTensor、aclDestroyIntArray等接口释放算子输入、输出参数，相关接口详见[《算子库》](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/ops-lib/0_README.md)中“公共接口”。
     2. 所有数据释放后，调用aclrtDestroyStream、aclrtResetDevice等接口，依次释放运行时资源即Stream、Context、Device。
 
 8. **去初始化：**调用aclFinalize接口实现去初始化。

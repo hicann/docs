@@ -34,7 +34,7 @@ Check op[%s]'s type[%s] failed, it is not supported.
 
 2. 如果算子插件so加载成功，则需要继续确认算子注册的映射关系是否编译进加载的插件so中了。
 
-    使用nm命令查看so符号表，如果没有注册，则需要注册该算子插件，可以参考[《TBE&AI CPU算子开发》](https://hiascend.com/document/redirect/CannCommunityOpdevWizard)中的“算子开发过程 \> 算子适配”章节内容实现。
+    使用nm命令查看so符号表，如果没有注册，则需要注册该算子插件。
 
     >**说明：** 
     >**nm -D**命令可查看so文件符号表。

@@ -7,7 +7,7 @@
     - 非Control CPU（例如低功耗）上的系统类日志，主要反映低功耗、Task Scheduler、ISP等组件的运行情况。
 
 - **应用类日志**：AI应用程序运行产生的日志。主要包括：
-    - Host侧AscendCL、GE、Runtime、HCCL等组件打印的日志。
+    - Host侧GE、Runtime、HCCL等组件打印的日志。
     - Device侧AI CPU进程打印的日志。
 
-如何查看日志、设置日志级别等描述请参见[《日志参考》](https://hiascend.com/document/redirect/CannCommunitylogref)。
+如何查看日志、设置日志级别等描述请参见[《日志参考》](https://gitcode.com/cann/runtime/blob/9.2.0/docs/zh/log_ref/README.md)。

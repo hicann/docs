@@ -20,7 +20,7 @@ FastRCNN网络，模型转换时，保持默认高性能模式、force\_fp16精�
 
     上图中AddN算子第0个输出的余弦相似度只有0.72，说明这个算子可能存在精度问题，因此需要进一步分析该算子在高精度模式下的第0个输出的Dump数据文件（第2步中获取的Dump数据文件）。
 
-5. 由于Dump数据文件无法通过文本工具直接查阅，因此在分析该Dump数据文件前，请参考[《精度调试工具》](https://hiascend.com/document/redirect/CannCommunityToolAccucacy)的“扩展功能 \> 查看dump数据文件”章节，先将dump数据文件转换为numpy格式，再将numpy格式文件转换为txt格式文件。
+5. 由于Dump数据文件无法通过文本工具直接查阅，因此在分析该Dump数据文件前，请参考[《精度调试工具》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/ModelAccuracyAnalyzer/atlasaccuracy_16_0001.html)的“扩展功能 \> 查看dump数据文件”章节，先将dump数据文件转换为numpy格式，再将numpy格式文件转换为txt格式文件。
 
     在将numpy格式文件转换为txt格式文件的过程中，可以获取AddN算子第0个输出的最大值、最小值，命令示例如下（**\*\*\*\*_.npy_**表示numpy格式文件的路径）：
 

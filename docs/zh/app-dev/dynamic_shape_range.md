@@ -10,7 +10,7 @@
 
 1. 构建模型。
 
-    模型推理场景下，对于动态Shape的输入数据，使用ATC工具转换模型时，通过input\_shape参数设置输入Shape范围，详细参数说明请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)中的“参数说明 \> 基础功能参数 \> 输入选项 \> --input\_shape”。
+    模型推理场景下，对于动态Shape的输入数据，使用ATC工具转换模型时，通过input\_shape参数设置输入Shape范围，详细参数说明请参见[《ATC离线模型编译工具》](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/atc_tools/README.md)中的“参数说明 \> 基础功能参数 \> 输入选项 \> --input\_shape”。
 
 2. 加载模型。
 

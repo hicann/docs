@@ -6,7 +6,7 @@
 
 1. 基于构图接口编译并保存模型，模型中包含多个图，例如推理图、变量初始化图、变量更新图等。
 
-    此处是调用aclgrphBundleBuildModel接口编译模型、调用aclgrphBundleSaveModel接口保存模型，接口详细描述参见[《图开发》](https://hiascend.com/document/redirect/CannCommunityGraphguide)中的“接口参考 \> C++语言接口 \> aclgrph接口 \> aclgrphBundleBuildModel”、“接口参考 \> C++语言接口 \> aclgrph接口 \> aclgrphBundleSaveModel”。
+    此处是调用aclgrphBundleBuildModel接口编译模型、调用aclgrphBundleSaveModel接口保存模型，接口详细描述参见[《图开发》](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/graph_dev/README.md)中的“接口参考 \> C++语言接口 \> aclgrph接口 \> aclgrphBundleBuildModel”、“接口参考 \> C++语言接口 \> aclgrph接口 \> aclgrphBundleSaveModel”。
 
     权重初始化是可选步骤，根据业务场景由用户判断是否需要包含权重初始化图，不包含的情况下，可节省模型加载所需的Device内存。
 

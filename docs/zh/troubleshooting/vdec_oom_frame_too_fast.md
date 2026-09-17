@@ -20,4 +20,4 @@ OOM_NOTIFIER: oom type 2
 
 ## 解决方法
 
-参见[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)中的VDEC性能指标数据，自行调整送帧间隔。
+参见[《DVPP媒体加速库》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html)中的VDEC性能指标数据，自行调整送帧间隔。

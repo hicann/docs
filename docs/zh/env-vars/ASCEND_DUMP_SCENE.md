@@ -15,11 +15,11 @@
   - 该选项仅支持以下型号：
 
     <!-- npu="910b" id1 -->
-    Atlas A2 系列产品
+    Atlas A2系列产品
     <!-- end id1 -->
 
     <!-- npu="A3" id2 -->
-    Atlas A3 系列产品
+    Atlas A3系列产品
     <!-- end id2 -->
 
   - 导出dump文件过程中，会暂停问题算子所在的AI Core，因此可能会影响Device上其他业务进程的正常执行，导出dump文件后，会自行恢复AI Core。

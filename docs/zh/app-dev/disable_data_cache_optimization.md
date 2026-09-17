@@ -12,7 +12,7 @@
     --buffer_optimize=off_optimize
     ```
 
-    关于该参数的详细说明请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)中的“参数说明 \> 高级功能参数 \> 模型调优选项 \> --buffer\_optimize”。
+    关于该参数的详细说明请参见[《ATC离线模型编译工具》](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/atc_tools/README.md)中的“参数说明 \> 高级功能参数 \> 模型调优选项 \> --buffer\_optimize”。
 
 2. 使用转换后的om模型重新推理。
 

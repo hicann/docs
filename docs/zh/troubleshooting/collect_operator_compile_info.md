@@ -1,6 +1,6 @@
 # 手动收集算子编译信息（算子.o和.json文件）
 
-**先从CANN软件安装路径下查找算子.json和.o文件**，CANN软件默认安装路径为/usr/local/Ascend/cann，**如果找不到，再从缓存目录下查找**，默认为$\{HOME\}/atc\_data目录，如果配置了ASCEND\_CACHE\_PATH环境变量，则从该环境变量配置的路径下查找。关于环境变量的详细说明及约束，请参见[《环境变量参考》](https://hiascend.com/document/redirect/CannCommunityEnvRef)。
+**先从CANN软件安装路径下查找算子.json和.o文件**，CANN软件默认安装路径为/usr/local/Ascend/cann，**如果找不到，再从缓存目录下查找**，默认为$\{HOME\}/atc\_data目录，如果配置了ASCEND\_CACHE\_PATH环境变量，则从该环境变量配置的路径下查找。关于环境变量的详细说明及约束，请参见[《环境变量参考》](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/env-vars/README.md)。
 
 **查找算子.json文件时**，以日志中的kernel\_name为关键字，但如果kernel\_name中包含\_mix\_aic或\_mix\_aiv，在搜索时需剔除\_mix\_aic或\_mix\_aiv，例如kernel\_name为_xxx_\_mix\_aic\__kernel0_，在搜索时需使用_xxx_\__kernel0_关键字来搜索；再例如kernel\_name为_xxx_\__tilingkey_\_mix\_aic，在搜索时需以关键字_xxx_\__tilingkey_来搜索。查找命令示例如下，在/usr/local/Ascend/cann目录下查找：
 

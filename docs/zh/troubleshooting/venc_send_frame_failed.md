@@ -27,6 +27,6 @@
 
     1. 入参的结构体没有进行memset初始化，导致有些参数如果没有主动设置就会是一些随机值；
     2. 头文件不匹配，导致枚举类型传入和预期不符合;
-    3. 参数支持范围不了解，各个参数的支持范围请查看[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)中的说明。
+    3. 参数支持范围不了解，各个参数的支持范围请查看[《DVPP媒体加速库》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html)中的说明。
 
 - 如果是0xa008800d，则说明VENC的输入空闲队列已满，此时无法再继续往内部送入数据帧，这种问题一般是由于用户送帧的频率太快，大于了芯片处理的速度，导致输入队列堆积，VENC的输入空闲队列长度为6帧，只要堆积到了6帧再继续往里送就会出现这个报错。这种情况建议用户控制调用hi\_mpi\_venc\_send\_frame的时间间隔，比如编码帧率30fps，调用的间隔可以控制在33ms一帧。

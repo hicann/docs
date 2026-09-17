@@ -39,7 +39,7 @@ IR for op[%s] optype[%s] is not registered.
 
 2. 如果算子原型so加载成功，需要确认算子原型定义是否编译进加载的so中了。
 
-    使用nm查看so符号表，如果没有注册，则需要注册该算子原型，可以参考[《TBE&AI CPU算子开发》](https://hiascend.com/document/redirect/CannCommunityOpdevWizard)中的“算子开发过程 \> 算子原型定义”章节内容实现。
+    使用nm查看so符号表，如果没有注册，则需要注册该算子原型。
 
     >**说明：** 
     >**nm -D**命令可查看so文件符号表。

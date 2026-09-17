@@ -79,7 +79,7 @@
 ## 定位思路
 
 1. 根据日志描述的错误信息，找到VPC对应的配置参数，根据提示进行修改。
-2. 根据日志描述的错误信息，参考[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)中的“媒体数据处理V1 API \> VPC图像处理功能”或“媒体数据处理V2 API \> VPC图像处理功能”章节的约束修改。
+2. 根据日志描述的错误信息，参考[《DVPP媒体加速库》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html)中的“媒体数据处理V1 API \> VPC图像处理功能”或“媒体数据处理V2 API \> VPC图像处理功能”章节的约束修改。
 
 ## 解决方法
 

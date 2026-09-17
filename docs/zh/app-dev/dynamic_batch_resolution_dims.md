@@ -10,11 +10,11 @@
 
 1. **构建模型时**，需配置动态Batch、动态分辨率、动态维度（ND格式）相关的信息：
 
-    **若模型推理时包含动态Batch特性**，在模型推理时，需调用acl接口设置模型推理时需使用的batch size，模型支持的batch size已提前在构建模型时配置，例如构建模型时使用ATC工具的dynamic\_batch\_size参数，详细参数说明请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)中的“参数说明 \> 基础功能参数 \> 输入选项 \> --dynamic\_batch\_size”。
+    **若模型推理时包含动态Batch特性**，在模型推理时，需调用acl接口设置模型推理时需使用的batch size，模型支持的batch size已提前在构建模型时配置，例如构建模型时使用ATC工具的dynamic\_batch\_size参数，详细参数说明请参见[《ATC离线模型编译工具》](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/atc_tools/README.md)中的“参数说明 \> 基础功能参数 \> 输入选项 \> --dynamic\_batch\_size”。
 
-    **若模型推理时包含动态分辨率特性**，在模型推理时，需调用acl接口设置模型推理时需使用的分辨率，模型支持的分辨率已提前在构建模型时配置，例如构建模型时使用ATC工具的dynamic\_image\_size参数，详细参数说明请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)中的“参数说明 \> 基础功能参数 \> 输入选项 \> --dynamic\_image\_size”。
+    **若模型推理时包含动态分辨率特性**，在模型推理时，需调用acl接口设置模型推理时需使用的分辨率，模型支持的分辨率已提前在构建模型时配置，例如构建模型时使用ATC工具的dynamic\_image\_size参数，详细参数说明请参见[《ATC离线模型编译工具》](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/atc_tools/README.md)中的“参数说明 \> 基础功能参数 \> 输入选项 \> --dynamic\_image\_size”。
 
-    **若模型推理时包含动态维度（ND格式）特性**，在模型推理时，需调用acl接口设置模型推理时需使用的维度值，模型支持哪些维度值已提前在构建模型时配置，例如构建模型时使用ATC工具的dynamic\_dims参数，详细参数说明请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)中的“参数说明 \> 基础功能参数 \> 输入选项 \> --dynamic\_dims”。
+    **若模型推理时包含动态维度（ND格式）特性**，在模型推理时，需调用acl接口设置模型推理时需使用的维度值，模型支持哪些维度值已提前在构建模型时配置，例如构建模型时使用ATC工具的dynamic\_dims参数，详细参数说明请参见[《ATC离线模型编译工具》](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/atc_tools/README.md)中的“参数说明 \> 基础功能参数 \> 输入选项 \> --dynamic\_dims”。
 
     构建模型成功后，在生成的om模型中，会新增相应的输入（下文简称动态Batch输入/动态分辨率输入/动态维度输入），在模型推理时通过该新增的输入提供具体的Batch值/分辨率/维度值。
 

@@ -27,4 +27,4 @@
 ![](figures/image_0000001927835337.png)
 
 >**说明：** 
->执行export ASCEND\_GLOBAL\_LOG\_LEVEL=0命令开启DEBUG日志，调试完成后，再执行export ASCEND\_GLOBAL\_LOG\_LEVEL=3命令将日志级别设置成ERROR，关于日志级别的详细说明请参见[《日志参考》](https://hiascend.com/document/redirect/CannCommunitylogref)。
+>执行export ASCEND\_GLOBAL\_LOG\_LEVEL=0命令开启DEBUG日志，调试完成后，再执行export ASCEND\_GLOBAL\_LOG\_LEVEL=3命令将日志级别设置成ERROR，关于日志级别的详细说明请参见[《日志参考》](https://gitcode.com/cann/runtime/blob/9.2.0/docs/zh/log_ref/README.md)。

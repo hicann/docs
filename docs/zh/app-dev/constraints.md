@@ -17,13 +17,13 @@
 - 对于Atlas 200I/500 A2 推理产品，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程。
 <!-- end id5 -->
 <!-- npu="910b" id4 -->
-- 对于Atlas A2 训练系列产品/Atlas A2 推理系列产品，一个Device上最多只能支持63个用户进程，Host最多只能支持Device个数*63个进程。
+- 对于Atlas A2系列产品，一个Device上最多只能支持63个用户进程，Host最多只能支持Device个数*63个进程。
 <!-- end id4 -->
 <!-- npu="A3" id3 -->
-- 对于Atlas A3 训练系列产品/Atlas A3 推理系列产品，一个Device上最多只能支持63个用户进程，Host最多只能支持Device个数*63个进程。
+- 对于Atlas A3系列产品，一个Device上最多只能支持63个用户进程，Host最多只能支持Device个数*63个进程。
 <!-- end id3 -->
 <!-- npu="950" id2 -->
-- 对于Ascend 950PR/Ascend 950DT，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程。
+- 对于Ascend 950PR&950DT系列产品，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程。
 <!-- end id2 -->
 
 ## 关于创建类和销毁类接口

@@ -29,4 +29,4 @@ AIPP区分为静态AIPP和动态AIPP。您只能选择静态AIPP或动态AIPP方
 - 对同一个模型，AIPP（包括静态AIPP和动态AIPP）与动态维度（ND格式）不能同时使用。
 - 除了AIPP，还存在基于DVPP（Digital Vision Pre-Processing）硬件进行媒体数据处理的acl接口，包括缩放、抠图、格式转换、图片编解码、视频编解码等，功能比AIPP丰富，但对于输入/输出图片、内存有一定的约束。
 
-    基于DVPP的媒体数据处理接口介绍，请参见[《DVPP媒体加速库》](https://hiascend.com/document/redirect/CannCommunityDvppApi)。
+    基于DVPP的媒体数据处理接口介绍，请参见[《DVPP媒体加速库》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/API/dvpp/dvpp_03_0000.html)。

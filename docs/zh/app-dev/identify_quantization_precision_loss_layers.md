@@ -10,4 +10,4 @@
 
     执行量化原始模型（GPU/CPU） vs 量化离线模型（关闭融合规则）（NPU）。
 
-**详细操作请参见**[《精度调试工具》](https://hiascend.com/document/redirect/CannCommunityToolAccucacy)中的“GPU/CPU vs NPU（Caffe离线推理）”。
+**详细操作请参见**[《精度调试工具》](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/latest/devaids/ModelAccuracyAnalyzer/atlasaccuracy_16_0001.html)中的“GPU/CPU vs NPU（Caffe离线推理）”。

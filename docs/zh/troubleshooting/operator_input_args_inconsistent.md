@@ -62,8 +62,3 @@ npu.open().as_default()
 ```py
 op_debug_config = ccec_O0,ccec_g,oom
 ```
-
->**说明：** 
->
->- --op\_debug\_config调测选项的详细介绍请参考[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)。
->- npu.global\_options\(\).op\_debug\_config配置项的详细介绍请参考[《TensorFlow 2.6.5模型迁移》](https://hiascend.com/document/redirect/canncommercial-tfmigr26)。

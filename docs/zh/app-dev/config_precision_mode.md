@@ -14,7 +14,7 @@
     --precision_mode=allow_fp32_to_fp16
     ```
 
-    关于该参数的详细说明请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)中的“参数说明 \> 高级功能参数 \> 算子调优选项 \> --precision\_mode”。
+    关于该参数的详细说明请参见[《ATC离线模型编译工具》](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/atc_tools/README.md)中的“参数说明 \> 高级功能参数 \> 算子调优选项 \> --precision\_mode”。
 
 2. 使用转换后的om模型重新推理。
 
@@ -36,6 +36,6 @@
     …
     ```
 
-    关于该参数的详细说明请参见[《ATC离线模型编译工具》](https://hiascend.com/document/redirect/cannCommunityATC)中的“参数说明 \> 高级功能参数 \> 算子调优选项 \> --keep\_dtype”。
+    关于该参数的详细说明请参见[《ATC离线模型编译工具》](https://gitcode.com/cann/ge/blob/9.2.0/docs/zh/user_guides/atc_tools/README.md)中的“参数说明 \> 高级功能参数 \> 算子调优选项 \> --keep\_dtype”。
 
 2. 使用转换后的om模型重新推理。

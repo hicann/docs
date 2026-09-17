@@ -15,7 +15,7 @@
 
     - 应用类日志：用于记录在Host和Device上运行应用程序产生的用户态日志，其中常用的日志为plog-_pid_\*.log，通常称为plog日志。
 
-        关于日志级别、日志路径以及日志文件的详细介绍请参见[《日志参考》](https://hiascend.com/document/redirect/CannCommunitylogref)。
+        关于日志级别、日志路径以及日志文件的详细介绍请参见[《日志参考》](https://gitcode.com/cann/runtime/blob/9.2.0/docs/zh/log_ref/README.md)。
 
     - Device侧系统类日志和其他维测信息：用于记录系统运行信息，包括内核态日志、系统进程运行产生的用户态日志等。
 
