@@ -21,16 +21,16 @@
 
 静态编译模式支持的产品型号：
 <!-- npu="310p" id1 -->
-- <term>Atlas 推理系列产品</term>
+- <term>Atlas推理系列产品</term>
 <!-- end id1 -->
 <!-- npu="910" id2 -->
-- <term>Atlas 训练系列产品</term>
+- <term>Atlas训练系列产品</term>
 <!-- end id2 -->
 <!-- npu="910b" id3 -->
-- <term>Atlas A2 训练系列产品/Atlas A2 推理系列产品</term>
+- <term>Atlas A2系列产品</term>
 <!-- end id3 -->
 <!-- npu="950" id4 -->
-- <term>Ascend 950PR/Ascend 950DT</term>
+- <term>Ascend 950PR&950DT系列产品</term>
 <!-- end id4 -->
 
 ## 整体流程
