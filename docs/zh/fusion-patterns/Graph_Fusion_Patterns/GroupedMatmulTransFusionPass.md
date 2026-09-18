@@ -14,15 +14,15 @@
 该融合模式支持的产品如下。
 
 <!-- npu="910b" id3 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2系列产品
 <!-- end id3 -->
 
 <!-- npu="A3" id4 -->
-Atlas A3 训练系列产品/Atlas A3 推理系列产品
+Atlas A3系列产品
 <!-- end id4 -->
 
 <!-- npu="950" id5 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id5 -->
 
 ![](../figures/GroupedMatmulTransFusionPass_3.png)
@@ -31,16 +31,16 @@ Ascend 950PR/Ascend 950DT
 
 <!-- end id2 -->
 <!-- npu="950" id1 -->
-融合模式三：Ascend 950PR/Ascend 950DT的伪量化场景下，将weight/antiquantScale前的Reshape+Transpose/TransposeD+Reshape从图中删除，并将weight转置信息打在算子属性上。如下图所示。
+融合模式三：Ascend 950PR&950DT系列产品的伪量化场景下，将weight/antiquantScale前的Reshape+Transpose/TransposeD+Reshape从图中删除，并将weight转置信息打在算子属性上。如下图所示。
 
 ![](../figures/GroupedMatmulTransFusionPass_5.png)
 
-融合模式四：Ascend 950PR/Ascend 950DT的MX/GB量化场景下，融合模式是：将Transpose或TransposeD从图中删除，并将x和weight的转置信息打在算子属性上。如下图所示：
+融合模式四：Ascend 950PR&950DT系列产品的MX/GB量化场景下，融合模式是：将Transpose或TransposeD从图中删除，并将x和weight的转置信息打在算子属性上。如下图所示：
 
 ![](../figures/GroupedMatmulTransFusionPass_6.png)
 
 >[!NOTE]说明
->Ascend 950PR/Ascend 950DT的MX/GB量化场景下，scale跟随weight的转置信息，pertokenScale跟随x的转置信息。
+>Ascend 950PR&950DT系列产品的MX/GB量化场景下，scale跟随weight的转置信息，pertokenScale跟随x的转置信息。
 <!-- end id1 -->
 
 ## 使用约束

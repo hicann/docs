@@ -43,5 +43,5 @@ split的输出需要和concat的输入数量需要一致，同时split的输出�
 ## 支持的型号
 
 <!-- npu="950" id1 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id1 -->

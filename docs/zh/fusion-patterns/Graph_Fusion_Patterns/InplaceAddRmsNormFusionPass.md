@@ -18,22 +18,22 @@
   - 仅支持cast从float16/bfloat16转float32。
   - 融合前后的输出中都不能包含rstd。
 
-- 融合成InplaceAddRmsNorm约束：非Ascend 950PR/Ascend 950DT场景下，AddRmsNorm的第二个输出须无后继节点。
+- 融合成InplaceAddRmsNorm约束：非Ascend 950PR&950DT系列产品场景下，AddRmsNorm的第二个输出须无后继节点。
 
 ## 支持的型号
 
 <!-- npu="910b" id1 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2系列产品
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 训练系列产品/Atlas A3 推理系列产品
+Atlas A3系列产品
 <!-- end id2 -->
 
 <!-- npu="310p" id3 -->
-Atlas 推理系列产品
+Atlas推理系列产品
 <!-- end id3 -->
 
 <!-- npu="950" id4 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id4 -->

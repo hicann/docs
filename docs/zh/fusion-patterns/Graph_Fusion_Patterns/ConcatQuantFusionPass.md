@@ -39,15 +39,15 @@
     数据类型为默认的Float16或者Float32时，K0=16；数据类型为int8时，K0=32；数据类型为int4时，K0=64。该约束条件适用于如下芯片类型。
 
     <!-- npu="910" id2 -->
-    - Atlas 训练系列产品
+    - Atlas训练系列产品
     <!-- end id2 -->
     <!-- npu="310p" id3 -->
-    - Atlas 推理系列产品
+    - Atlas推理系列产品
     <!-- end id3 -->
     <!-- npu="910b" id4 -->
-    - Atlas A2 训练系列产品/Atlas A2 推理系列产品
+    - Atlas A2系列产品
     <!-- end id4 -->
     <!-- npu="310b" id5 -->
-    - Atlas 200I/500 A2 推理产品
+    - Atlas 200I/500 A2推理产品
     <!-- end id5 -->
 <!-- end id1 -->

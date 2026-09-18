@@ -20,7 +20,7 @@
 
 ![](../figures/BatchMatMulV2ReshapeFusionPass_4.png)
 
-场景三：非Atlas 推理系列产品，或是Atlas 推理系列产品中的白名单用例场景，支持3维\*2维BatchMatMulV2运算融合为2维 \* 2维MatMulV2运算，该场景分为动态或静态场景。
+场景三：非Atlas推理系列产品，或是Atlas推理系列产品中的白名单用例场景，支持3维\*2维BatchMatMulV2运算融合为2维 \* 2维MatMulV2运算，该场景分为动态或静态场景。
 
 - 动态场景：
 
@@ -49,27 +49,27 @@
 - 静态场景下，针对BatchMatMulV2后接Add/Relu/AddN/Mul算子场景，Batch维度需大于50， M维度需小于32，或者M=1，Batch维度大于1时，图融合规则生效。
 - 静态场景下，针对单BatchMatMulV2大Batch场景，Batch维度需大于4096， M维度需小于64，或者M=1，Batch维度大于1时，图融合规则生效。
 <!-- npu="310p" id6 -->
-- Atlas 推理系列产品中，仅在白名单用例下，该图融合规则生效。
+- Atlas推理系列产品中，仅在白名单用例下，该图融合规则生效。
 <!-- end id6 -->
 
 ## 支持的型号
 
 <!-- npu="310p" id1 -->
-Atlas 推理系列产品
+Atlas推理系列产品
 <!-- end id1 -->
 
 <!-- npu="310b" id2 -->
-Atlas 200I/500 A2 推理产品
+Atlas 200I/500 A2推理产品
 <!-- end id2 -->
 
 <!-- npu="910" id3 -->
-Atlas 训练系列产品
+Atlas训练系列产品
 <!-- end id3 -->
 
 <!-- npu="910b" id4 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2系列产品
 <!-- end id4 -->
 
 <!-- npu="A3" id5 -->
-Atlas A3 训练系列产品/Atlas A3 推理系列产品
+Atlas A3系列产品
 <!-- end id5 -->

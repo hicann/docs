@@ -21,14 +21,14 @@
 - 不支持动态shape场景。
 - 数据类型约束：
   - input0、input1、input2的数据类型需要保持一致。
-  - Atlas A2 训练系列产品/Atlas A2 推理系列产品：数据类型支持FLOAT16、FLOAT32、BFLOAT16。
+  - Atlas A2系列产品：数据类型支持FLOAT16、FLOAT32、BFLOAT16。
 
 ## 支持的型号
 
 <!-- npu="910b" id1 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2系列产品
 <!-- end id1 -->
 
 <!-- npu="950" id2 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id2 -->

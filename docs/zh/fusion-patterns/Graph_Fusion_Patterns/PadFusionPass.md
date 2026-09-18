@@ -13,5 +13,5 @@ x数据类型不在\{float16,float,int32\}的范围内时，不进行图融合�
 ## 支持的型号
 
 <!-- npu="910b" id1 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2系列产品
 <!-- end id1 -->

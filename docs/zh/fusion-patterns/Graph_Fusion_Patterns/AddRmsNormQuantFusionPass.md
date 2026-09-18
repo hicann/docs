@@ -17,13 +17,13 @@
   <!-- npu="A3,910b,310p" id5 -->
 - 如下形态下，Quantize的输出仅支持量化类型为int8。
   <!-- npu="910b" id6 -->
-  - Atlas A2 训练系列产品/Atlas A2 推理系列产品
+  - Atlas A2系列产品
   <!-- end id6 -->
   <!-- npu="310p" id7 -->
-  - Atlas 推理系列产品
+  - Atlas推理系列产品
   <!-- end id7 -->
   <!-- npu="A3" id8 -->
-  - Atlas A3 训练系列产品/Atlas A3 推理系列产品
+  - Atlas A3系列产品
   <!-- end id8 -->
   <!-- end id5 -->
 
@@ -35,17 +35,17 @@
 ## 支持的型号
 
 <!-- npu="910b" id1 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2系列产品
 <!-- end id1 -->
 
 <!-- npu="310p" id2 -->
-Atlas 推理系列产品
+Atlas推理系列产品
 <!-- end id2 -->
 
 <!-- npu="A3" id3 -->
-Atlas A3 训练系列产品/Atlas A3 推理系列产品
+Atlas A3系列产品
 <!-- end id3 -->
 
 <!-- npu="950" id4 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id4 -->

@@ -12,7 +12,7 @@
 - 该融合规则不可关闭。
 
 <!-- npu="950" id3 -->
-Ascend 950PR/Ascend 950DT场景下，还存在如下使用约束。
+Ascend 950PR&950DT系列产品场景下，还存在如下使用约束。
 
 - 由于ScatterNdUpdate算子aicore实现支持的数据类型为：int64、int8、float32、float16、bfloat16和bool。因此融合成功后，只有这六种数据类型执行aicore，其他类型执行aicpu。
 - String和complex128类型在tensormove/ScatterNdUpdate上不支持时，该融合规则不生效。
@@ -21,9 +21,9 @@ Ascend 950PR/Ascend 950DT场景下，还存在如下使用约束。
 ## 支持的型号
 
 <!-- npu="910b" id1 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2系列产品
 <!-- end id1 -->
 
 <!-- npu="950" id2 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id2 -->
