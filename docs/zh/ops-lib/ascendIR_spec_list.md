@@ -15,15 +15,15 @@ CANN算子是基于Ascend IR定义的算子，文档中所列出的算子仅适�
 <!-- end id4 -->
 
 <!-- npu="310b" id1 -->
-[算子规格说明\(Atlas 200&500 A2推理产品\)](ascendir-ops-list/atlas_200_500_a2_ops_list/README.md)
+[算子规格说明\(Atlas 200I/500 A2推理产品\)](ascendir-ops-list/atlas_200_500_a2_ops_list/README.md)
 <!-- end id1 -->
 
 <!-- npu="310p" id2 -->
-[算子规格说明\(Atlas 推理系列产品\)](ascendir-ops-list/atlas_infer_ops_list/README.md)
+[算子规格说明\(Atlas推理系列产品\)](ascendir-ops-list/atlas_infer_ops_list/README.md)
 <!-- end id2 -->
 
 <!-- npu="910" id3 -->
-[算子规格说明\(Atlas 训练系列产品\)](ascendir-ops-list/atlas_train_ops_list/README.md)
+[算子规格说明\(Atlas训练系列产品\)](ascendir-ops-list/atlas_train_ops_list/README.md)
 <!-- end id3 -->
 
 <!-- npu="IPV350" id6 -->
