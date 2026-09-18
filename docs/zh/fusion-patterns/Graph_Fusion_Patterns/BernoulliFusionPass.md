@@ -15,5 +15,5 @@ StatelessBernoulliV2输入维度 \>= 2。
 ## 支持的型号
 
 <!-- npu="950" id1 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id1 -->

@@ -18,10 +18,10 @@
   <!-- npu="A3,910b" id4 -->
 - DynamicQuant的输出yout的约束：
   <!-- npu="910b" id5 -->
-  - Atlas A2 训练系列产品/Atlas A2 推理系列产品：yout仅支持量化类型为int8。
+  - Atlas A2系列产品：yout仅支持量化类型为int8。
   <!-- end id5 -->
   <!-- npu="A3" id6 -->
-  - Atlas A3 训练系列产品/Atlas A3 推理系列产品：yout仅支持量化类型为int8。
+  - Atlas A3系列产品：yout仅支持量化类型为int8。
   <!-- end id6 -->
   <!-- end id4 -->
 
@@ -31,26 +31,26 @@
 
 - attr约束：
   <!-- npu="950" id7 -->
-  - Ascend 950PR/Ascend 950DT：dst\_type仅支持DT\_INT8、DT\_HIFLOAT8、DT\_FLOAT8\_E4M3FN、DT\_FLOAT8\_E5M2。
+  - Ascend 950PR&950DT系列产品：dst\_type仅支持DT\_INT8、DT\_HIFLOAT8、DT\_FLOAT8\_E4M3FN、DT\_FLOAT8\_E5M2。
   <!-- end id7 -->
   <!-- npu="910b" id8 -->
-  - Atlas A2 训练系列产品/Atlas A2 推理系列产品：dst\_type仅支持DT\_INT8。
+  - Atlas A2系列产品：dst\_type仅支持DT\_INT8。
   <!-- end id8 -->
   <!-- npu="A3" id9 -->
-  - Atlas A3 训练系列产品/Atlas A3 推理系列产品：dst\_type仅支持DT\_INT8。
+  - Atlas A3系列产品：dst\_type仅支持DT\_INT8。
   <!-- end id9 -->
   - 双路模式下，DynamicQuant0和DynamicQuant1的dst\_type须相同。
 
 ## 支持的型号
 
 <!-- npu="910b" id1 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2系列产品
 <!-- end id1 -->
 
 <!-- npu="A3" id2 -->
-Atlas A3 训练系列产品/Atlas A3 推理系列产品
+Atlas A3系列产品
 <!-- end id2 -->
 
 <!-- npu="950" id3 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id3 -->

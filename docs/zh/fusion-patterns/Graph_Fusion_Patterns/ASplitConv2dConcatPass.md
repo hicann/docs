@@ -17,35 +17,35 @@
   <!-- npu="910,310p,310b" id1 -->
 - Conv2D输入的类型只支持：float、float16、int8和int32，且不支持Conv2D动态输入。该约束适用的型号如下：
   <!-- npu="310p" id2 -->
-  - Atlas 推理系列产品
+  - Atlas推理系列产品
   <!-- end id2 -->
   <!-- npu="310b" id3 -->
-  - Atlas 200I/500 A2 推理产品
+  - Atlas 200I/500 A2推理产品
   <!-- end id3 -->
   <!-- npu="910" id4 -->
-  - Atlas 训练系列产品
+  - Atlas训练系列产品
   <!-- end id4 -->
   <!-- end id1 -->
 
   <!-- npu="950" id5 -->
 - Conv2D输入的类型只支持：float、float16、int8。该约束适用的型号如下：
-  - Ascend 950PR/Ascend 950DT
+  - Ascend 950PR&950DT系列产品
   <!-- end id5 -->
 
 ## 支持的型号
 
 <!-- npu="310p" id6 -->
-Atlas 推理系列产品
+Atlas推理系列产品
 <!-- end id6 -->
 
 <!-- npu="310b" id7 -->
-Atlas 200I/500 A2 推理产品
+Atlas 200I/500 A2推理产品
 <!-- end id7 -->
 
 <!-- npu="910" id8 -->
-Atlas 训练系列产品
+Atlas训练系列产品
 <!-- end id8 -->
 
 <!-- npu="950" id9 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id9 -->

@@ -19,11 +19,11 @@
 - 输出idx和count数据类型是int32、int64。
 - 输入x的数据类型是int64、int32、int16、int8、uint64、uint32、uint16、uint8、bfloat16、float16、float32。
 <!-- npu="950" id2 -->
-- Ascend 950PR/Ascend 950DT场景下，该融合规则不支持关闭。
+- Ascend 950PR&950DT系列产品场景下，该融合规则不支持关闭。
 <!-- end id2 -->
 
 ## 支持的型号
 
 <!-- npu="950" id1 -->
-Ascend 950PR/Ascend 950DT
+Ascend 950PR&950DT系列产品
 <!-- end id1 -->

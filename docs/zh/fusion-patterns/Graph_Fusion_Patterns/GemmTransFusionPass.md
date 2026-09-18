@@ -17,5 +17,5 @@ Transpose输入format需为ND且不能为非对齐场景。
 ## 支持的型号
 
 <!-- npu="310b" id1 -->
-Atlas 200I/500 A2 推理产品
+Atlas 200I/500 A2推理产品
 <!-- end id1 -->

@@ -77,11 +77,11 @@
 - 不支持动态shape场景。
 <!-- npu="910b" id2 -->
 - 数据类型限制：
-  - Atlas A2 训练系列产品/Atlas A2 推理系列产品：数据类型支持FLOAT32、FLOAT16、BFLOAT16。
+  - Atlas A2系列产品：数据类型支持FLOAT32、FLOAT16、BFLOAT16。
 <!-- end id2 -->
 
 ## 支持的型号
 
 <!-- npu="910b" id1 -->
-Atlas A2 训练系列产品/Atlas A2 推理系列产品
+Atlas A2系列产品
 <!-- end id1 -->
