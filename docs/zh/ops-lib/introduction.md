@@ -65,7 +65,7 @@ CANN算子支持如下调用方式，请根据实际情况选择。
 本章将为您的算子调用之旅提供全方位指引。作为新手，建议您按照以下路径阅读：
 
 - <span style="display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;background:#0057D9;color:#FFF;font-size:13px">1</span> **环境准备**：先查阅[头文件和库文件说明](header_and_library.md)，了解CANN包安装方法，以及调用算子依赖的头文件或库文件。
-- <span style="display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;background:#0057D9;color:#FFF;font-size:13px">2</span> **概念理解**：通过学习[基本概念](https://gitcode.com/cann/ops-math/blob/master/docs/zh/context/basic_concept.md)熟悉算子的基础术语和关键特性（例如确定性、量化模式等）。
+- <span style="display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;background:#0057D9;color:#FFF;font-size:13px">2</span> **概念理解**：通过学习[基本概念](https://gitcode.com/cann/ops-math/blob/9.2.0/docs/zh/context/basic_concept.md)熟悉算子的基础术语和关键特性（例如确定性、量化模式等）。
 - <span style="display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;background:#0057D9;color:#FFF;font-size:13px">3</span> **接口调用**：根据您的业务场景，选择合适的算子调用方式，算子或算子API可参见下表查找。
 
     <!-- npu="950,A3,910b,910,310p,310b" id6 -->
@@ -80,37 +80,37 @@ CANN算子支持如下调用方式，请根据实际情况选择。
     <tbody>
       <tr>
         <td><b>公共接口</b></td>
-        <td><a href="https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/0_aclnn_meta_api.md">公共接口</a></td>
+        <td><a href="https://gitcode.com/cann/opbase/blob/9.2.0/docs/zh/api/nnopbase/aclnn/0_aclnn_meta_api.md">公共接口</a></td>
         <td>调用aclnn接口时依赖的公共Meta接口，如创建aclTensor、aclScalar、aclIntArray等。</td>
       </tr>
       <tr>
         <td rowspan="5"><b>算子接口（aclnn）</b></td>
-        <td><a href="https://gitcode.com/cann/ops-math/blob/master/docs/zh/menu_aclnn_api.md">Math类接口</a></td>
+        <td><a href="https://gitcode.com/cann/ops-math/blob/9.2.0/docs/zh/menu_aclnn_api.md">Math类接口</a></td>
         <td>数学计算类算子对应的C API，例如Add、Abs等算子。</td>
       </tr>
       <tr>
-        <td><a href="https://gitcode.com/cann/ops-nn/blob/master/docs/zh/menu_aclnn_api.md">NN类接口</a></td>
+        <td><a href="https://gitcode.com/cann/ops-nn/blob/9.2.0/docs/zh/menu_aclnn_api.md">NN类接口</a></td>
         <td>Neural Network，即神经网络类算子对应的C API，例如Matmul等算子。目前该类算子在整个算子库中占最大比重。</td>
       </tr>
       <tr>
-        <td><a href="https://gitcode.com/cann/ops-cv/blob/master/docs/zh/menu_aclnn_api.md">CV类接口</a></td>
+        <td><a href="https://gitcode.com/cann/ops-cv/blob/9.2.0/docs/zh/menu_aclnn_api.md">CV类接口</a></td>
         <td>Computer Vision，即计算机视觉类算子对应的C API，例如GridSample等算子。</td>
       </tr>
       <tr>
-        <td><a href="https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_aclnn_api.md">Transformer类接口</a></td>
+        <td><a href="https://gitcode.com/cann/ops-transformer/blob/9.2.0/docs/zh/menu_aclnn_api.md">Transformer类接口</a></td>
         <td>大模型计算类算子对应的C API，例如FlashAttention、MC2（通算融合）、MoE（Mixture of Experts）等算子。</td>
       </tr>
       <tr>
-        <td><a href="https://gitcode.com/cann/ops-ras/blob/master/docs/zh/menu_aclnn_api.md">RAS类接口</a></td>
+        <td><a href="https://gitcode.com/cann/ops-ras/blob/9.2.0/docs/zh/menu_aclnn_api.md">RAS类接口</a></td>
         <td>安全维测类算子对应的C API。</td>
       </tr>
       <tr>
         <td rowspan="2"><b>算子接口（torch_extension）</b></td>
-        <td><a href="https://gitcode.com/cann/ops-nn/blob/master/docs/zh/menu_torch_api.md">NN类接口</a></td>
+        <td><a href="https://gitcode.com/cann/ops-nn/blob/9.2.0/docs/zh/menu_torch_api.md">NN类接口</a></td>
         <td>针对非PyTorch原生但常见的神经网络类算子，提供PyTorch API，例如Matmul等算子。</td>
       </tr>
       <tr>
-        <td><a href="https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_torch_api.md">Transformer类接口</a></td>
+        <td><a href="https://gitcode.com/cann/ops-transformer/blob/9.2.0/docs/zh/menu_torch_api.md">Transformer类接口</a></td>
         <td>针对非PyTorch原生但常见的大模型类算子，提供PyTorch API，例如FlashAttention、MC2（通算融合）、MoE等算子。</td>
       </tr>
       <tr>
