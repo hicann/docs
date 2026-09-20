@@ -16,9 +16,9 @@
 
 1. 在VENC编码时，指定video\_full\_range\_flag参数值。
 
-    在Atlas 推理系列产品上，对于H.264、H.265码流，当前VENC编码时video\_full\_range\_flag默认值为0（表示limited\_range）。
+    在Atlas推理系列产品上，对于H.264、H.265码流，当前VENC编码时video\_full\_range\_flag默认值为0（表示limited\_range）。
 
-    在Atlas 200I/500 A2 推理产品上，对于H.265码流，当前VENC编码时video\_full\_range\_flag默认值为0（表示limited\_range）；对于H.264码流，当前VENC编码时video\_full\_range\_flag默认值为1（表示full\_range）。
+    在Atlas 200I/500 A2推理产品上，对于H.265码流，当前VENC编码时video\_full\_range\_flag默认值为0（表示limited\_range）；对于H.264码流，当前VENC编码时video\_full\_range\_flag默认值为1（表示full\_range）。
 
     **若默认值不满足要求，用户可以调用hi\_mpi\_venc\_set\_h264\_vui或hi\_mpi\_venc\_set\_h265\_vui接口修改video\_full\_range\_flag参数值。**
 

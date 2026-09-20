@@ -58,4 +58,4 @@
             - GE：约86MB
             - RUNTIME：约18MB
 
-    - 可使用[《算子开发工具》](https://hiascend.com/document/redirect/CannCommunityopdev)中的msSanitizer内存检测工具排查用户应用的内存问题，不过该工具当前仅支持Atlas A2训练系列产品、Atlas 推理系列产品。
+    - 可使用[《算子开发工具》](https://hiascend.com/document/redirect/CannCommunityopdev)中的msSanitizer内存检测工具排查用户应用的内存问题，不过该工具当前仅支持Atlas A2训练系列产品、Atlas推理系列产品。

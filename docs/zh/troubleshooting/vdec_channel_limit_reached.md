@@ -22,7 +22,7 @@ pid 0 usr chn 0 device 0 chn 0 vf_id 1 has created chn num(27) is full, max chn 
 
 1. 根据所使用的算力模板查询该模板中的VDEC资源信息。
 
-    **表 1** **昇腾虚拟化实例配置表**（Atlas 推理系列产品）
+    **表 1** **昇腾虚拟化实例配置表**（Atlas推理系列产品）
 
     | name（切分名称） | 切分规格 | AIC核数（aicore数量配置） | 内存容量(GB) | AICPU（device_aicpu数量配置） | VPC | JPEGD | JPEGE | VENC | VDEC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
