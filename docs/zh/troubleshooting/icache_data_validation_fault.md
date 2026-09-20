@@ -13,7 +13,7 @@ Atlas A2系列产品上，trace日志（默认在$HOME/ascend/atrace/路径下�
 <!-- end id1 -->
 
 <!-- npu="310p" id2 -->
-Atlas 推理系列产品上，trace日志（默认在$HOME/ascend/atrace/路径下）中存在“check\_error\_pc\_icache\_and\_hbm\_info”报错关键字。YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
+Atlas推理系列产品上，trace日志（默认在$HOME/ascend/atrace/路径下）中存在“check\_error\_pc\_icache\_and\_hbm\_info”报错关键字。YYYY‑MM‑DD‑HH:MM:SS.fff.uuu（年‑月‑日‑时:分:秒.毫秒.微秒）表示日志输出时间。
 
 ```bash
 [ERROR] TSCH(-1,null):YYYY‑MM‑DD‑HH:MM:SS.fff.uuu 438 (dieid:0,cpuid:0) aicore_icache_plat.c:848 check_error_pc_icache_and_hbm_info: stat for dump pc start, aic_id=1, icache_miss_num=8176, hbm_miss_num=0, compare_num=17, compare_fail_num=0  

@@ -8,13 +8,13 @@
 
 - 不支持使用fork函数以及封装了fork的函数（如system、posix_spawnp等）创建多个子进程，且在进程中调用acl接口的场景，否则进程运行时会报错或者卡死。
 <!-- npu="910" id7 -->
-- 对于Atlas 训练系列产品，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数*32个进程。
+- 对于Atlas训练系列产品，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数*32个进程。
 <!-- end id7 -->
 <!-- npu="310p" id6 -->
-- 对于Atlas 推理系列产品，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数*32个进程。
+- 对于Atlas推理系列产品，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数*32个进程。
 <!-- end id6 -->
 <!-- npu="310b" id5 -->
-- 对于Atlas 200I/500 A2 推理产品，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程。
+- 对于Atlas 200I/500 A2推理产品，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数*64个进程。
 <!-- end id5 -->
 <!-- npu="910b" id4 -->
 - 对于Atlas A2系列产品，一个Device上最多只能支持63个用户进程，Host最多只能支持Device个数*63个进程。
@@ -34,7 +34,7 @@
 ## 关于内存
 
 <!-- npu="310p" id8 -->
-- 在Atlas 推理系列产品上开发业务应用时，需避免多个操作向同一个内存地址写数据，否则可能导致硬件异常。
+- 在Atlas推理系列产品上开发业务应用时，需避免多个操作向同一个内存地址写数据，否则可能导致硬件异常。
 <!-- end id8 -->
 - 不支持在aclrtMemcpyAsync、aclrtMemsetAsync接口等异步操作内存过程中使用fork以及封装了fork的函数，如system、posix_spawnp等，否则会导致进程运行时报错，甚至卡死等不可预期的错误。
 - 使用内存申请接口（例如aclrtMalloc）申请内存后，为确保内存中不会有脏数据，建议在使用内存前先调用aclrtMemset或aclrtMemsetAsync接口先清空内存，例如aclrtMemset(devBufferPtr, devBufferSize, 0, devBufferSize)。

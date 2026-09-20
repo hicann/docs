@@ -32,7 +32,7 @@ pid 0 usr chn 0 device 0 chn 0 vf_id 1 has created chn num(0) is full, max chn n
 
 2. 若需要使用DVPP能力，可使用含DVPP能力的算力模板，算力模板信息如下所示。
 
-    **表 1** **昇腾虚拟化实例配置表**（Atlas 推理系列产品）
+    **表 1** **昇腾虚拟化实例配置表**（Atlas推理系列产品）
 
     | name（切分名称） | 切分规格 | AIC核数（aicore数量配置） | 内存容量(GB) | AICPU（device_aicpu数量配置） | VPC | JPEGD | JPEGE | VENC | VDEC |
     | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -46,4 +46,4 @@ pid 0 usr chn 0 device 0 chn 0 vf_id 1 has created chn num(0) is full, max chn n
     | vir01 | 1/8 | 1 | memory_size/8 | 1 | 1 | 2 | 1 | 0 | 1 |
 
     >**说明：** 
-    >Atlas 推理系列产品的2P场景下，p0对应的算力模板名称如上表所示，p1对应的算力模板名称均多了p1的标记，比如：p1\_vir04。
+    >Atlas推理系列产品的2P场景下，p0对应的算力模板名称如上表所示，p1对应的算力模板名称均多了p1的标记，比如：p1\_vir04。
