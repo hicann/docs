@@ -21,7 +21,7 @@
 <!-- npu="310p" id1 -->
 Maxpoolv3满足如下条件才可以融合:
 
-- soc：Atlas 推理系列加速卡产品
+- soc：Atlas推理系列加速卡产品
 - conv2d：
 
     （1）输入参数的format为NCHW
