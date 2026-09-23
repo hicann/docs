@@ -10,9 +10,9 @@
 ## 编程指南
 
 - 《[Ascend C算子开发](https://gitcode.com/cann/asc-devkit/blob/master/docs/zh/guide/index.md)》
-- 《[PyPTO算子开发](https://gitcode.com/cann/pypto/blob/master/docs/zh/tutorials/index_hiascend.md)》
+- 《[PyPTO算子开发](https://gitcode.com/cann/pypto/blob/9.2.0/docs/zh/guide/index_hiascend.md)》
 - 《[通信算子开发](https://gitcode.com/cann/hcomm/blob/master/docs/zh/comm_op_dev_guide/README.md)》
-- 《[应用开发](https://gitcode.com/cann/docs/blob/master/docs/zh/app-dev/00_acl_cpp_dev.md)》
+- 《[应用开发](https://gitcode.com/cann/docs/blob/9.2.0/docs/zh/app-dev/README.md)》
 - 《[图开发](https://gitcode.com/cann/ge/blob/master/docs/zh/user_guides/graph_dev/README.md)》
 
 ## API参考
@@ -46,7 +46,7 @@
 - 《[日志参考](https://gitcode.com/cann/runtime/blob/master/docs/zh/log_ref/README.md)》
 - 《[环境变量参考](https://gitcode.com/cann/docs/blob/master/docs/zh/env-vars/README.md)》
 - 《[图融合和UB融合规则参考](https://gitcode.com/cann/docs/blob/master/docs/zh/fusion-patterns/README.md)》
-- 《[基础数据结构和接口](https://gitcode.com/cann/metadef/blob/master/docs/api/README.md)》
+- 《[基础数据结构和接口](https://gitcode.com/cann/metadef/blob/9.2.0/docs/zh/api/README.md)》
 
 ## 其他
 
