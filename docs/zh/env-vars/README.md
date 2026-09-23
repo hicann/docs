@@ -58,5 +58,5 @@
 <!-- @ref: docs/res/docs/env-vars/zh/README_res.md#id1 -->
 - [故障信息收集](./_dump_fault_collect.md)
   - [NPU_COLLECT_PATH](./NPU_COLLECT_PATH.md)
-  - [ASCEND_DUMP_SCENE](./ASCEND_DUMP_SCENE.md)
-  - [ASCEND_DUMP_PATH](./ASCEND_DUMP_PATH.md)
+  - [ASCEND_DUMP_SCENE](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_DUMP_SCENE.md)
+  - [ASCEND_DUMP_PATH](https://gitcode.com/cann/runtime/blob/master/docs/zh/env_vars/ASCEND_DUMP_PATH.md)
