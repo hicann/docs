@@ -6,10 +6,10 @@
 - 对于创建类接口（例如：`acl.rt.create_stream`、`acl.rt.create_event`、`acl.create_data_buffer`等），用户调用该类接口创建对应的资源后，资源使用完成后，建议及时调用对应的销毁类接口（例如：`acl.rt.destroy_stream`、`acl.rt.destroy_event`、`acl.destroy_data_buffer`等），否则，程序可能会异常。
 - 对于销毁类接口（例如：`acl.rt.destroy_stream`、`acl.rt.destroy_event`、`acl.rt.free`、`acl.destroy_data_buffer`等），用户调用该类接口后，不能继续使用已释放或销毁的资源，建议用户调用销毁类接口后，将相关资源设置为无效值（例如，设置为None）。
 <!-- npu="910" id1 -->
-- 对于**Atlas 训练系列产品**，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数\*32个进程。
+- 对于**Atlas训练系列产品**，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数\*32个进程。
 <!-- end id1 -->
 <!-- npu="310p" id2 -->
-- 对于**Atlas 推理系列产品**，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数\*32个进程。
+- 对于**Atlas推理系列产品**，物理机场景下，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程；虚拟机场景下，一个Device上最多只能支持32个用户进程，Host最多只能支持Device个数\*32个进程。
 <!-- end id2 -->
 <!-- npu="310b" id3 -->
 - 对于**Atlas 200I/500 A2推理产品**，一个Device上最多只能支持64个用户进程，Host最多只能支持Device个数\*64个进程。

@@ -38,7 +38,7 @@ VPC（Vision Preprocessing Core）负责图像处理功能，支持对图片做�
     - 可以跟`acl.himpi.vpc_resize`接口在同一个线程中调用`acl.himpi.vpc_get_process_result`接口，也可以新起一个线程调用`acl.himpi.vpc_get_process_result`接口，后者多线程并行，提高效率，但用户需自行实现线程间同步。
     - 在实现抠图、缩放等功能时，通过将输入图片和输出图片的格式设置成不同的，达到转换图片格式的目的。
     <!-- npu="310p" id6 -->
-    - 对于Atlas 推理系列产品，调用`acl.rt.get_run_mode`接口获取软件栈的运行模式，如果运行模式为ACL_HOST，且Host上需要展示VPC输出的图片数据，则需要申请Host内存，通过`acl.rt.memcpy`接口将Device的输出图片数据传输到Host；如果Host上不需要展示VPC输出的图片数据，则VPC的输出图片数据可以直接作为模型推理的输入，模型推理的相关介绍请参见[模型管理](model_management.md)、[模型动态AIPP推理](dynamic_AIPP_inference.md)。
+    - 对于Atlas推理系列产品，调用`acl.rt.get_run_mode`接口获取软件栈的运行模式，如果运行模式为ACL_HOST，且Host上需要展示VPC输出的图片数据，则需要申请Host内存，通过`acl.rt.memcpy`接口将Device的输出图片数据传输到Host；如果Host上不需要展示VPC输出的图片数据，则VPC的输出图片数据可以直接作为模型推理的输入，模型推理的相关介绍请参见[模型管理](model_management.md)、[模型动态AIPP推理](dynamic_AIPP_inference.md)。
     <!-- end id6 -->
 5. 调用`acl.himpi.dvpp_free`接口释放输入、输出内存。
     <!-- npu="310b" id7 -->
