@@ -557,5 +557,3 @@
 - [Globalavgpoolpass](https://gitcode.com/cann/ops-math/blob/9.2.0/math/reduce_mean/docs/GlobalavgpoolFusionPass.md)
 
 - [ReduceMeanWithCastFusionPass](https://gitcode.com/cann/ops-math/blob/9.2.0/math/reduce_mean/docs/ReduceMeanWithCastFusionPass.md)
-
-- []()
