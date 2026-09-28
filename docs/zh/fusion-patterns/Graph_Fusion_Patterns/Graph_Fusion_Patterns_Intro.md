@@ -158,7 +158,7 @@
 - [YoloxBoundingBoxDecodeONNXFusionPass](YoloxBoundingBoxDecodeONNXFusionPass.md)  
 <!-- end id28 -->
 
-- [MatMulUnsqueezeSqueezeFusionPass](MatMulUnsqueezeSqueezeFusionPass.md)  
+- [MatMulUnsqueezeSqueezeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/MatMulUnsqueezeSqueezeFusionPass.md)  
 
 - [LayerNormSpecialTrainingFusionPass](LayerNormSpecialTrainingFusionPass.md)  
 
@@ -179,7 +179,7 @@
 <!-- end id32 -->
 
 <!-- npu="950,A3,910b" id33 -->
-- [BatchMatMul2MulFusionPass](BatchMatMul2MulFusionPass.md)  
+- [BatchMatMul2MulFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/batch_mat_mul_v3/docs/BatchMatMul2MulFusionPass.md)  
 <!-- end id33 -->
 
 <!-- npu="950,A3,910b,910,310p,310b" id34 -->
@@ -223,15 +223,15 @@
 <!-- end id43 -->
 
 <!-- npu="950,A3,910b" id44 -->
-- [WeightQuantBatchMatmulV2TransposeFusionPass](WeightQuantBatchMatmulV2TransposeFusionPass.md)  
+- [WeightQuantBatchMatmulV2TransposeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/weight_quant_batch_matmul_v2/docs/WeightQuantBatchMatmulV2TransposeFusionPass.md)  
 <!-- end id44 -->
 
 <!-- npu="A3,910b,310p" id45 -->
-- [GeGluV2FusionPass](GeGluV2FusionPass.md)  
+- [GeGluV2FusionPass](GeGluV2FusionPass.md)
 <!-- end id45 -->
 
 <!-- npu="950,A3,910b" id46 -->
-- [QuantBatchMatmulV3TransposeFusionPass](QuantBatchMatmulV3TransposeFusionPass.md)  
+- [QuantBatchMatmulV3TransposeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/quant_batch_matmul_v3/docs/QuantBatchMatmulV3TransposeFusionPass.md)  
 <!-- end id46 -->
 
 <!-- npu="A3,910b" id47 -->
@@ -305,7 +305,7 @@
 <!-- end id62 -->
 
 <!-- npu="950,A3,910b,310b" id63 -->
-- [MatmulReshapeTransposeFusionPass](MatmulReshapeTransposeFusionPass.md)  
+- [MatmulReshapeTransposeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/MatmulReshapeTransposeFusionPass.md)  
 <!-- end id63 -->
 
 <!-- npu="950,A3,910b" id64 -->
@@ -457,7 +457,7 @@
 <!-- end id100 -->
 
 <!-- npu="950,A3,910b" id101 -->
-- [MatMulReshapeBiasAddFusionPass](MatMulReshapeBiasAddFusionPass.md)  
+- [MatMulReshapeBiasAddFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/MatMulReshapeBiasAddFusionPass.md)  
 <!-- end id101 -->
 
 <!-- npu="910b,910,310p,310b" id102 -->
@@ -471,7 +471,7 @@
 <!-- end id103 -->
 
 <!-- npu="950,A3,910b" id104 -->
-- [BatchMatMul2TransposeBatchMatMulFusionPass](BatchMatMul2TransposeBatchMatMulFusionPass.md)  
+- [BatchMatMul2TransposeBatchMatMulFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/transpose_batch_mat_mul/docs/BatchMatMul2TransposeBatchMatMulFusionPass.md)  
 <!-- end id104 -->
 
 <!-- npu="950" id105 -->
@@ -479,15 +479,15 @@
 <!-- end id105 -->
 
 <!-- npu="950" id106 -->
-- [MatMulToMatmulV3FusionPass](MatMulToMatmulV3FusionPass.md)  
+- [MatMulToMatmulV3FusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/MatMulToMatmulV3FusionPass.md)  
 <!-- end id106 -->
 
 <!-- npu="950" id107 -->
-- [BatchMatMulTransposeFusionPass](BatchMatMulTransposeFusionPass.md)  
+- [BatchMatMulTransposeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/batch_mat_mul_v3/docs/BatchMatMulTransposeFusionPass.md)  
 <!-- end id107 -->
 
-<!-- npu="950" id108 -->
-- [MatmulToGemmOpFusionPass](MatmulToGemmOpFusionPass.md)  
+<!-- npu="950,A3,910b" id108 -->
+- [MatmulToGemmOpFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/MatmulToGemmOpFusionPass.md)  
 <!-- end id108 -->
 
 <!-- npu="950" id109 -->
@@ -505,3 +505,55 @@
 <!-- npu="950" id112 -->
 - [RotaryMulGrad2RotaryPositionEmbeddingGradFusionPass](RotaryMulGrad2RotaryPositionEmbeddingGradFusionPass.md)  
 <!-- end id112 -->
+
+<!-- npu="950" id113 -->
+- [GatherToGatherV2FusionPass](https://gitcode.com/cann/ops-nn/blob/master/index/gather_v2/docs/GatherToGatherV2FusionPass.md)
+<!-- end id113 -->
+
+<!-- npu="950" id114 -->
+- [LayerNormRemoveBroadcastFusionPass](https://gitcode.com/cann/ops-nn/blob/master/norm/layer_norm/docs/LayerNormRemoveBroadcastFusionPass.md)
+<!-- end id114 -->
+
+<!-- npu="950,A3,910b" id115 -->
+- [InplaceAddLayerNormFusionPass](https://gitcode.com/cann/ops-nn/blob/master/norm/inplace_add_layer_norm/docs/InplaceAddLayerNormFusionPass.md)
+<!-- end id115 -->
+
+<!-- npu="950" id116 -->
+- [MaxPoolGradFusionPass](https://gitcode.com/cann/ops-nn/blob/master/pooling/max_pool_v3_grad/docs/MaxPoolGradFusionPass.md)
+<!-- end id116 -->
+
+<!-- npu="950" id117 -->
+- [MatMulBiasAddOpenFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/MatMulBiasAddOpenFusionPass.md)
+<!-- end id117 -->
+
+<!-- npu="950" id118 -->
+- [GemmToMatmulFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/mat_mul_v3/docs/GemmToMatmulFusionPass.md)
+<!-- end id118 -->
+
+<!-- npu="950" id119 -->
+- [ZZMatMulTOQBMMV3FusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/quant_batch_matmul_v3/docs/ZZMatMulTOQBMMV3FusionPass.md)
+<!-- end id119 -->
+
+<!-- npu="950,A3,910b" id120 -->
+- [QuantBatchMatmulV4ToV3FusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/quant_batch_matmul_v4/docs/QuantBatchMatmulV4ToV3FusionPass.md)
+<!-- end id120 -->
+
+<!-- npu="950" id121 -->
+- [QuantBatchMatmulV4TransposeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/quant_batch_matmul_v4/docs/QuantBatchMatmulV4TransposeFusionPass.md)
+<!-- end id121 -->
+
+<!-- npu="950,910b" id122 -->
+- [AntiQuantMatMulFusionPass](https://gitcode.com/cann/ops-nn/blob/master/matmul/weight_quant_batch_matmul_v2/docs/AntiQuantMatMulFusionPass.md)
+<!-- end id122 -->
+
+<!-- npu="950" id123 -->
+- [BucketizeFusionPass](https://gitcode.com/cann/ops-nn/blob/master/index/bucketize_v2/docs/BucketizeFusionPass.md)
+<!-- end id123 -->
+
+<!-- npu="950,A3,910b,910,310p,310b" id124 -->
+- [PermuteFusionPass](https://gitcode.com/cann/ops-math/blob/master/conversion/transpose/docs/PermuteFusionPass.md)
+<!-- end id124 -->
+
+- [Globalavgpoolpass](https://gitcode.com/cann/ops-math/blob/master/math/reduce_mean/docs/GlobalavgpoolFusionPass.md)
+
+- [ReduceMeanWithCastFusionPass](https://gitcode.com/cann/ops-math/blob/master/math/reduce_mean/docs/ReduceMeanWithCastFusionPass.md)
