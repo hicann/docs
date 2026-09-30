@@ -19,7 +19,7 @@
 
   由于硬件限制，FLOAT32、BFLOAT16、FLOAT16、INT32、INT64类型的输入数据，范围为\[-65504,65504\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
 
-- Conv2D和DepthwiseConv2D算子，在Atlas 训练系列产品中，支持的数据类型如下：
+- Conv2D和DepthwiseConv2D算子，在Atlas训练系列产品中，支持的数据类型如下：
 
   <table><tbody><tr id="row205251150134314"><td class="cellrowborder" valign="top" width="7.5200000000000005%"><p id="p1428164433320"><a name="p1428164433320"></a><a name="p1428164433320"></a>Tensor</p>
   </td>

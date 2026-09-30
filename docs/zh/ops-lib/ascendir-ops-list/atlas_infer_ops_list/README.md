@@ -63,7 +63,7 @@
   </tbody>
   </table>
 
-- Conv2D和DepthwiseConv2D算子，在Atlas 推理系列产品中，支持的数据类型如下：
+- Conv2D和DepthwiseConv2D算子，在Atlas推理系列产品中，支持的数据类型如下：
 
   <table><tbody><tr id="row205251150134314"><td class="cellrowborder" valign="top" width="7.5200000000000005%"><p id="p1428164433320"><a name="p1428164433320"></a><a name="p1428164433320"></a>Tensor</p>
   </td>

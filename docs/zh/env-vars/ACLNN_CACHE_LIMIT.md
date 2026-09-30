@@ -28,21 +28,21 @@ export ACLNN_CACHE_LIMIT=10000
 ## 支持的型号
 
 <!-- npu="310p" id1 -->
-Atlas 推理系列产品
+Atlas推理系列产品
 <!-- end id1 -->
 
 <!-- npu="910" id2 -->
-Atlas 训练系列产品
+Atlas训练系列产品
 <!-- end id2 -->
 
 <!-- npu="910b" id3 -->
-Atlas A2 系列产品
+Atlas A2系列产品
 <!-- end id3 -->
 
 <!-- npu="A3" id4 -->
-Atlas A3 系列产品
+Atlas A3系列产品
 <!-- end id4 -->
 
 <!-- npu="950" id5 -->
-Ascend 950PR&950DT 系列产品
+Ascend 950PR&950DT系列产品
 <!-- end id5 -->
