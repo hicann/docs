@@ -16,7 +16,7 @@
     export ASCEND_LOG_PRINT_TO_STDOUT=1
     ```
 
-    日志相关介绍参见[《CANN 日志参考》](https://hiascend.com/document/redirect/CannCommunitylogref)，环境变量介绍参见[《CANN 环境变量》](https://hiascend.com/document/redirect/CannCommunityEnvRef)。
+    日志相关介绍参见[《CANN日志参考》](https://hiascend.com/document/redirect/CannCommunitylogref)，环境变量介绍参见[《CANN环境变量》](https://hiascend.com/document/redirect/CannCommunityEnvRef)。
 
 - aclnn异常错误信息获取：
 

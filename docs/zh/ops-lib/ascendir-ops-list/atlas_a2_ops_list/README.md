@@ -9,9 +9,9 @@
 ## 整体约束
 
 - HIFLOAT8、FLOAT8\_E5M2、FLOAT8\_E4M3FN、FLOAT8\_E8M0、FLOAT6\_E3M2、FLOAT6\_E2M3、FLOAT4\_E2M1、FLOAT4\_E1M2在当前产品型号不支持。
-- Atlas A2 系列产品不支持Caffe框架。
+- Atlas A2系列产品不支持Caffe框架。
 - DynamicRNN、DynamicGRUV2、BNInference这三个算子的实现公式请点击[Link](https://gitee.com/ascend/modelzoo/wikis/%E5%8E%86%E5%8F%B2%E6%95%99%E7%A8%8B%E5%BD%92%E6%A1%A3/%E6%98%87%E8%85%BE%E4%BC%97%E6%99%BA/CANN%E5%86%85%E7%BD%AE%E7%AE%97%E5%AD%90%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%8F%82%E8%80%83/BNInference)查看。
-- MatMul、MatMulV2、BatchMatmul、BatchMatMulV2算子，在Atlas A2 系列产品上不支持INT32数据类型。
+- MatMul、MatMulV2、BatchMatmul、BatchMatMulV2算子，在Atlas A2系列产品上不支持INT32数据类型。
 - 如下算子groups属性支持最大取值范围为65535：
 
   TransData、Deconvolution、Conv2D、Conv2DTranspose、Conv2DBackpropInput、Conv2dBackpropFilter、Conv3D、Conv3DTranspose、Conv3DBackpropInput、Conv3DBackpropFilter、DeformableConv2D、Correlation。
@@ -22,13 +22,13 @@
 
 - Sin算子约束：
 
-  针对Atlas A2 系列产品，支持高精度和高性能两种模式，不同模式下的约束为：
+  针对Atlas A2系列产品，支持高精度和高性能两种模式，不同模式下的约束为：
   -   高精度模式，由于硬件限制，FLOAT32、FLOAT16、BFLOAT16类型的输入数据，范围为\[-13493037704, 13493037704\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
   -   高性能模式，由于硬件限制，FLOAT32、FLOAT16、BFLOAT16类型的输入数据，范围为\[-10^7, 10^7\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
 
 - Cos算子约束：
 
-  针对Atlas A2 系列产品，支持高精度和高性能两种模式，不同模式下的约束为：
+  针对Atlas A2系列产品，支持高精度和高性能两种模式，不同模式下的约束为：
 
   -   高精度模式，由于硬件限制，FLOAT32、FLOAT16、BFLOAT16类型的输入数据，范围为\[-13493037704, 13493037704\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
   -   高性能模式，由于硬件限制，FLOAT32、FLOAT16、BFLOAT16类型的输入数据，范围为\[-10^7, 10^7\]时满足精度要求，超过数值范围精度无法保证，请使用CPU进行计算。
@@ -74,7 +74,7 @@
   </tbody>
   </table>
 
-- Conv2D和DepthwiseConv2D算子，在Atlas A2 系列产品中，支持的数据类型如下：
+- Conv2D和DepthwiseConv2D算子，在Atlas A2系列产品中，支持的数据类型如下：
 
   <table><tbody><tr id="row59917511449"><td class="cellrowborder" valign="top" width="7.519248075192481%"><p id="p1840912812349"><a name="p1840912812349"></a><a name="p1840912812349"></a>Tensor</p>
   </td>

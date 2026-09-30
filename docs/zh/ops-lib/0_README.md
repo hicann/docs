@@ -10,11 +10,12 @@
 - [公共接口（当前版本不支持）<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/aclnn/0_aclnn_meta_api.md)
 <!-- end id2 -->
 <!-- npu="950,A3,910b,910,310p,310b" id3 -->
-- [算子接口（aclnn）](op_interface_aclnn.md)
+- [算子接口（aclnn）<a npu_parse_enabled="true"></a>](op_interface_aclnn.md)
   - [Math类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-math/blob/master/docs/zh/menu_aclnn_api.md)
   - [NN类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-nn/blob/master/docs/zh/menu_aclnn_api.md)
   - [CV类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-cv/blob/master/docs/zh/menu_aclnn_api.md)
   - [Transformer类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_aclnn_api.md)
+  - [RAS类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-ras/blob/master/docs/zh/menu_aclnn_api.md)
 <!-- end id3 -->
 <!-- npu="IPV350" id4 -->
 - [算子接口（aclnn）（当前版本不支持）](op_interface_aclnn.md)
@@ -22,6 +23,7 @@
   - [NN类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-nn/blob/master/docs/zh/menu_aclnn_api.md)
   - [CV类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-cv/blob/master/docs/zh/menu_aclnn_api.md)
   - [Transformer类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-transformer/blob/master/docs/zh/menu_aclnn_api.md)
+  - [RAS类接口<a name="sub_menu"></a>](https://gitcode.com/cann/ops-ras/blob/master/docs/zh/menu_aclnn_api.md)
 <!-- end id4 -->
 <!-- npu="950,A3,910b" id5 -->
 - [算子接口（torch\_extension）](op_interface_torch.md)
@@ -33,7 +35,7 @@
   - [规格清单](ascendIR_spec_list.md)
 - [附录](appendix/appendix.md)
   <!-- npu="950,A3,910b,910,310p,310b" id6 -->
-  - [nnopbase接口<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/0_opdev_api_list.md)
+  - [nnopbase接口<a name="sub_menu" npu_parse_enabled="true"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/0_opdev_api_list.md)
   <!-- end id6 -->
   <!-- npu="IPV350" id7 -->
   - [nnopbase接口（当前版本不支持）<a name="sub_menu"></a>](https://gitcode.com/cann/opbase/blob/master/docs/zh/api/nnopbase/opdev/0_opdev_api_list.md)
