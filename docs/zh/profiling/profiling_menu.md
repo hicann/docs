@@ -33,7 +33,9 @@
   - [FAQ]()
     - [采集](https://gitcode.com/cann/oam-tools/blob/9.2.0/docs/zh/profiling/faq/faq.md)
     - [解析](https://gitcode.com/Ascend/msprof/blob/26.2.0/docs/zh/support/faq.md)
+<!-- npu="950,A3,910b,310b" id1 -->
 - [msPTI调优工具<a name="sub_menu"></a>](https://gitcode.com/Ascend/docs/blob/master/MindStudio/26.2.0/zh/menu/mstt_msit/mspti_menu.md)
+<!-- end id1 -->
 - [服务化调优工具<a name="sub_menu"></a>](https://gitcode.com/Ascend/docs/blob/master/MindStudio/26.2.0/zh/menu/mstt_msit/msserviceprofiler_menu.md)
 - [其他采集方式<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/9.2.0/docs/zh/profiling/other_method/other_method.md)
 - [附录<a name="sub_menu"></a>](https://gitcode.com/cann/oam-tools/blob/9.2.0/docs/zh/profiling/appendices/appendices.md)
