@@ -26,4 +26,4 @@ Atlas A2系列产品上，由于硬件优化，不会出现atomic add精度溢�
 
 ## 处理方法
 
-此类问题一般为输入数据错误导致，应通过精度调优手段进行下一步定位。例如推理场景下，请参考[《应用开发 \(C&C++\)》](https://hiascend.com/document/redirect/cannCommunityadev)中的“模型推理 > 精度/性能优化”章节调优精度。
+此类问题一般为输入数据错误导致，应通过精度调优手段进行下一步定位。例如推理场景下，请参考[《应用开发 \(C&C++\)》](https://gitcode.com/cann/docs/blob/master/docs/zh/app-dev/c/00_acl_cpp_dev.md)中的“模型推理 > 精度/性能优化”章节调优精度。

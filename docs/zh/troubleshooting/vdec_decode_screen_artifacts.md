@@ -4,7 +4,7 @@
 
 输入码流给VDEC进行解码，得到的解码数据不正确，产生花屏现象，如图1所示。并且日志中存在类似“decode error”、“input stream error, can't decode, report to user”、“num\_ref\_idx\_l0\_active\(30\) out of range\(0,16\)”、“dvpp\_vdec\_vdm\_process failed”、“Chan 0 ErrRatio = 44”信息。
 
-**图 1**  视频花屏  
+**图 1**  视频花屏
 ![](figures/video_artifacts.png "视频花屏")
 
 ## 可能原因
@@ -24,4 +24,4 @@
 
     - 通过对应版本的sample，解码这段保留下来的码流，验证码流是否正常或VDEC是否支持该格式。
 
-        如果sample解码正常，那就是开发本身的代码逻辑有问题，可以参考[《应用开发C&C++》](https://hiascend.com/document/redirect/cannCommunityadev)中的“专用加速器 \> 媒体数据处理（DVPP）\> 媒体数据处理V1 \>VDEC视频解码”或“专用加速器 \> 媒体数据处理（DVPP）\> 媒体数据处理V2 \>VDEC视频解码”章节优化代码逻辑。
+        如果sample解码正常，那就是开发本身的代码逻辑有问题，可以参考[《应用开发C&C++》](https://gitcode.com/cann/docs/blob/master/docs/zh/app-dev/c/00_acl_cpp_dev.md)中的“专用加速器 \> 媒体数据处理（DVPP）\> 媒体数据处理V1 \>VDEC视频解码”或“专用加速器 \> 媒体数据处理（DVPP）\> 媒体数据处理V2 \>VDEC视频解码”章节优化代码逻辑。
